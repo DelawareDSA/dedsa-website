@@ -1,4 +1,3 @@
-// frontend/src/app/api/newsletters/[slug]/route.ts
 import fs from 'fs/promises';
 import path from 'path';
 

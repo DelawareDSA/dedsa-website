@@ -1,6 +1,3 @@
-// Layout component type definitions
-
-// Footer component types
 export interface FooterLink {
   name: string;
   href: string;
@@ -26,7 +23,6 @@ export interface FooterContent {
   sections: FooterSection[];
 }
 
-// Header component types
 export interface HeaderContent {
   siteName: string;
   joinButtonText: string;

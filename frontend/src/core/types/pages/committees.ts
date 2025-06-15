@@ -1,5 +1,3 @@
-// src/core/types/pages/committees.ts
-
 export interface CommitteeOrGroup {
   title: string;
   purpose: string;

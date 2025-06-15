@@ -1,4 +1,3 @@
-// frontend/src/features/handbook/components/NextSteps.tsx
 import { HandbookPageContent } from '../Page';
 
 interface NextStepsProps {

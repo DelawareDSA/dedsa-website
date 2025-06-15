@@ -1,10 +1,7 @@
-// Common Tailwind class combinations for reuse
 export const tailwindClasses = {
-  // Layout
   container: 'container-page',
   section: 'py-16 relative overflow-hidden',
 
-  // Components
   card: 'bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300',
   button: {
     base: 'inline-flex items-center justify-center font-bold rounded transition-all duration-200',
@@ -18,19 +15,16 @@ export const tailwindClasses = {
     },
   },
 
-  // Typography
   heading: {
     h1: 'text-4xl md:text-7xl font-bold mb-4',
     h2: 'text-3xl md:text-5xl font-bold mb-4',
     h3: 'text-2xl font-bold mb-2',
   },
 
-  // Forms
   input:
     'w-full rounded-md border-gray-300 shadow-sm focus:border-dsa-red focus:ring focus:ring-dsa-red focus:ring-opacity-50',
 };
 
-// Helper to combine Tailwind classes
 export function tw(...classes: (string | undefined | false)[]): string {
   return classes.filter(Boolean).join(' ');
 }

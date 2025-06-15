@@ -1,7 +1,6 @@
 import nationalInfoData from '@/core/content/pages/about.json';
 import { NationalInfoContent } from '@/core/types/pages/about';
 
-// Type assertion for imported JSON
 const typedContent = nationalInfoData.nationalInfo as NationalInfoContent;
 
 export default function NationalInfo() {

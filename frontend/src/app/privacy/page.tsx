@@ -23,10 +23,6 @@ export const metadata: Metadata = {
   },
 };
 
-/**
- * This `Page` is a Next.js server component (no custom props),
- * so it satisfies App Router requirements.
- */
 export default function Page() {
   return <PrivacyPage data={privacyContent} />;
 }

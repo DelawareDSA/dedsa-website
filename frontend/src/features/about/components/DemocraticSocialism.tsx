@@ -4,7 +4,6 @@ import GenericCard from '@/core/components/shared/GenericCard';
 import GenericSection from '@/core/components/shared/GenericSection';
 import { useEffect, useState } from 'react';
 
-// Using consolidated content
 interface Principle {
   title: string;
   description: string;
@@ -21,7 +20,6 @@ export default function DemocraticSocialism() {
   );
 
   useEffect(() => {
-    // Load from consolidated content
     const loadData = async () => {
       try {
         const data = await import('@/core/content/pages/about.json');

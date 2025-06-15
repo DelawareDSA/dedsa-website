@@ -19,7 +19,7 @@ export interface Newsletter {
     };
   };
   content?: string;
-  htmlPath?: string; // Path to HTML file in public/newsletters
+  htmlPath?: string;
 }
 
 export class NewsletterService {
@@ -35,12 +35,10 @@ export class NewsletterService {
 
   async loadNewsletters(): Promise<Newsletter[]> {
     try {
-      // Load from JSON data
       const dataPath = path.join(process.cwd(), 'src/data/newsletters.json');
       const fileContents = await fs.readFile(dataPath, 'utf8');
       const newsletters = JSON.parse(fileContents) as Newsletter[];
 
-      // Check for corresponding HTML files
       const htmlDir = path.join(process.cwd(), 'public/newsletters');
 
       for (const newsletter of newsletters) {
@@ -48,9 +46,7 @@ export class NewsletterService {
         try {
           await fs.access(htmlPath);
           newsletter.htmlPath = `/newsletters/${newsletter.slug}.html`;
-        } catch {
-          // HTML file doesn't exist, use content field
-        }
+        } catch {}
       }
 
       this.newsletters = newsletters;

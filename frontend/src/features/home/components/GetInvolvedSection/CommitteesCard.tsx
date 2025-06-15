@@ -3,15 +3,12 @@ import committeesContent from '@/core/content/pages/home.json';
 import { CommitteesCardContent } from '@/core/types/pages/home';
 import CommitteeItem from './CommitteeItem';
 
-// Type assertion for the imported JSON
 const typedCommitteesContent =
   committeesContent.committeesCard as CommitteesCardContent;
 
 export default function CommitteesCard() {
-  // Default to showing 4 items if initialDisplayCount is not defined
   const initialCount = typedCommitteesContent.initialDisplayCount || 4;
 
-  // Only display the initial set of committees
   const displayedCommittees = typedCommitteesContent.committees.slice(
     0,
     initialCount

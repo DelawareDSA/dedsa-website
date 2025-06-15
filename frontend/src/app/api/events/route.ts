@@ -18,14 +18,12 @@ interface ServiceAccount {
 }
 
 export async function GET() {
-  // 1. Validate env
   const calendarId = process.env.GOOGLE_CALENDAR_ID;
   if (!calendarId) {
     console.error('GOOGLE_CALENDAR_ID is not set');
     return NextResponse.json({ error: 'Missing calendar ID' }, { status: 500 });
   }
 
-  // 2. Load service account
   let serviceAccount: ServiceAccount;
   try {
     const credsPath = path.join(process.cwd(), 'src', 'googleService.json');
@@ -37,7 +35,6 @@ export async function GET() {
   }
 
   try {
-    // 3. Authenticate
     const auth = new google.auth.JWT({
       email: serviceAccount.client_email,
       key: serviceAccount.private_key,
@@ -45,7 +42,6 @@ export async function GET() {
     });
     const calendar = google.calendar({ version: 'v3', auth });
 
-    // 4. Fetch events
     const { data } = await calendar.events.list({
       calendarId,
       timeMin: new Date().toISOString(),

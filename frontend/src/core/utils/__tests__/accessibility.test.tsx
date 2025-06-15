@@ -2,7 +2,6 @@ import HomePage from '@/app/page';
 import { render } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 expect.extend(toHaveNoViolations as any);
 
 describe('Accessibility Compliance', () => {
@@ -40,5 +39,5 @@ describe('Accessibility Compliance', () => {
 });
 
 function calculateContrastRatio(bg: string, fg: string): number {
-  return 4.5; // Placeholder
+  return 4.5;
 }

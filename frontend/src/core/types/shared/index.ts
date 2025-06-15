@@ -1,6 +1,3 @@
-// src/core/types/shared/index.ts
-// Shared types used across the application
-
 export interface BasePageProps {
   className?: string;
 }

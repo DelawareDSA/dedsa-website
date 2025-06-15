@@ -1,4 +1,3 @@
-// components/shared/GenericSection.tsx
 import { ReactNode } from 'react';
 
 interface GenericSectionProps {

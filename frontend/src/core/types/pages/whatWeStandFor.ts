@@ -1,5 +1,3 @@
-// frontend/src/core/types/pages/whatWeStandFor.ts
-
 export interface WhatWeStandForHero {
   heading: string;
   description: string;
@@ -126,7 +124,6 @@ export interface OrganizationContent {
   participationInfo: string;
 }
 
-// Update the main interface
 export interface WhatWeStandForPageContent {
   hero: WhatWeStandForHero;
   aboutSection: AboutSectionContent;

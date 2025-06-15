@@ -1,4 +1,3 @@
-// frontend/src/features/bylaws/components/BylawsDocument.tsx
 'use client';
 import { BylawsPageContent } from '@/core/types/pages/bylaws';
 
@@ -14,7 +13,7 @@ export default function BylawsDocument({ data }: BylawsDocumentProps) {
         <p className="mb-4 text-gray-600">{data.lastUpdatedLabel}</p>
       </div>
 
-      {/* PDF Document Card */}
+      {}
       <div className="p-8 text-center border-2 rounded-lg border-dsa-red bg-gradient-to-br from-red-50 to-white">
         <div className="mb-6">
           <svg
@@ -37,7 +36,7 @@ export default function BylawsDocument({ data }: BylawsDocumentProps) {
           </p>
         </div>
 
-        {/* Action buttons */}
+        {}
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href={data.pdfUrl}
@@ -85,7 +84,7 @@ export default function BylawsDocument({ data }: BylawsDocumentProps) {
         </div>
       </div>
 
-      {/* Quick Navigation */}
+      {}
       <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-3">
         <div className="p-4 rounded-lg bg-gray-50">
           <h4 className="mb-2 font-semibold text-gray-900">
@@ -114,7 +113,7 @@ export default function BylawsDocument({ data }: BylawsDocumentProps) {
         </div>
       </div>
 
-      {/* Browser note */}
+      {}
       <div className="p-4 mt-6 border border-blue-200 rounded-lg bg-blue-50">
         <div className="flex items-start">
           <svg

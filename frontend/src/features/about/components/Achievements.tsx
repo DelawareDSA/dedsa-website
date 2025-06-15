@@ -21,7 +21,6 @@ export default function Achievements({
   const [achievements, setAchievements] = useState<string[]>([]);
 
   useEffect(() => {
-    // Load from consolidated content
     const loadData = async () => {
       try {
         const data = await import('@/core/content/pages/about.json');

@@ -1,4 +1,3 @@
-// src/app/error.tsx
 'use client';
 
 import Link from 'next/link';
@@ -12,7 +11,6 @@ export default function Error({
   reset: () => void;
 }) {
   useEffect(() => {
-    // Log the error to an error reporting service
     console.error('Page error:', error);
   }, [error]);
 

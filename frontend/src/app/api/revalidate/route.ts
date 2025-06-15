@@ -1,12 +1,10 @@
 import { revalidatePath, revalidateTag } from 'next/cache';
 import { NextRequest, NextResponse } from 'next/server';
 
-// Ensure REVALIDATE_SECRET is provided via environment variable
 const REVALIDATE_SECRET = process.env.REVALIDATE_SECRET;
 
 export async function POST(request: NextRequest) {
   try {
-    // Check for server misconfiguration
     if (!REVALIDATE_SECRET) {
       console.error('REVALIDATE_SECRET environment variable is not set');
       return NextResponse.json(
@@ -15,7 +13,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Parse JSON body safely
     const body = await request.json().catch(() => ({}));
     const { path, tag, secret } = body as {
       path?: string;
@@ -23,7 +20,6 @@ export async function POST(request: NextRequest) {
       secret?: string;
     };
 
-    // Validate presence of secret
     if (!secret) {
       return NextResponse.json(
         { error: 'Missing secret parameter' },
@@ -31,13 +27,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Constant-time comparison replaced by simple equality for now
     if (secret !== REVALIDATE_SECRET) {
       console.warn('Invalid revalidation secret attempt');
       return NextResponse.json({ error: 'Invalid secret' }, { status: 401 });
     }
 
-    // Ensure either path or tag is provided
     if (!path && !tag) {
       return NextResponse.json(
         { error: 'Either "path" or "tag" must be provided' },
@@ -45,7 +39,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Revalidate a given path
     if (path) {
       try {
         revalidatePath(path);
@@ -63,7 +56,6 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Revalidate a given tag
     if (tag) {
       try {
         revalidateTag(tag);
@@ -81,7 +73,6 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Fallback failure
     return NextResponse.json(
       { error: 'Revalidation request could not be processed' },
       { status: 500 }

@@ -1,4 +1,3 @@
-// frontend/src/features/handbook/components/FAQSection.tsx
 'use client';
 
 import { useState } from 'react';

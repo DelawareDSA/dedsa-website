@@ -1,4 +1,3 @@
-// frontend/src/features/handbook/components/MembershipBenefits.tsx
 import { HandbookPageContent } from '../Page';
 
 interface MembershipBenefitsProps {

@@ -115,7 +115,7 @@ export default function CalendarPage() {
           </p>
         </div>
 
-        {/* View Toggle and Month Navigation */}
+        {}
         <div className="bg-white rounded-lg shadow-md p-4 mb-6">
           <div className="flex justify-between items-center flex-wrap gap-4">
             <div className="flex gap-2">
@@ -189,7 +189,7 @@ export default function CalendarPage() {
           </div>
         </div>
 
-        {/* Events Display */}
+        {}
         <div className="bg-white rounded-lg shadow-md p-6">
           {view === 'list' ? (
             <div className="space-y-6">
@@ -269,7 +269,7 @@ export default function CalendarPage() {
           )}
         </div>
 
-        {/* Subscribe Section */}
+        {}
         <div className="mt-8 bg-white rounded-lg shadow-md p-6">
           <h2 className="text-2xl font-bold mb-4">Stay Updated</h2>
           <p className="text-dsa-black mb-4">
@@ -293,7 +293,6 @@ export default function CalendarPage() {
   );
 }
 
-// Month View Component
 function MonthView({
   events,
   month,

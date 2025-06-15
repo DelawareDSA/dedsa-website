@@ -1,10 +1,8 @@
-// components/LatestUpdatesSection.tsx
 'use client';
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-// Inline minimal Newsletter type
 type N = {
   id: string;
   title: string;
@@ -62,7 +60,7 @@ export default function LatestUpdatesSection() {
                   {n.title}
                 </h3>
                 <p className="text-muted text-sm mb-3 flex items-center">
-                  {/* Calendar icon */}
+                  {}
                   <svg
                     className="w-4 h-4 mr-1"
                     fill="none"
@@ -84,7 +82,7 @@ export default function LatestUpdatesSection() {
                   {n.author?.node?.name && (
                     <>
                       <span className="mx-2">|</span>
-                      {/* User icon */}
+                      {}
                       <svg
                         className="w-4 h-4 mr-1"
                         fill="none"

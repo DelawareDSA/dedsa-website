@@ -1,4 +1,3 @@
-// File: frontend/src/features/calendar/components/MonthView.tsx
 'use client';
 
 import type { CalendarEvent } from '@/core/types/pages/calendar';

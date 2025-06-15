@@ -47,7 +47,7 @@ export function useGoogleCalendar(): {
 
   const events: Event[] = (eventData || [])
     .filter((e) => e?.summary && (e.start.dateTime || e.start.date))
-    .slice(0, 3) // Only show next 3 events on home page
+    .slice(0, 3)
     .map((e) => {
       const iso = e.start.dateTime || e.start.date!;
       const dt = new Date(iso);

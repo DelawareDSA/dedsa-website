@@ -2,7 +2,6 @@ import getInvolvedContent from '@/core/content/pages/about.json';
 import { GetInvolvedContent } from '@/core/types/pages/about';
 import Link from 'next/link';
 
-// Type assertion for imported JSON
 const typedContent = getInvolvedContent.getInvolved as GetInvolvedContent;
 
 export default function GetInvolved() {

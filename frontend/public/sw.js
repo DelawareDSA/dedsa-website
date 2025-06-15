@@ -3,5 +3,5 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // Simple pass-through
+  
 });

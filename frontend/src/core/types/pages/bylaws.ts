@@ -1,5 +1,3 @@
-// frontend/src/core/types/pages/bylaws.ts
-
 export interface BylawsDocumentContent {
   title: string;
   fallbackMessage: string;
@@ -19,7 +17,7 @@ export interface FAQContent {
 export interface GovernanceSection {
   title: string;
   description: string;
-  pageLink: string; // PDF page reference like "page=5"
+  pageLink: string;
   linkText: string;
 }
 
@@ -40,10 +38,9 @@ export interface OtherDocumentsContent {
   documents: Document[];
 }
 
-// Main page content interface
 export interface BylawsPageContent {
   title: string;
-  pdfUrl: string; // Path to the PDF file
+  pdfUrl: string;
   fallbackContent: string;
   currentVersionLabel: string;
   lastUpdatedLabel: string;

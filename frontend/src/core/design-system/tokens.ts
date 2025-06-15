@@ -1,12 +1,11 @@
 export const DesignTokens = {
-  // Colors
   colors: {
     primary: '#EC1F27',
     primaryTints: ['#F04C53', '#F4797E', '#F7A5A9', '#FBD2D4'],
     black: '#231F20',
     blackTints: ['#514D4E', '#7F7B7C', '#ADA9AA', '#DBD7D8'],
     cream: '#FFF3F5',
-    // Accessibility pairs
+
     accessible: {
       redOnWhite: { bg: '#FFFFFF', text: '#EC1F27', ratio: 4.5 },
       whiteOnRed: { bg: '#EC1F27', text: '#FFFFFF', ratio: 8.6 },
@@ -14,7 +13,6 @@ export const DesignTokens = {
     },
   },
 
-  // Typography
   typography: {
     fontFamilies: {
       primary: 'Manifold DSA, Klima, -apple-system, sans-serif',
@@ -32,7 +30,6 @@ export const DesignTokens = {
     },
   },
 
-  // Spacing (based on 8px grid)
   spacing: {
     xs: '0.5rem',
     sm: '1rem',
@@ -43,7 +40,6 @@ export const DesignTokens = {
     '3xl': '6rem',
   },
 
-  // Layout
   layout: {
     maxWidth: '1280px',
     gutter: '1.5rem',

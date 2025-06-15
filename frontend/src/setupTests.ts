@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom';
 import 'whatwg-fetch';
 
-// Mock IntersectionObserver
 (global as any).IntersectionObserver = class {
   constructor() {}
   disconnect() {}
@@ -41,7 +40,6 @@ jest.mock('next/navigation', () => ({
   },
 }));
 
-// Provide a predictable performance.now for performance tests
 Object.defineProperty(performance, 'now', {
   writable: true,
   value: jest.fn(() => 0),

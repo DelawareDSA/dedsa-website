@@ -26,7 +26,7 @@ export default function LeadershipPage(props: Props) {
   return (
     <div className="min-h-screen py-12 bg-dsa-red-t4">
       <div className="container-page">
-        {/* Page Header */}
+        {}
         <div className="mb-12">
           <h1 className="mb-6 text-4xl font-bold">{title}</h1>
           <div
@@ -37,22 +37,21 @@ export default function LeadershipPage(props: Props) {
           />
         </div>
 
-        {/* Chapter Structure Section */}
+        {}
         <ChapterStructure {...chapterStructure} />
 
-        {/* Officer Structure Section */}
+        {}
         {officerStructure && <OfficerStructure {...officerStructure} />}
 
-        {/* Governance Process Section */}
+        {}
         {governanceProcess && <GovernanceProcess {...governanceProcess} />}
 
-        {/* Current Leadership Cards */}
+        {}
       </div>
     </div>
   );
 }
 
-// Chapter Structure Component
 function ChapterStructure(props: ChapterStructureContent) {
   const {
     title,
@@ -90,7 +89,6 @@ function ChapterStructure(props: ChapterStructureContent) {
   );
 }
 
-// Officer Structure Component
 function OfficerStructure(props: OfficerStructureContent) {
   const { title, description, officers, diversityRequirements } = props;
 
@@ -136,7 +134,6 @@ function OfficerStructure(props: OfficerStructureContent) {
   );
 }
 
-// Governance Process Component
 function GovernanceProcess(props: GovernanceProcessContent) {
   const { title, description, processes } = props;
 
@@ -157,7 +154,6 @@ function GovernanceProcess(props: GovernanceProcessContent) {
   );
 }
 
-// Leadership Section Component (for current leadership when available)
 function LeadershipSection() {
   return (
     <section className="p-8 bg-white rounded-lg shadow-md">

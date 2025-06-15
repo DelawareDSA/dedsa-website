@@ -1,4 +1,4 @@
-// next.config.ts
+
 
 import withBundleAnalyzer from '@next/bundle-analyzer';
 import type { NextConfig } from 'next';
@@ -12,10 +12,10 @@ const withAnalyzer = withBundleAnalyzer({
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
-  // remove the X-Powered-By header
+  
   poweredByHeader: false,
 
-  // Exclude specific routes from output file tracing
+  
   outputFileTracingExcludes: {
     '/_not-found': [],
   },
@@ -34,7 +34,7 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60 * 60 * 24 * 7, // 7 days
+    minimumCacheTTL: 60 * 60 * 24 * 7, 
   },
 
   redirects: async () => [
@@ -50,14 +50,14 @@ const nextConfig: NextConfig = {
     const styleSrc = `style-src 'self'${isDev ? " 'unsafe-inline'" : ''}`;
 
     return [
-      // 1) Calendar embed exception
+      
       {
         source: '/(.*)',
         headers: [
-          // Allow the page to be framed by itself
+          
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
 
-          // Permit iframes from Google Calendar & Google Accounts for OAuth redirects
+          
           {
             key: 'Content-Security-Policy',
             value: [
@@ -69,9 +69,9 @@ const nextConfig: NextConfig = {
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
-              // Allow embedding of Google Calendar & account login
+              
               "frame-src 'self' https://calendar.google.com https://accounts.google.com",
-              // Deprecated alias for older browsers
+              
               "child-src 'self' https://calendar.google.com https://accounts.google.com",
               'block-all-mixed-content',
             ].join('; '),
@@ -79,7 +79,7 @@ const nextConfig: NextConfig = {
         ],
       },
 
-      // 2) Static assets caching policy
+      
       {
         source: '/static/(.*)',
         headers: [
@@ -90,14 +90,14 @@ const nextConfig: NextConfig = {
         ],
       },
 
-      // 3) Global security headers for all other routes
+      
       {
         source: '/(.*)',
         headers: [
-          // From your JS config
+          
           { key: 'Referrer-Policy', value: 'no-referrer' },
 
-          // From your TS config
+          
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },

@@ -1,9 +1,7 @@
-// src/features/about/components/AboutHero.tsx
 import GenericSection from '@/core/components/shared/GenericSection';
 import { contentService } from '@/core/services/contentService';
 import type { AboutPageContent } from '@/core/types/pages/about';
 
-// Now strongly typed
 const aboutContent = contentService.getPageContent('about') as AboutPageContent;
 
 export default function AboutHero({

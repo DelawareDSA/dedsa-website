@@ -7,10 +7,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 
-// Inline cast so we can drop a separate typed variable
 const m = homeJson.missionSection as MissionSectionContent;
 
-// Config for the two background circles
 const bgConfigs: Array<{ cl: string; range: [number, number] }> = [
   {
     cl: 'absolute top-[10%] left-[5%] w-32 h-32 rounded-full bg-red-50',
@@ -22,8 +20,6 @@ const bgConfigs: Array<{ cl: string; range: [number, number] }> = [
   },
 ];
 
-// Separate component for background blobs to properly use hooks
-// Fixed AnimatedBlob component with proper types
 function AnimatedBlob({
   scrollYProgress,
   opacity,
@@ -141,9 +137,9 @@ export default function MissionSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            {/* Container for overlapping images */}
+            {}
             <div className="relative w-full h-full">
-              {/* First image - positioned at top-left */}
+              {}
               <motion.div
                 className="absolute top-0 left-0 w-[60%] h-[65%] z-10 rounded-lg overflow-hidden shadow-lg"
                 initial={{ opacity: 0, x: -20, y: -20 }}
@@ -171,7 +167,7 @@ export default function MissionSection() {
                 />
               </motion.div>
 
-              {/* Second image - overlapping in middle-right */}
+              {}
               <motion.div
                 className="absolute top-[15%] right-0 w-[50%] h-[60%] z-20 rounded-lg overflow-hidden shadow-lg"
                 initial={{ opacity: 0, x: 20, y: 20 }}
@@ -199,7 +195,7 @@ export default function MissionSection() {
                 />
               </motion.div>
 
-              {/* Third image - at bottom-center, overlapping the other two */}
+              {}
               <motion.div
                 className="absolute bottom-0 left-[20%] w-[60%] h-[50%] z-30 rounded-lg overflow-hidden shadow-lg"
                 initial={{ opacity: 0, y: 20 }}

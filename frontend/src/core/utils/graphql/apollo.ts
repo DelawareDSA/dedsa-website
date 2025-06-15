@@ -6,7 +6,7 @@ export const { getClient } = registerApolloClient(() => {
     cache: new InMemoryCache(),
     link: new HttpLink({
       uri: process.env.NEXT_PUBLIC_WORDPRESS_API_URL || '/api/graphql',
-      // Include credentials if you need authentication
+
       credentials: 'same-origin',
     }),
     defaultOptions: {

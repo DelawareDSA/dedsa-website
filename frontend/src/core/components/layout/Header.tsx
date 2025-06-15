@@ -29,7 +29,7 @@ export default function Header() {
       }`}
     >
       <div className="flex items-center justify-between space-x-6 container-page">
-        {/* Logo */}
+        {}
         <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/dedsa-logo.png"
@@ -47,7 +47,7 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop nav, now centered */}
+        {}
         <div className="items-center justify-center flex-1 hidden space-x-6 md:flex">
           {h.navItems.map((i: { name: string; href: string }) => (
             <Link
@@ -62,7 +62,7 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Join button */}
+        {}
         <div className="hidden md:flex">
           <Link
             href="/join"
@@ -78,7 +78,7 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Mobile menu toggle */}
+        {}
         <button
           className="md:hidden"
           aria-label="Toggle navigation menu"
@@ -111,7 +111,7 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile nav, text-centered */}
+      {}
       {open && (
         <nav className="flex flex-col items-center p-4 space-y-2 bg-white shadow-md md:hidden">
           {h.navItems.map((i: { name: string; href: string }) => (

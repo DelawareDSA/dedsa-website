@@ -1,9 +1,5 @@
-// Simple replacement for Apollo Client functionality
 import { fetchGraphQL } from './fetcher';
 
-/**
- * Get all post slugs for static generation
- */
 export async function getAllPostSlugs() {
   const query = `
     query GetAllPostSlugs {
@@ -21,9 +17,6 @@ export async function getAllPostSlugs() {
   return response.data?.posts?.nodes || [];
 }
 
-/**
- * Simple replacement for getClient().query for transitioning from Apollo
- */
 export const queryGraphQL = async <T>(
   query: string,
   variables?: Record<string, unknown>

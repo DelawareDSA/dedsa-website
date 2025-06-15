@@ -76,7 +76,7 @@ export default function CalendarFilters({
   return (
     <div className="bg-white rounded-lg shadow-md p-6 mb-6">
       <div className="flex flex-col lg:flex-row gap-4">
-        {/* Search */}
+        {}
         <div className="flex-1">
           <label htmlFor="search" className="sr-only">
             Search events
@@ -106,7 +106,7 @@ export default function CalendarFilters({
           </div>
         </div>
 
-        {/* Filter Toggle */}
+        {}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
           className={`px-4 py-2 rounded-lg transition-colors flex items-center gap-2 ${
@@ -146,11 +146,11 @@ export default function CalendarFilters({
         )}
       </div>
 
-      {/* Expanded Filters */}
+      {}
       {isExpanded && (
         <div className="mt-6 pt-6 border-t border-gray-200">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Categories */}
+            {}
             <div>
               <h3 className="font-semibold text-dsa-black mb-3">Categories</h3>
               <div className="space-y-2">
@@ -175,7 +175,7 @@ export default function CalendarFilters({
               </div>
             </div>
 
-            {/* Committees */}
+            {}
             <div>
               <h3 className="font-semibold text-dsa-black mb-3">Committees</h3>
               <div className="space-y-2">

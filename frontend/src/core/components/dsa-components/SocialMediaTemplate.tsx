@@ -34,12 +34,12 @@ export const SocialMediaTemplate = ({
         aspectRatio: spec.ratio,
       }}
     >
-      {/* DSA Brand Bar */}
+      {}
       <div className="absolute top-0 left-0 right-0 h-24 bg-dsa-red flex items-center px-8">
         <DSALogo variant="white" size="small" />
       </div>
 
-      {/* Content */}
+      {}
       <div className="pt-32 px-8 pb-8 h-full flex flex-col">
         <h1 className="font-styrene-b text-4xl mb-4">{message}</h1>
         <div className="flex-grow">

@@ -56,7 +56,6 @@ export default function PrivacyPage({ data }: PrivacyPageProps) {
   };
 
   const renderContent = (content: string) => {
-    // Handle basic markdown-style formatting
     return content
       .split('**')
       .map((part, index) =>
@@ -67,7 +66,7 @@ export default function PrivacyPage({ data }: PrivacyPageProps) {
   return (
     <div className="min-h-screen py-12 bg-gray-50">
       <div className="container max-w-4xl px-4 mx-auto">
-        {/* Header */}
+        {}
         <div className="mb-12 text-center">
           <h1 className="mb-4 text-4xl font-bold text-dsa-black">
             {data.title}
@@ -77,7 +76,7 @@ export default function PrivacyPage({ data }: PrivacyPageProps) {
           </p>
         </div>
 
-        {/* Sections */}
+        {}
         <div className="space-y-8">
           {data.sections.map((section) => (
             <section
@@ -95,7 +94,7 @@ export default function PrivacyPage({ data }: PrivacyPageProps) {
               <div className="prose prose-lg max-w-none text-dsa-slate">
                 <p className="mb-4">{renderContent(section.content)}</p>
 
-                {/* Regular items list */}
+                {}
                 {section.items && (
                   <ul className="mb-4 space-y-2">
                     {section.items.map((item, index) => (
@@ -107,7 +106,7 @@ export default function PrivacyPage({ data }: PrivacyPageProps) {
                   </ul>
                 )}
 
-                {/* Subsections */}
+                {}
                 {section.subsections && (
                   <div className="space-y-6">
                     {section.subsections.map((subsection, index) => (
@@ -138,7 +137,7 @@ export default function PrivacyPage({ data }: PrivacyPageProps) {
                   </div>
                 )}
 
-                {/* Contact information */}
+                {}
                 {section.contact && (
                   <div className="p-4 mt-4 rounded-lg bg-gray-50">
                     <div className="flex items-center mb-2">
@@ -168,7 +167,7 @@ export default function PrivacyPage({ data }: PrivacyPageProps) {
                   </div>
                 )}
 
-                {/* Third-party services */}
+                {}
                 {section.services && (
                   <div className="mt-4 space-y-3">
                     {section.services.map((service, index) => (
@@ -187,7 +186,7 @@ export default function PrivacyPage({ data }: PrivacyPageProps) {
                   </div>
                 )}
 
-                {/* Contact methods */}
+                {}
                 {section.contact_methods && (
                   <div className="mt-4 space-y-2">
                     {section.contact_methods.map((method, index) => (
@@ -220,7 +219,7 @@ export default function PrivacyPage({ data }: PrivacyPageProps) {
                   </div>
                 )}
 
-                {/* Contact info text */}
+                {}
                 {section.contact_info && (
                   <div className="p-3 mt-4 border border-blue-200 rounded bg-blue-50">
                     <p className="text-sm text-blue-800">
@@ -233,13 +232,13 @@ export default function PrivacyPage({ data }: PrivacyPageProps) {
           ))}
         </div>
 
-        {/* Legal Notice */}
+        {}
         <div className="p-6 mt-12 text-white rounded-lg bg-dsa-black">
           <h2 className="mb-4 text-xl font-bold text-white">Legal Notice</h2>
           <p className="text-gray-300">{data.legalNotice}</p>
         </div>
 
-        {/* Contact CTA */}
+        {}
         <div className="mt-8 text-center">
           <div className="inline-flex items-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
             <Mail className="w-5 h-5 mr-3 text-dsa-red" />

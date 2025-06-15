@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// count-tokens-dir.js
+
 
 const fs = require('fs/promises');
 const path = require('path');
 
-// Exclude files by name or regex
+
 const EXCLUDE_FILES = [
   'README.md',
   '.env',
@@ -74,13 +74,13 @@ async function* getFiles(dir) {
       results.push({ file: path.relative(process.cwd(), filePath), tokens });
     }
 
-    // Sort descending
+    
     results.sort((a, b) => b.tokens - a.tokens);
     for (const { file, tokens } of results) {
       console.log(`${file}: ${tokens}`);
     }
   } finally {
-    // Guarded free: only calls if using the WASM-backed 'tiktoken' package
+    
     if (typeof enc.free === 'function') {
       enc.free();
     }

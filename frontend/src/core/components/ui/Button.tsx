@@ -22,7 +22,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       lg: 'text-lg px-8 py-4',
     }[size];
 
-    // Ensure minimum touch target
     const minHeight = {
       sm: 'min-h-[36px]',
       md: 'min-h-[44px]',

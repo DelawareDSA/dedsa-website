@@ -23,19 +23,18 @@ export default function UdYdsaPage(props: Props) {
 
   return (
     <div className="min-h-screen bg-dsa-red-t4">
-      {/* passes only the hero object */}
+      {}
       <HeroSection hero={hero} />
 
-      {/* passes only campaigns array */}
+      {}
       <CampaignsSection campaigns={campaignsSection.campaigns} />
 
-      {/* eventsSection already has the right shape */}
+      {}
       <EventsSection {...eventsSection} />
     </div>
   );
 }
 
-// Hero Section
 function HeroSection({ hero }: { hero: HeroSectionContent }) {
   return (
     <section className="py-20 text-white bg-gradient-to-r from-dsa-red to-red-700">
@@ -47,7 +46,6 @@ function HeroSection({ hero }: { hero: HeroSectionContent }) {
   );
 }
 
-// Campaigns Section
 function CampaignsSection({
   campaigns,
 }: {
@@ -81,7 +79,6 @@ function CampaignsSection({
   );
 }
 
-// Events Section
 function EventsSection({
   upcomingEvents,
   viewAllLinkText,
@@ -104,7 +101,6 @@ function EventsSection({
   );
 }
 
-// Meeting Info Section
 function MeetingInfoSection(props: MeetingInfoSectionContent) {
   return (
     <section className="py-16 bg-gray-50">
@@ -151,7 +147,6 @@ function MeetingInfoSection(props: MeetingInfoSectionContent) {
   );
 }
 
-// Leadership Section
 function LeadershipSection({
   leaders,
   contactLinkText,
@@ -187,7 +182,6 @@ function LeadershipSection({
   );
 }
 
-// Join Section
 function JoinSection({ title, description, buttonText }: JoinSectionContent) {
   return (
     <section className="py-16 text-white bg-dsa-red">

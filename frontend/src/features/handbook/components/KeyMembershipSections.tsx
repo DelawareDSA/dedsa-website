@@ -1,4 +1,3 @@
-// frontend/src/features/handbook/components/KeyMembershipSections.tsx
 import { HandbookPageContent } from '../Page';
 
 interface KeyMembershipSectionsProps {
@@ -30,7 +29,7 @@ export default function KeyMembershipSections({
             </h3>
             <p className="mb-4 text-gray-700">{section.description}</p>
 
-            {/* Link to PDF section */}
+            {}
             <a
               href={`${data.pdfUrl}#${section.pageLink}`}
               target="_blank"

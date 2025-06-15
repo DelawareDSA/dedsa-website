@@ -7,7 +7,6 @@ import { motion, useAnimation, type Variants } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-// Type assertion for the imported JSON
 const typedJoinCTAContent =
   joinCTAContent.joinCTASection as JoinCTASectionContent;
 
@@ -41,7 +40,6 @@ export default function JoinCTASection() {
     },
   };
 
-  // Animated diagonal line pattern
   const linePatternVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {

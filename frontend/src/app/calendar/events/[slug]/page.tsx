@@ -1,4 +1,3 @@
-// src/app/calendar/events/[slug]/page.tsx
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import CalendarEventClient from './client';
@@ -8,7 +7,6 @@ interface PageProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-// Event type definition
 interface Event {
   id: string;
   title: string;
@@ -28,7 +26,6 @@ interface Event {
   tags: string[];
 }
 
-// Mock event data - replace with your actual data source
 const events: Record<string, Event> = {
   'general-meeting-june': {
     id: 'general-meeting-june',
@@ -95,7 +92,6 @@ async function getEvent(slug: string) {
 }
 
 export default async function CalendarEventPage({ params }: PageProps) {
-  // Await the params since they're now async in Next.js 15
   const { slug } = await params;
 
   const event = await getEvent(slug);
@@ -110,7 +106,6 @@ export default async function CalendarEventPage({ params }: PageProps) {
   return <CalendarEventClient event={event} relatedEvents={relatedEvents} />;
 }
 
-// Generate metadata for SEO
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -141,7 +136,6 @@ export async function generateMetadata({
   };
 }
 
-// Generate static params for build-time generation
 export async function generateStaticParams() {
   return Object.keys(events).map((slug) => ({
     slug,

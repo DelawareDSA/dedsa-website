@@ -1,4 +1,3 @@
-// src/features/home/components/GetInvolvedSection/UpcomingEventsCard.tsx
 'use client';
 
 import Link from 'next/link';
@@ -7,11 +6,10 @@ import { Event } from './types';
 
 interface Props {
   events: Event[];
-  maxEvents?: number; // Add optional prop to control number of events
+  maxEvents?: number;
 }
 
 export default function UpcomingEventsCard({ events, maxEvents = 3 }: Props) {
-  // Limit the number of events displayed
   const displayedEvents = events.slice(0, maxEvents);
 
   return (

@@ -1,4 +1,3 @@
-// File: frontend/src/features/calendar/components/CalendarSubscription.tsx
 'use client';
 
 import { useState } from 'react';
@@ -45,7 +44,7 @@ export default function CalendarSubscription({
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold">Subscribe to Our Calendar</h3>
         <button onClick={() => setIsOpen(!isOpen)} className="btn btn-primary">
-          {/* Icon */}
+          {}
           Subscribe
         </button>
       </div>
@@ -57,11 +56,9 @@ export default function CalendarSubscription({
 
       {isOpen && (
         <div className="space-y-4 border-t pt-4">
-          {/* Google Calendar */}
+          {}
           <div className="flex items-center justify-between p-4 border rounded-lg">
-            <div className="flex items-center gap-3">
-              {/* Icon and title */}
-            </div>
+            <div className="flex items-center gap-3">{}</div>
             <a
               href={generateGoogleCalendarAddUrl()}
               target="_blank"
@@ -72,11 +69,9 @@ export default function CalendarSubscription({
             </a>
           </div>
 
-          {/* Outlook */}
+          {}
           <div className="flex items-center justify-between p-4 border rounded-lg">
-            <div className="flex items-center gap-3">
-              {/* Icon and title */}
-            </div>
+            <div className="flex items-center gap-3">{}</div>
             <a
               href={generateOutlookUrl()}
               target="_blank"
@@ -87,11 +82,9 @@ export default function CalendarSubscription({
             </a>
           </div>
 
-          {/* Apple Calendar */}
+          {}
           <div className="flex items-center justify-between p-4 border rounded-lg">
-            <div className="flex items-center gap-3">
-              {/* Icon and title */}
-            </div>
+            <div className="flex items-center gap-3">{}</div>
             <a
               href={iCalUrl}
               target="_blank"
@@ -102,7 +95,7 @@ export default function CalendarSubscription({
             </a>
           </div>
 
-          {/* iCal/Manual */}
+          {}
           <div className="p-4 border rounded-lg">
             <p className="text-sm text-dsa-black mb-2">Copy the iCal URL:</p>
             <div className="flex gap-2">
@@ -125,7 +118,7 @@ export default function CalendarSubscription({
             </div>
           </div>
 
-          {/* Embedded Calendar */}
+          {}
           <div className="p-4 border rounded-lg">
             <button
               onClick={() => setShowEmbed(!showEmbed)}

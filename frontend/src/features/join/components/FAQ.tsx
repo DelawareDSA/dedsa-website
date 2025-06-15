@@ -1,7 +1,6 @@
 import faqData from '@/core/content/pages/join.json';
 import { FAQContent } from '@/features/join/types';
 
-// Type assertion for imported JSON
 const typedContent = faqData.faq as FAQContent;
 
 export default function FAQ() {

@@ -37,7 +37,7 @@ export default function PhotoReleaseForm({
         materials, social media, and publications. Your consent is required.
       </p>
 
-      {/* Name Field */}
+      {}
       <div className="mb-4">
         <label className="block mb-2 font-bold text-dsa-black">
           Full Name <span className="text-dsa-red">*</span>
@@ -54,7 +54,7 @@ export default function PhotoReleaseForm({
         />
       </div>
 
-      {/* Email Field */}
+      {}
       <div className="mb-4">
         <label className="block mb-2 font-bold text-dsa-black">
           Email <span className="text-dsa-red">*</span>
@@ -69,7 +69,7 @@ export default function PhotoReleaseForm({
         />
       </div>
 
-      {/* Consent Checkbox */}
+      {}
       <div className="mb-6">
         <label className="flex items-start">
           <input

@@ -1,21 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { handleGraphQLRequest } from '@/mocks/api/mockApiHandlers';
 
-// Force using mock data via environment variable
 const useMockApi = process.env.NEXT_PUBLIC_USE_MOCK_DATA === 'true';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    // Use mock data if requested
     if (useMockApi) {
       console.log('Using mock API data for GraphQL request');
       const mockResponse = await handleGraphQLRequest(body);
       return NextResponse.json(mockResponse);
     }
 
-    // Forward request to WordPress GraphQL endpoint if not using mocks
     const wpEndpoint =
       process.env.WORDPRESS_API_URL ||
       'http://delaware-dsa-backend.local/graphql';
@@ -41,7 +38,6 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('GraphQL API route error:', error);
 
-    // Even in error case, return mock data if using mocks
     if (useMockApi) {
       try {
         const mockResponse = await handleGraphQLRequest({

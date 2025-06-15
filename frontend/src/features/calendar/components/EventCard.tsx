@@ -21,7 +21,6 @@ export default function EventCard({
   event,
   isCompact = false,
 }: EventCardProps) {
-  // Add safety check for event object
   if (!event) {
     console.error('EventCard: event prop is undefined');
     return (
@@ -31,7 +30,6 @@ export default function EventCard({
     );
   }
 
-  // Add safety checks for required properties
   const safeEvent = {
     id: event.id || 'unknown',
     title: event.title || 'Untitled Event',

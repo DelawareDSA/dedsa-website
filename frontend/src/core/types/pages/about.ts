@@ -1,5 +1,3 @@
-// src/core/types/pages/about.ts
-
 export interface AboutPageContent {
   page: {
     title: string;

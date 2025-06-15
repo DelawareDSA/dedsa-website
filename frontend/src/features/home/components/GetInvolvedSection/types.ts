@@ -1,5 +1,3 @@
-// frontend/src/components/home/GetInvolvedSection/types.ts
-
 export interface Event {
   title: string;
   date: string;

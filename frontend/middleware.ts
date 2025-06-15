@@ -2,14 +2,14 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 const rateLimit = {
-  windowMs: 60 * 1000, // 1 minute
-  max: 60, // limit each IP to 60 requests per windowMs
+  windowMs: 60 * 1000, 
+  max: 60, 
 };
 
 const cache = new Map();
 
 export function middleware(request: NextRequest) {
-  // Only apply to API routes
+  
   if (!request.nextUrl.pathname.startsWith('/api/')) {
     return NextResponse.next();
   }

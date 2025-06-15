@@ -1,4 +1,3 @@
-// src/app/newsletter/[slug]/page.tsx
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import NewsletterPageClient from './client';
@@ -8,7 +7,6 @@ interface PageProps {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-// Mock newsletter data - replace with your actual data source
 const newsletters = {
   'march-2024': {
     id: 'march-2024',
@@ -91,7 +89,6 @@ async function getNewsletter(slug: string) {
 }
 
 export default async function NewsletterPage({ params }: PageProps) {
-  // Await the params since they're now async in Next.js 15
   const { slug } = await params;
 
   const newsletter = await getNewsletter(slug);
@@ -113,7 +110,6 @@ export default async function NewsletterPage({ params }: PageProps) {
   );
 }
 
-// Generate metadata for SEO
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -148,7 +144,6 @@ export async function generateMetadata({
   };
 }
 
-// Generate static params for build-time generation
 export async function generateStaticParams() {
   return Object.keys(newsletters).map((slug) => ({
     slug,

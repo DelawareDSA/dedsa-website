@@ -1,5 +1,3 @@
-// src/core/hooks/index.ts
-// Re-export all hooks
 export { useForm } from './useForm';
 export { useInfiniteScroll } from './useInfiniteScroll';
 export { useLocalStorage } from './useLocalStorage';

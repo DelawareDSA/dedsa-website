@@ -1,4 +1,3 @@
-// File: src/features/calendar/components/CustomMonthView.tsx
 'use client';
 
 import { motion } from 'framer-motion';
@@ -36,13 +35,11 @@ export default function CustomMonthView({
 
   const calendarDays = [];
 
-  // Previous month's trailing days
   for (let i = startingDayOfWeek - 1; i >= 0; i--) {
     const date = new Date(year, month, -i);
     calendarDays.push({ date, isCurrentMonth: false });
   }
 
-  // Current month's days
   for (let day = 1; day <= daysInMonth; day++) {
     const date = new Date(year, month, day);
     calendarDays.push({ date, isCurrentMonth: true });
@@ -52,7 +49,7 @@ export default function CustomMonthView({
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
-      {/* Header */}
+      {}
       <div className="grid grid-cols-7 border-b border-gray-200">
         {weekDays.map((day) => (
           <div
@@ -64,7 +61,7 @@ export default function CustomMonthView({
         ))}
       </div>
 
-      {/* Calendar Grid */}
+      {}
       <div className="grid grid-cols-7">
         {calendarDays.map(({ date, isCurrentMonth }, index) => {
           const dayEvents = getDayEvents(date);

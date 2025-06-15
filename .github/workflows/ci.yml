@@ -45,7 +45,7 @@ jobs:
         run: |
           cd frontend
           CURRENT_SIZE=$(du -sk .next/static | cut -f1)
-          THRESHOLD=5000  # 5MB
+          THRESHOLD=5000
           if [ $CURRENT_SIZE -gt $THRESHOLD ]; then
             echo "❌ Bundle size ${CURRENT_SIZE}KB exceeds ${THRESHOLD}KB"
             exit 1

@@ -1,4 +1,3 @@
-// src/core/utils/graphql/fetcher.ts
 interface GraphQLResponse<T = unknown> {
   data?: T;
   errors?: Array<{ message: string }>;

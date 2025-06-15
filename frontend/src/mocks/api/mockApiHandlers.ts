@@ -1,4 +1,3 @@
-// Mock API handlers for development
 interface GraphQLRequest {
   query: string;
   variables?: Record<string, unknown>;
@@ -15,7 +14,6 @@ export async function handleGraphQLRequest(
 ): Promise<GraphQLResponse> {
   console.log('Mock GraphQL request:', request);
 
-  // Check if we're looking for posts
   if (
     request.query.includes('posts') ||
     request.query.includes('GetAllPostSlugs')
@@ -38,7 +36,6 @@ export async function handleGraphQLRequest(
     };
   }
 
-  // Default mock response
   return {
     data: {
       mock: true,

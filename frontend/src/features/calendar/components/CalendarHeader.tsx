@@ -1,4 +1,3 @@
-// File: frontend/src/features/calendar/components/CalendarHeader.tsx
 'use client';
 
 import type { CalendarViewType } from '@/core/types/pages/calendar';
@@ -60,7 +59,7 @@ export default function CalendarHeader({
 
   return (
     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-      {/* Navigation and Title */}
+      {}
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2">
           <button
@@ -68,14 +67,14 @@ export default function CalendarHeader({
             className="p-2 hover:bg-dsa-red-t4 rounded-lg transition-colors"
             aria-label="Previous"
           >
-            {/* SVG icon */}
+            {}
           </button>
           <button
             onClick={() => onNavigate('next')}
             className="p-2 hover:bg-dsa-red-t4 rounded-lg transition-colors"
             aria-label="Next"
           >
-            {/* SVG icon */}
+            {}
           </button>
         </div>
 
@@ -96,7 +95,7 @@ export default function CalendarHeader({
         </button>
       </div>
 
-      {/* View Options */}
+      {}
       <div className="flex bg-dsa-red-t4 rounded-lg p-1">
         {VIEW_OPTIONS.map((option) => (
           <button

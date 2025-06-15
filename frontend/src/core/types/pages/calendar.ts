@@ -1,5 +1,3 @@
-// src/core/types/pages/calendar.ts
-
 export interface CalendarPageContent {
   title: string;
   subtitle: string;
@@ -18,7 +16,6 @@ export interface EventCalendarContent {
   loadingMessage: string;
   errorLoadingMessage: string;
 
-  // ** New live‐data props **
   events: CalendarEvent[];
   isLoading: boolean;
   error?: Error;
@@ -29,7 +26,6 @@ export interface MonthSelectorContent {
   nextMonth: string;
 }
 
-// Enhanced event types for calendar
 export interface CalendarEvent {
   id: string;
   title: string;

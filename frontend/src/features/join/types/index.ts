@@ -1,5 +1,3 @@
-// src/features/join/types/index.ts
-
 export interface JoinHeroContent {
   title: string;
   subtitle: string;

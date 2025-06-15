@@ -5,11 +5,9 @@ import { useInView } from 'react-intersection-observer';
 import chapterStatsContent from '@/core/content/pages/home.json';
 import { ChapterStatsSectionContent } from '@/core/types/pages/home';
 
-// Type assertion for the imported JSON
 const typedChapterStatsContent =
   chapterStatsContent.chapterStatsSection as ChapterStatsSectionContent;
 
-// A simpler, lightweight version of stats animation
 export default function ChapterStatsSection() {
   const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
   const statsRefs = {
@@ -29,7 +27,7 @@ export default function ChapterStatsSection() {
 
   return (
     <section ref={ref} className="py-16 bg-white  relative overflow-hidden">
-      {/* Background grid pattern */}
+      {}
       <div className="absolute inset-0 opacity-5">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -116,7 +114,6 @@ function CountUp({
       const elapsed = Date.now() - startTime;
       const progress = Math.min(elapsed / updateDuration, 1);
 
-      // Easing function for smooth animation
       const easedProgress =
         progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
       const current = Math.min(Math.floor(easedProgress * end), end);

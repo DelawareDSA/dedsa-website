@@ -1,4 +1,3 @@
-// src/core/services/contentService.ts
 import footer from '../content/layout/footer.json';
 import header from '../content/layout/header.json';
 import about from '../content/pages/about.json';
@@ -14,7 +13,6 @@ import newsletter from '../content/pages/newsletter.json';
 import udYdsa from '../content/pages/ud-ydsa.json';
 import whatWeStandFor from '../content/pages/what-we-stand-for.json';
 
-// Import all content directly
 const pageContent = {
   about,
   home,
@@ -36,16 +34,10 @@ const componentContent = {
 };
 
 export const contentService = {
-  /**
-   * Get content for a specific page
-   */
   getPageContent: (pageName: keyof typeof pageContent) => {
     return pageContent[pageName];
   },
 
-  /**
-   * Get content for a specific component
-   */
   getComponentContent: (componentName: keyof typeof componentContent) => {
     return componentContent[componentName];
   },

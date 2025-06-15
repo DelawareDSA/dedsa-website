@@ -1,5 +1,3 @@
-// src/core/types/pages/home.ts
-
 export interface HomePageContent {
   heroSection: HeroSectionContent;
   missionSection: MissionSectionContent;

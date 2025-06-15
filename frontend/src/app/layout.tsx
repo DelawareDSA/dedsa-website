@@ -10,7 +10,6 @@ import MainWrapper from './MainWrapper';
 import PageTransition from './PageTransition';
 import { Providers } from './providers';
 
-// Add Styrene B font definition
 const styreneB = localFont({
   src: [
     {

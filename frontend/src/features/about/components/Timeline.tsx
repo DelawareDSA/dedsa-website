@@ -1,7 +1,6 @@
 import timelineData from '@/core/content/pages/about.json';
 import { TimelineContent } from '@/core/types/pages/about';
 
-// Type assertion for imported JSON
 const typedContent = timelineData.timeline as TimelineContent;
 
 interface TimelineProps {

@@ -28,34 +28,33 @@ export default function WhatWeStandForPage(props: Props) {
 
   return (
     <div className="min-h-screen bg-dsa-red-t4">
-      {/* Hero Section */}
+      {}
       <HeroSection hero={hero} />
 
-      {/* About Section */}
+      {}
       <AboutSection aboutSection={aboutSection} />
 
-      {/* Core Principles Section - NEW */}
+      {}
       <CorePrinciplesSection corePrinciplesSection={corePrinciplesSection} />
 
-      {/* Strategic Goals Section - NEW */}
+      {}
       <StrategicGoalsSection strategicGoalsSection={strategicGoalsSection} />
 
-      {/* Beliefs Section */}
+      {}
       <BeliefsSection beliefs={beliefs} />
 
-      {/* 2025 Priorities Section */}
+      {}
       <PrioritiesSection priorities2025={priorities2025} />
 
-      {/* Organization Section - NEW */}
+      {}
       <OrganizationSection organizationSection={organizationSection} />
 
-      {/* Call to Action */}
+      {}
       <CTASection cta={cta} />
     </div>
   );
 }
 
-// Hero Section Component
 function HeroSection({ hero }: { hero: WhatWeStandForPageContent['hero'] }) {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
@@ -90,7 +89,6 @@ function HeroSection({ hero }: { hero: WhatWeStandForPageContent['hero'] }) {
   );
 }
 
-// About Section Component
 function AboutSection({
   aboutSection,
 }: {
@@ -128,11 +126,6 @@ function AboutSection({
   );
 }
 
-// NEW: Core Principles Section Component
-
-// NEW: Strategic Goals Section Component
-
-// Beliefs Section Component
 function BeliefsSection({
   beliefs,
 }: {
@@ -201,7 +194,6 @@ function BeliefsSection({
   );
 }
 
-// Priorities Section Component - Updated for 2025
 function PrioritiesSection({
   priorities2025,
 }: {
@@ -217,7 +209,7 @@ function PrioritiesSection({
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Background Pattern */}
+      {}
       <div className="absolute inset-0 opacity-5">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -338,9 +330,6 @@ function PrioritiesSection({
   );
 }
 
-// NEW: Organization Section Component
-
-// CTA Section Component
 function CTASection({ cta }: { cta: WhatWeStandForPageContent['cta'] }) {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 

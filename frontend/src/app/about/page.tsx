@@ -8,15 +8,10 @@ export const metadata: Metadata = {
     'Learn about the Delaware chapter of the Democratic Socialists of America.',
 };
 
-/**
- * This `Page` is a Next.js server component (no custom props),
- * so it satisfies App Router requirements.
- */
 export default function Page() {
-  // Pull out exactly the values AboutPageProps expects:
   const missionStatement = aboutContent.aboutHero.defaultMissionStatement;
   const foundingYear = aboutContent.timeline.defaultFoundingYear;
-  // Compute yearsActive if not provided:
+
   const yearsActive = new Date().getFullYear() - foundingYear;
   const achievementsList = aboutContent.achievements.defaultAchievements;
 

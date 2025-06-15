@@ -6,7 +6,6 @@ interface EventItemProps {
 }
 
 export default function EventItem({ event, index }: EventItemProps) {
-  // Add safety checks
   if (!event) {
     return (
       <div className="border-l-4 border-gray-300 pl-4 py-3 bg-gray-50 rounded-r-lg">

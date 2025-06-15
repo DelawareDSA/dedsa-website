@@ -1,7 +1,6 @@
 import joinHeroData from '@/core/content/pages/join.json';
 import { JoinHeroContent } from '@/features/join/types';
 
-// Type assertion for imported JSON
 const typedContent = joinHeroData.joinHero as JoinHeroContent;
 
 export default function JoinHero() {

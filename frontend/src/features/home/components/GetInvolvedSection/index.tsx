@@ -1,4 +1,3 @@
-// src/features/home/components/GetInvolvedSection/index.tsx
 'use client';
 
 import { useGoogleCalendar } from '@/core/hooks/calendar/useGoogleCalendar';
@@ -7,9 +6,6 @@ import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import CommitteesCard from './CommitteesCard';
 import UpcomingEventsCard from './UpcomingEventsCard';
-
-// (You can remove this import if you no longer need JSON content for heading/subheading)
-// import getInvolvedContent from '@/core/content/pages/home.json';
 
 export default function GetInvolvedSection() {
   const [isClient, setIsClient] = useState(false);
@@ -65,12 +61,12 @@ export default function GetInvolvedSection() {
       >
         <motion.div className="text-center mb-12" variants={itemVariants}>
           <h2 className="text-3xl md:text-5xl font-bold mb-2 text-heading">
-            {/* You can hard-code or prop-drill this heading now */}
+            {}
             Get Involved
           </h2>
           <div className="w-24 h-1 bg-dsa-red mx-auto mb-4 rounded"></div>
           <p className="text-lg text-secondary max-w-3xl mx-auto">
-            {/* You can hard-code or prop-drill this subheading now */}
+            {}
             Join a committee or attend our next event.
           </p>
         </motion.div>

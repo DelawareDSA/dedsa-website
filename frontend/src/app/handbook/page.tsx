@@ -8,10 +8,6 @@ export const metadata: Metadata = {
     'Your comprehensive guide to getting involved with Delaware DSA - from new member orientation to organizing campaigns.',
 };
 
-/**
- * This `Page` is a Next.js server component (no custom props),
- * so it satisfies App Router requirements.
- */
 export default function Page() {
   return <HandbookPage data={handbookContent} />;
 }

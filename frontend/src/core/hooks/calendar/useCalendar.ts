@@ -24,9 +24,7 @@ export function useCalendar() {
       setLoading(true);
       try {
         await new Promise((r) => setTimeout(r, 1000));
-        const mockEvents: CalendarEvent[] = [
-          /* ... */
-        ];
+        const mockEvents: CalendarEvent[] = [];
         setEvents(mockEvents);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load events');

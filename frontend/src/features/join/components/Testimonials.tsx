@@ -1,7 +1,6 @@
 import testimonialsData from '@/core/content/pages/join.json';
 import { TestimonialsContent } from '@/features/join/types';
 
-// Type assertion for imported JSON
 const typedContent = testimonialsData.testimonials as TestimonialsContent;
 
 export default function Testimonials() {

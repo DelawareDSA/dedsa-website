@@ -1,4 +1,3 @@
-// frontend/src/features/bylaws/components/OtherDocuments.tsx
 import { BylawsPageContent } from '@/core/types/pages/bylaws';
 
 interface OtherDocumentsProps {

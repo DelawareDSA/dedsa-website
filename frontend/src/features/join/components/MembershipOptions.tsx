@@ -2,7 +2,6 @@ import membershipOptionsData from '@/core/content/pages/join.json';
 import { MembershipOptionsContent } from '@/features/join/types';
 import Link from 'next/link';
 
-// Type assertion for imported JSON
 const typedContent =
   membershipOptionsData.membershipOptions as MembershipOptionsContent;
 
@@ -11,7 +10,7 @@ export default function MembershipOptions() {
 
   return (
     <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2">
-      {/* DSA Membership Card */}
+      {}
       <div className="overflow-hidden bg-white rounded-lg shadow-md">
         <div className="p-6 text-white bg-gray-800">
           <h2 className="mb-2 text-2xl font-bold text-white">
@@ -51,7 +50,7 @@ export default function MembershipOptions() {
         </div>
       </div>
 
-      {/* Dues Waiver Card */}
+      {}
       <div className="overflow-hidden bg-white rounded-lg shadow-md">
         <div className="p-6 text-white bg-gray-800">
           <h2 className="mb-2 text-2xl font-bold text-white">

@@ -1,4 +1,3 @@
-// src/app/calendar/events/[slug]/client.tsx
 'use client';
 
 import { motion } from 'framer-motion';
@@ -10,7 +9,7 @@ interface Event {
   id: string;
   title: string;
   description: string;
-  date: string; // ISO 8601 date string
+  date: string;
   startTime?: string;
   endTime?: string;
   location: string;
@@ -49,7 +48,6 @@ export default function CalendarEventClient({
   event,
   relatedEvents = [],
 }: CalendarEventClientProps) {
-  // Parse and format date/time
   const eventDate = new Date(event.date);
   const now = new Date();
   const isUpcoming = eventDate > now;
@@ -79,7 +77,7 @@ export default function CalendarEventClient({
           animate={{ opacity: 1, y: 0 }}
           className="max-w-4xl mx-auto"
         >
-          {/* Breadcrumb */}
+          {}
           <nav aria-label="breadcrumb" className="mb-6 text-sm text-dsa-black">
             <ol className="flex items-center space-x-2">
               <li>
@@ -100,7 +98,7 @@ export default function CalendarEventClient({
             </ol>
           </nav>
 
-          {/* Event Header */}
+          {}
           <header className="bg-white rounded-lg shadow-md overflow-hidden p-8">
             <div className="flex flex-col md:flex-row justify-between mb-6">
               <div>
@@ -123,9 +121,9 @@ export default function CalendarEventClient({
               </div>
             </div>
 
-            {/* Details */}
+            {}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              {/* Date & Time */}
+              {}
               <div>
                 <h2 className="text-lg font-semibold text-dsa-black mb-2">
                   Date &amp; Time
@@ -136,7 +134,7 @@ export default function CalendarEventClient({
                 {timeRange && <p className="text-dsa-black">{timeRange}</p>}
               </div>
 
-              {/* Location */}
+              {}
               <div>
                 <h2 className="text-lg font-semibold text-dsa-black mb-2">
                   Location
@@ -157,7 +155,7 @@ export default function CalendarEventClient({
               </div>
             </section>
 
-            {/* Registration */}
+            {}
             {event.registrationRequired && (
               <section className="mb-8">
                 <h2 className="text-lg font-semibold text-dsa-black mb-2">
@@ -185,7 +183,7 @@ export default function CalendarEventClient({
               </section>
             )}
 
-            {/* Tags */}
+            {}
             {event.tags && event.tags.length > 0 && (
               <section className="mb-8">
                 <h2 className="text-lg font-semibold text-dsa-black mb-2">
@@ -204,7 +202,7 @@ export default function CalendarEventClient({
               </section>
             )}
 
-            {/* Description */}
+            {}
             <section className="border-t pt-8 mb-8">
               <h2 className="text-lg font-semibold text-dsa-black mb-4">
                 About This Event
@@ -214,7 +212,7 @@ export default function CalendarEventClient({
               </div>
             </section>
 
-            {/* Actions */}
+            {}
             <div className="border-t pt-8 flex flex-wrap gap-4">
               <Link href="/calendar" className="btn btn-secondary">
                 ← Back to Calendar
@@ -228,7 +226,7 @@ export default function CalendarEventClient({
             </div>
           </header>
 
-          {/* Related Events */}
+          {}
           {relatedEvents.length > 0 && (
             <aside className="mt-12 bg-white rounded-lg shadow-md p-8">
               <h2 className="text-2xl font-bold text-dsa-black mb-6">

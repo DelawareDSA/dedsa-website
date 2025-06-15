@@ -7,7 +7,6 @@ import { useTypewriterEffect } from '@/core/utils/animations';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-// Inline cast to drop a separate binding
 const c =
   homeJson.strategicPrioritiesSection as StrategicPrioritiesSectionContent;
 
@@ -26,7 +25,7 @@ export default function StrategicPrioritiesSection() {
 
   return (
     <section ref={ref} className="relative py-20 overflow-hidden bg-dsa-red-t4">
-      {/* Dot-pattern background */}
+      {}
       <div className="absolute inset-0 opacity-5">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -43,7 +42,7 @@ export default function StrategicPrioritiesSection() {
         </svg>
       </div>
 
-      {/* Blobs */}
+      {}
       <Blob
         color="rgba(236,31,39,0.05)"
         className="top-[10%] left-[5%]"

@@ -1,4 +1,3 @@
-// File: frontend/src/features/calendar/Page.tsx
 'use client';
 
 import type {
@@ -12,16 +11,14 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export interface CalendarFeatureProps extends CalendarPageContent {
-  /** The structured data for the full calendar view */
   eventCalendar: EventCalendarContent;
-  /** Data for rendering the month selector dropdown */
+
   monthSelectorData: MonthSelectorContent;
-  /** Subscription info for users to subscribe to calendar feeds */
+
   subscription: CalendarSubscription;
 }
 
 export default function CalendarFeature({
-  /* fields from CalendarPageContent */
   title,
   subtitle,
   errorTitle,
@@ -32,7 +29,6 @@ export default function CalendarFeature({
   googleCalendarButtonText,
   iCalOutlookButtonText,
 
-  /* the newly added props */
   eventCalendar,
   monthSelectorData,
   subscription,
@@ -43,7 +39,6 @@ export default function CalendarFeature({
     useState<Partial<CalendarFeatureProps> | null>(null);
   const { googleCalendarEmbedUrl, iCalUrl, googleCalendarUrl } = subscription;
 
-  // Add debug logging
   useEffect(() => {
     console.log('CalendarFeature props:', {
       title,
@@ -78,7 +73,7 @@ export default function CalendarFeature({
           </p>
         </motion.div>
 
-        {/* Debug Information - Remove this in production */}
+        {}
         {process.env.NODE_ENV === 'development' && debugInfo && (
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
             <h3 className="font-bold text-yellow-800 mb-2">Debug Info:</h3>
@@ -89,7 +84,7 @@ export default function CalendarFeature({
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          {/* Main Calendar Area */}
+          {}
           <div className="lg:col-span-3">
             <div className="bg-white rounded-lg shadow-md p-6">
               <div className="flex justify-between items-center mb-6">
@@ -127,7 +122,7 @@ export default function CalendarFeature({
                     title="Delaware DSA Calendar"
                     onError={() => setShowEmbed(false)}
                   ></iframe>
-                  {/* Fallback overlay */}
+                  {}
                   <div
                     id="calendar-fallback"
                     className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-90 text-center p-8 rounded"
@@ -196,7 +191,7 @@ export default function CalendarFeature({
                 </div>
               )}
 
-              {/* Display event calendar fallback message */}
+              {}
               <div className="bg-white rounded-lg shadow-md p-6 mt-6">
                 <h3 className="text-xl font-bold mb-4">Event Information</h3>
                 <div className="text-center py-8">
@@ -213,9 +208,9 @@ export default function CalendarFeature({
             </div>
           </div>
 
-          {/* Sidebar */}
+          {}
           <div className="space-y-6">
-            {/* Month Selector */}
+            {}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-lg font-semibold mb-4">
                 {monthSelectorData?.label || 'Browse by Month'}
@@ -337,7 +332,7 @@ export default function CalendarFeature({
               </div>
             </div>
 
-            {/* Event Categories */}
+            {}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-lg font-semibold mb-4">Event Categories</h3>
               <div className="space-y-2">
@@ -364,7 +359,7 @@ export default function CalendarFeature({
               </div>
             </div>
 
-            {/* Calendar Help */}
+            {}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-lg font-semibold mb-4">Need Help?</h3>
               <div className="space-y-3 text-sm">

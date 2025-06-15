@@ -1,4 +1,3 @@
-// src/app/calendar/events/[slug]/client.tsx
 'use client';
 
 import { motion } from 'framer-motion';
@@ -44,7 +43,7 @@ export default function CalendarEventClient({
           animate={{ opacity: 1, y: 0 }}
           className="max-w-4xl mx-auto"
         >
-          {/* Breadcrumb */}
+          {}
           <nav className="mb-6">
             <ol className="flex items-center space-x-2 text-sm text-dsa-black">
               <li>
@@ -63,7 +62,7 @@ export default function CalendarEventClient({
             </ol>
           </nav>
 
-          {/* Event Header */}
+          {}
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="p-8">
               <div className="flex items-start justify-between mb-6">
@@ -98,7 +97,7 @@ export default function CalendarEventClient({
                 </div>
               </div>
 
-              {/* Event Details Grid */}
+              {}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div className="space-y-4">
                   <div>
@@ -190,7 +189,7 @@ export default function CalendarEventClient({
                 </div>
               </div>
 
-              {/* Event Description */}
+              {}
               <div className="border-t pt-8">
                 <h3 className="text-lg font-semibold text-dsa-black mb-4">
                   About This Event
@@ -200,7 +199,7 @@ export default function CalendarEventClient({
                 </div>
               </div>
 
-              {/* Action Buttons */}
+              {}
               <div className="border-t pt-8 flex flex-wrap gap-4">
                 <Link href="/calendar" className="btn btn-secondary">
                   ← Back to Calendar
@@ -220,7 +219,7 @@ export default function CalendarEventClient({
             </div>
           </div>
 
-          {/* Related Events */}
+          {}
           <div className="mt-12 bg-white rounded-lg shadow-md p-8">
             <h3 className="text-2xl font-bold text-dsa-black mb-6">
               More Events

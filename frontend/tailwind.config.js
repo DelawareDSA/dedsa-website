@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx}',
@@ -30,7 +30,7 @@ module.exports = {
             t4: '#DBD7D8',
           },
           cream: '#FFF3F5',
-          // Alternative social media palette
+          
           rose: '#F25C60',
           slate: '#4F5966',
           'off-white': '#FDFBFA',

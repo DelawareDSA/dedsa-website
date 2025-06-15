@@ -9,7 +9,6 @@ interface ListViewProps {
 }
 
 export default function ListView({ events }: ListViewProps) {
-  // Group events by date
   const groupedEvents = events.reduce(
     (groups, event) => {
       const date = new Date(event.startDate).toDateString();

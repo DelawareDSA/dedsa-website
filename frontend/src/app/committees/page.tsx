@@ -20,7 +20,7 @@ export default function CommitteesPage() {
   return (
     <div className="min-h-screen py-12 bg-dsa-red-t4">
       <div className="container-page">
-        {/* Page Header */}
+        {}
         <div className="mb-12">
           <h1 className="mb-4 text-4xl font-bold">{content.title}</h1>
           <p className="mb-4 text-xl text-dsa-black">{content.subtitle}</p>
@@ -29,7 +29,7 @@ export default function CommitteesPage() {
           </p>
         </div>
 
-        {/* Committees Section */}
+        {}
         <section className="mb-12">
           <h2 className="mb-8 text-3xl font-bold">Committees</h2>
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -39,7 +39,7 @@ export default function CommitteesPage() {
           </div>
         </section>
 
-        {/* Working Groups Section */}
+        {}
         <section>
           <h2 className="mb-8 text-3xl font-bold">Working Groups</h2>
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">

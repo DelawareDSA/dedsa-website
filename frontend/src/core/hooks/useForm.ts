@@ -19,7 +19,7 @@ export function useForm<T extends Record<string, unknown>>({
     ) => {
       const { name, value } = e.target;
       setValues((prev) => ({ ...prev, [name]: value }));
-      // Clear error when field is modified
+
       if (errors[name]) {
         setErrors((prev) => {
           const newErrors = { ...prev };
@@ -46,7 +46,7 @@ export function useForm<T extends Record<string, unknown>>({
       setIsSubmitting(true);
       try {
         await onSubmit(values);
-        // Reset form after successful submission
+
         setValues(initialValues);
         setErrors({});
       } catch (error) {

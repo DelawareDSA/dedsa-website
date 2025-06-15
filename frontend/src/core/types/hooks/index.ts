@@ -1,6 +1,3 @@
-// src/core/types/hooks/index.ts
-
-// useForm types
 export interface UseFormProps<T> {
   initialValues: T;
   validate?: (values: T) => ValidationResult;
@@ -12,11 +9,9 @@ export interface ValidationResult {
   errors: Record<string, string>;
 }
 
-// useInfiniteScroll types
 export interface UseInfiniteScrollProps {
   threshold?: number;
   onLoadMore: () => Promise<void>;
 }
 
-// useNewsletterSubscription types
 export type SubscriptionStatus = 'idle' | 'submitting' | 'success' | 'error';

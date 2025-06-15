@@ -1,4 +1,3 @@
-// frontend/src/features/bylaws/components/KeyGovernanceSections.tsx
 import { BylawsPageContent } from '@/core/types/pages/bylaws';
 
 interface KeyGovernanceSectionsProps {
@@ -30,7 +29,7 @@ export default function KeyGovernanceSections({
             </h3>
             <p className="mb-4 text-gray-700">{section.description}</p>
 
-            {/* Link to PDF section */}
+            {}
             <a
               href={`${data.pdfUrl}#${section.pageLink}`}
               target="_blank"

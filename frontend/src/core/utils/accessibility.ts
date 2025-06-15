@@ -1,5 +1,4 @@
 export const a11y = {
-  // Check contrast ratio
   checkContrast: (fg: string, bg: string): number => {
     const luminance = (hex: string): number => {
       const cleaned = hex.replace('#', '');
@@ -23,7 +22,6 @@ export const a11y = {
     return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
   },
 
-  // Generate accessible color pairs
   getAccessiblePair: (baseColor: string) => {
     const pairs: Record<string, { light: string; dark: string | null }> = {
       '#EC1F27': { light: '#FFFFFF', dark: '#231F20' },
@@ -32,7 +30,6 @@ export const a11y = {
     return pairs[baseColor] || { light: '#FFFFFF', dark: '#231F20' };
   },
 
-  // Ensure minimum font size
   clampFontSize: (size: string): string => {
     const numSize = parseFloat(size);
     const unit = size.replace(/[0-9.]/g, '');

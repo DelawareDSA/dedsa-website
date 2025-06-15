@@ -36,12 +36,11 @@ export default function ContactForm() {
     });
 
     setIsSubmitting(false);
-    // Handle response...
   };
 
   return (
     <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
-      {/* Name Field */}
+      {}
       <div className="mb-4">
         <label htmlFor="name" className="block mb-2 font-bold text-dsa-black">
           Name <span className="text-dsa-red">*</span>
@@ -57,7 +56,7 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Email Field */}
+      {}
       <div className="mb-4">
         <label htmlFor="email" className="block mb-2 font-bold text-dsa-black">
           Email <span className="text-dsa-red">*</span>
@@ -73,7 +72,7 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Subject Field */}
+      {}
       <div className="mb-4">
         <label
           htmlFor="subject"
@@ -94,7 +93,7 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Message Field */}
+      {}
       <div className="mb-6">
         <label
           htmlFor="message"
@@ -115,7 +114,7 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* Consent Checkbox - REQUIRED for DSA compliance */}
+      {}
       <div className="mb-6">
         <label className="flex items-start">
           <input
@@ -138,7 +137,7 @@ export default function ContactForm() {
         </label>
       </div>
 
-      {/* Submit Button */}
+      {}
       <button
         type="submit"
         disabled={isSubmitting || !formData.consent}

@@ -1,4 +1,3 @@
-// frontend/src/features/bylaws/components/FrequentlyAskedQuestions.tsx
 'use client';
 import { BylawsPageContent } from '@/core/types/pages/bylaws';
 import { useState } from 'react';

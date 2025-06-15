@@ -1,9 +1,5 @@
-// src/core/types/pages/index.ts
-// Basic page types
-
 export * from './about';
 
-// Temporary placeholders for other page types
 export type HomePageProps = object;
 export type BylawsPageProps = object;
 export type CalendarPageProps = object;

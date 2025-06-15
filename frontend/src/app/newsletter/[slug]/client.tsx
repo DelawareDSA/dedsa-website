@@ -1,4 +1,3 @@
-// src/app/newsletter/[slug]/client.tsx
 'use client';
 
 import { motion } from 'framer-motion';
@@ -68,7 +67,7 @@ export default function NewsletterPageClient({
           animate={{ opacity: 1, y: 0 }}
           className="max-w-4xl mx-auto"
         >
-          {/* Breadcrumb */}
+          {}
           <nav className="mb-6">
             <ol className="flex items-center space-x-2 text-sm text-dsa-black">
               <li>
@@ -87,7 +86,7 @@ export default function NewsletterPageClient({
             </ol>
           </nav>
 
-          {/* Newsletter Header */}
+          {}
           <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
             <div className="p-8">
               <div className="flex items-center justify-between mb-6">
@@ -115,7 +114,7 @@ export default function NewsletterPageClient({
                 </div>
               </div>
 
-              {/* Tags */}
+              {}
               {newsletter.tags && newsletter.tags.length > 0 && (
                 <div className="flex flex-wrap gap-2 mb-6">
                   {newsletter.tags.map((tag, index) => (
@@ -129,7 +128,7 @@ export default function NewsletterPageClient({
                 </div>
               )}
 
-              {/* Share Buttons */}
+              {}
               <div className="flex gap-4 pt-6 border-t">
                 {isClient && 'share' in navigator && (
                   <button onClick={handleShare} className="btn btn-outline">
@@ -146,7 +145,7 @@ export default function NewsletterPageClient({
             </div>
           </div>
 
-          {/* Newsletter Content */}
+          {}
           <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
             <div className="p-8">
               <div
@@ -156,7 +155,7 @@ export default function NewsletterPageClient({
             </div>
           </div>
 
-          {/* Call to Action */}
+          {}
           <div className="bg-dsa-red text-white rounded-lg p-8 mb-8">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Get Involved</h3>
@@ -186,7 +185,7 @@ export default function NewsletterPageClient({
             </div>
           </div>
 
-          {/* Newsletter Subscription */}
+          {}
           <div className="bg-white rounded-lg shadow-md p-8 mb-8">
             <h3 className="text-2xl font-bold text-dsa-black mb-4">
               Subscribe to Our Newsletter
@@ -208,7 +207,7 @@ export default function NewsletterPageClient({
             </form>
           </div>
 
-          {/* Other Newsletters */}
+          {}
           <div className="bg-white rounded-lg shadow-md p-8">
             <h3 className="text-2xl font-bold text-dsa-black mb-6">
               Other Newsletters
@@ -251,7 +250,7 @@ export default function NewsletterPageClient({
             </div>
           </div>
 
-          {/* Navigation */}
+          {}
           <div className="mt-8 flex justify-between">
             <Link href="/newsletter" className="btn btn-secondary">
               ← Back to Newsletter
