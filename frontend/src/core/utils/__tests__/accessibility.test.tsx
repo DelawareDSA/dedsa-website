@@ -18,8 +18,8 @@ describe('Accessibility Compliance', () => {
       { bg: '#FBD2D4', fg: '#231F20' },
     ];
 
-    combinations.forEach((combination) => {
-      const ratio = calculateContrastRatio(combination.bg, combination.fg);
+    combinations.forEach(({ bg, fg }) => {
+      const ratio = calculateContrastRatio(bg, fg);
       expect(ratio).toBeGreaterThanOrEqual(4.5);
     });
   });
@@ -38,7 +38,30 @@ describe('Accessibility Compliance', () => {
   });
 });
 
-function calculateContrastRatio(bg: string, fg: string): number {
-  // Mock implementation - replace with actual calculation if needed
-  return 4.5;
+function calculateContrastRatio(
+  background: string,
+  foreground: string
+): number {
+  // Helper function to get relative luminance
+  const getLuminance = (hex: string): number => {
+    const rgb = parseInt(hex.slice(1), 16);
+    const r = (rgb >> 16) & 0xff;
+    const g = (rgb >> 8) & 0xff;
+    const b = rgb & 0xff;
+
+    const [rL, gL, bL] = [r, g, b].map((component) => {
+      const c = component / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    });
+
+    return 0.2126 * rL + 0.7152 * gL + 0.0722 * bL;
+  };
+
+  const backgroundLuminance = getLuminance(background);
+  const foregroundLuminance = getLuminance(foreground);
+
+  const lighter = Math.max(backgroundLuminance, foregroundLuminance);
+  const darker = Math.min(backgroundLuminance, foregroundLuminance);
+
+  return (lighter + 0.05) / (darker + 0.05);
 }
