@@ -35,7 +35,7 @@
         "<strong>Full participation</strong> in national and local campaigns"
       ],
       "buttonText": "Join DSA",
-      "buttonUrl": "https://www.example.com"
+      "buttonUrl": "https://dsausa.org/join"
     },
     "duesWaiver": {
       "title": "Dues Waiver Program",
@@ -46,7 +46,7 @@
         "To request a dues waiver or sponsorship from Delaware DSA, please contact us using the button below."
       ],
       "buttonText": "Request Dues Waiver",
-      "buttonUrl": "/contact?subject=Dues%20Waiver"
+      "buttonUrl": "https://act.dsausa.org/survey/dueswaiver/"
     }
   },
   "testimonials": {

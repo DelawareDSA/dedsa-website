@@ -6,6 +6,7 @@ import Header from '@/core/components/layout/Header';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import React from 'react';
+import MainWrapper from './MainWrapper';
 import PageTransition from './PageTransition';
 import { Providers } from './providers';
 
@@ -72,9 +73,9 @@ export default function RootLayout({
         <Providers>
           <ThemeProvider>
             <Header />
-            <main id="main" className="flex-grow">
+            <MainWrapper>
               <PageTransition>{children}</PageTransition>
-            </main>
+            </MainWrapper>
             <Footer />
           </ThemeProvider>
         </Providers>
