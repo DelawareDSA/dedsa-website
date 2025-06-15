@@ -1,5 +1,3 @@
-
-
 import withBundleAnalyzer from '@next/bundle-analyzer';
 import type { NextConfig } from 'next';
 
@@ -11,11 +9,12 @@ const withAnalyzer = withBundleAnalyzer({
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-
-  
+  output: 'export',
   poweredByHeader: false,
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  distDir: 'dist',
 
-  
   outputFileTracingExcludes: {
     '/_not-found': [],
   },
@@ -34,7 +33,7 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60 * 60 * 24 * 7, 
+    minimumCacheTTL: 60 * 60 * 24 * 7,
   },
 
   redirects: async () => [
@@ -50,14 +49,11 @@ const nextConfig: NextConfig = {
     const styleSrc = `style-src 'self'${isDev ? " 'unsafe-inline'" : ''}`;
 
     return [
-      
       {
         source: '/(.*)',
         headers: [
-          
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
 
-          
           {
             key: 'Content-Security-Policy',
             value: [
@@ -69,9 +65,9 @@ const nextConfig: NextConfig = {
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
-              
+
               "frame-src 'self' https://calendar.google.com https://accounts.google.com",
-              
+
               "child-src 'self' https://calendar.google.com https://accounts.google.com",
               'block-all-mixed-content',
             ].join('; '),
@@ -79,7 +75,6 @@ const nextConfig: NextConfig = {
         ],
       },
 
-      
       {
         source: '/static/(.*)',
         headers: [
@@ -90,14 +85,11 @@ const nextConfig: NextConfig = {
         ],
       },
 
-      
       {
         source: '/(.*)',
         headers: [
-          
           { key: 'Referrer-Policy', value: 'no-referrer' },
 
-          
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },
