@@ -1,6 +1,6 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import NewsletterSubscription from '@/core/components/ui/NewsletterSubscription';
+import { render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 describe('Newsletter Subscription Flow', () => {
   it('completes subscription successfully', async () => {

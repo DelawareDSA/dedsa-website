@@ -1,6 +1,5 @@
 import { sanitizeString } from '@/core/utils/sanitization';
 import { isEmail, isNonEmpty } from '@/core/utils/validation';
-import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(req: Request) {
