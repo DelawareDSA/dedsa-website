@@ -76,8 +76,8 @@ export default function JoinCTASection() {
                 y1="0"
                 x2="0"
                 y2="10"
-                stroke="white"
-                strokeWidth="1"
+                stroke="red"
+                strokeWidth="10"
               />
             </pattern>
           </defs>
@@ -87,13 +87,13 @@ export default function JoinCTASection() {
 
       <div className="relative z-10 text-center container-page">
         <motion.h2
-          className="mb-4 text-4xl font-bold md:text-5xl text-on-accent"
+          className="mb-4 text-4xl font-bold text-black md:text-5xl text-on-accent"
           variants={itemVariants}
         >
           {typedJoinCTAContent.heading}
         </motion.h2>
         <motion.p
-          className="max-w-2xl mx-auto mb-8 text-xl text-on-accent"
+          className="max-w-2xl mx-auto mb-8 text-xl text-black text-on-accent"
           variants={itemVariants}
         >
           {typedJoinCTAContent.description}

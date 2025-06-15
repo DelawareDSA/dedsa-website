@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import membershipOptionsData from '@/core/content/pages/join.json';
 import { MembershipOptionsContent } from '@/features/join/types';
+import Link from 'next/link';
 
 // Type assertion for imported JSON
 const typedContent =
@@ -10,19 +10,21 @@ export default function MembershipOptions() {
   const { dsaMembership, duesWaiver } = typedContent;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+    <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2">
       {/* DSA Membership Card */}
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
-        <div className="bg-gray-800 text-white p-6">
-          <h2 className="text-2xl font-bold mb-2">{dsaMembership.title}</h2>
+      <div className="overflow-hidden bg-white rounded-lg shadow-md">
+        <div className="p-6 text-white bg-gray-800">
+          <h2 className="mb-2 text-2xl font-bold text-white">
+            {dsaMembership.title}
+          </h2>
           <p className="text-lg">{dsaMembership.subtitle}</p>
         </div>
         <div className="p-6">
-          <ul className="space-y-4 mb-6">
+          <ul className="mb-6 space-y-4">
             {dsaMembership.benefits.map((benefit, index) => (
               <li key={index} className="flex">
                 <svg
-                  className="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
+                  className="flex-shrink-0 w-6 h-6 mr-2 text-green-500"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -42,7 +44,7 @@ export default function MembershipOptions() {
             href={dsaMembership.buttonUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full btn btn-primary text-center block"
+            className="block w-full text-center btn btn-primary"
           >
             {dsaMembership.buttonText}
           </a>
@@ -50,9 +52,11 @@ export default function MembershipOptions() {
       </div>
 
       {/* Dues Waiver Card */}
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
-        <div className="bg-gray-800 text-white p-6">
-          <h2 className="text-2xl font-bold mb-2">{duesWaiver.title}</h2>
+      <div className="overflow-hidden bg-white rounded-lg shadow-md">
+        <div className="p-6 text-white bg-gray-800">
+          <h2 className="mb-2 text-2xl font-bold text-white">
+            {duesWaiver.title}
+          </h2>
           <p className="text-lg">{duesWaiver.subtitle}</p>
         </div>
         <div className="p-6">
@@ -63,7 +67,7 @@ export default function MembershipOptions() {
           ))}
           <Link
             href={duesWaiver.buttonUrl}
-            className="w-full btn btn-primary text-center block"
+            className="block w-full text-center btn btn-primary"
           >
             {duesWaiver.buttonText}
           </Link>

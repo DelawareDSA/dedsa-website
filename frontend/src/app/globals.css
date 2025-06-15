@@ -11,6 +11,16 @@
     --font-heading: var(--font-styrene-b);
     --font-body: var(--font-manifold-dsa);
 
+    --on-accent: #ffffff; /* White text for colored backgrounds */
+    --heading-text: #231f20; /* DSA Black for headings */
+    --text-primary: #231f20; /* DSA Black for primary text */
+    --text-secondary: #4f5966; /* DSA Slate for secondary text */
+    --nav-text: #231f20; /* DSA Black for navigation */
+    --text-muted: #7f7b7c; /* DSA Black t2 for muted text */
+    --link-text: #ec1f27; /* DSA Red for links */
+    --card-title: #231f20; /* DSA Black for card titles */
+    --card-text: #231f20; /* DSA Black for card text */
+
     /* DSA Type Scale */
     --type-4xl: 4rem; /* 64pt */
     --type-3xl: 3rem; /* 48pt */
