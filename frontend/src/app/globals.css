@@ -8,17 +8,17 @@
 @layer base {
   :root {
     /* Semantic tokens for typography & colors */
-    --text-primary: theme('colors.gray.800');
-    --text-secondary: theme('colors.gray.600');
-    --text-muted: theme('colors.gray.500');
-    --heading-text: theme('colors.gray.900');
-    --link-text: theme('colors.dsa.red.DEFAULT');
-    --nav-text: theme('colors.gray.700');
-    --on-accent: theme('colors.white');
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
+    --heading-text: #111827;
+    --link-text: #ec1f27;
+    --nav-text: #374151;
+    --on-accent: #ffffff;
     --btn-primary-text: var(--on-accent);
-    --btn-secondary-text: theme('colors.dsa.red.DEFAULT');
-    --card-title: theme('colors.gray.800');
-    --card-text: theme('colors.gray.600');
+    --btn-secondary-text: #ec1f27;
+    --card-title: #1f2937;
+    --card-text: #4b5563;
 
     --type-4xl: 4rem; /* 64pt */
     --type-3xl: 3rem; /* 48pt */
@@ -388,17 +388,9 @@
 @layer components {
   .bg-mesh-primary {
     background:
-      radial-gradient(
-        at 40% 20%,
-        theme('colors.dsa.red.DEFAULT') 0%,
-        transparent 50%
-      ),
-      radial-gradient(
-        at 80% 0%,
-        theme('colors.dsa.red.t1') 0%,
-        transparent 50%
-      ),
-      radial-gradient(at 0% 50%, theme('colors.dsa.red.t2') 0%, transparent 50%);
+      radial-gradient(at 40% 20%, #ec1f27 0%, transparent 50%),
+      radial-gradient(at 80% 0%, #f04c53 0%, transparent 50%),
+      radial-gradient(at 0% 50%, #f4797e 0%, transparent 50%);
   }
   .glass-card {
     background: linear-gradient(
@@ -411,7 +403,7 @@
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
   }
   .glow-primary {
-    box-shadow: 0 0 20px theme('colors.dsa.red.DEFAULT');
+    box-shadow: 0 0 20px #ec1f27;
   }
   .noise-overlay::after {
     /* SVG noise filter as before */
@@ -472,12 +464,8 @@
 @media (prefers-color-scheme: dark) {
   .bg-mesh-primary {
     background:
-      radial-gradient(
-        at 40% 20%,
-        theme('colors.dsa.red.t1') 0%,
-        transparent 60%
-      ),
-      radial-gradient(at 80% 0%, theme('colors.dsa.red.t2') 0%, transparent 60%);
+      radial-gradient(at 40% 20%, #f04c53 0%, transparent 60%),
+      radial-gradient(at 80% 0%, #f4797e 0%, transparent 60%);
   }
   .glass-card {
     background: linear-gradient(
