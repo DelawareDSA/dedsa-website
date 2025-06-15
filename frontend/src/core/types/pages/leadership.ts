@@ -42,3 +42,39 @@ export interface LeadershipCardContent {
   bioDefault: string;
   emailDefault: string;
 }
+
+export interface OfficerPosition {
+  position: string;
+  count: string;
+  responsibilities: string;
+  requirements: string;
+}
+
+export interface OfficerStructureContent {
+  title: string;
+  description: string;
+  officers: OfficerPosition[];
+  diversityRequirements: {
+    genderRequirement: string;
+    bipocRequirement: string;
+    note: string;
+  };
+}
+
+export interface GovernanceProcess {
+  title: string;
+  description: string;
+}
+
+export interface GovernanceProcessContent {
+  title: string;
+  description: string;
+  processes: GovernanceProcess[];
+}
+
+export interface FullLeadershipPageContent extends LeadershipPageContent {
+  chapterStructure: ChapterStructureContent;
+  leadershipCard: LeadershipCardContent;
+  officerStructure?: OfficerStructureContent;
+  governanceProcess?: GovernanceProcessContent;
+}
