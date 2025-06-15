@@ -5,7 +5,7 @@ import { axe, toHaveNoViolations } from 'jest-axe';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 expect.extend(toHaveNoViolations as any);
 
-describe.skip('Accessibility Compliance', () => {
+describe('Accessibility Compliance', () => {
   it('should not have accessibility violations on home page', async () => {
     const { container } = render(<HomePage />);
     const results = await axe(container);
@@ -31,6 +31,7 @@ describe.skip('Accessibility Compliance', () => {
 
     images.forEach((img) => {
       const alt = img.getAttribute('alt');
+
       expect(alt).toBeTruthy();
       expect(alt!.length).toBeLessThanOrEqual(120);
       expect(alt).toMatch(/^[A-Z]/);

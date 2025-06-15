@@ -13,7 +13,8 @@
     "type-check": "tsc --noEmit",
     "check-readability": "node scripts/check-readability.js",
     "test:compliance": "npm run check-readability && npm run test",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "test": "jest"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
