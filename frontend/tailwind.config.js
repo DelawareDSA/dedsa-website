@@ -9,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        manifold: ['var(--font-manifold-dsa)', 'system-ui', 'sans-serif'],
+        styrene: ['var(--font-styrene-b)', 'system-ui', 'sans-serif'],
+      },
       colors: {
         dsa: {
           red: {
@@ -26,7 +30,30 @@ module.exports = {
             t4: '#DBD7D8',
           },
           cream: '#FFF3F5',
+          // Alternative social media palette
+          rose: '#F25C60',
+          slate: '#4F5966',
+          'off-white': '#FDFBFA',
         },
+      },
+      fontSize: {
+        '4xl': '4rem',
+        '3xl': '3rem',
+        '2xl': '2.25rem',
+        xl: '1.75rem',
+        lg: '1.25rem',
+        base: '1rem',
+        sm: '0.875rem',
+      },
+      letterSpacing: {
+        display: '-0.02em',
+        heading: '0',
+        small: '0.08em',
+      },
+      lineHeight: {
+        tight: '1.2',
+        normal: '1.5',
+        relaxed: '1.75',
       },
       typography: {
         DEFAULT: {

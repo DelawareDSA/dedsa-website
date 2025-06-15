@@ -41,9 +41,9 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center py-20 md:py-28 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-animated z-0" />
-      <div className="absolute inset-0 bg-black bg-opacity-20 z-10">
+    <section className="relative flex items-center min-h-screen py-20 overflow-hidden md:py-28">
+      <div className="absolute inset-0 z-0 bg-gradient-animated" />
+      <div className="absolute inset-0 z-10 bg-black bg-opacity-20">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern
@@ -92,7 +92,7 @@ export default function HeroSection() {
         </>
       )}
 
-      <div className="container-page relative z-20" ref={ref}>
+      <div className="relative z-20 container-page" ref={ref}>
         {ready && (
           <motion.div
             className="max-w-3xl"
@@ -101,12 +101,12 @@ export default function HeroSection() {
             animate={inView ? 'visible' : 'hidden'}
           >
             <motion.h1
-              className="text-4xl md:text-7xl font-bold mb-6 tracking-tight text-on-accent relative inline-block"
+              className="mb-4 text-4xl font-bold font-styrene md:text-7xl text-dsa-black tracking-display"
               variants={item}
             >
               <span className="relative z-10">{c.mainHeading}</span>
               <motion.span
-                className="absolute -bottom-2 left-0 h-4 bg-dsa-red z-0"
+                className="absolute left-0 z-0 h-4 -bottom-2 bg-dsa-red"
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{ delay: 1, duration: 0.8 }}
@@ -114,20 +114,20 @@ export default function HeroSection() {
             </motion.h1>
 
             <motion.div variants={item}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-on-accent">
+              <h2 className="mb-6 text-2xl font-black font-manifold md:text-3xl text-dsa-black tracking-heading">
                 {c.subHeading}
               </h2>
             </motion.div>
 
             <motion.p
-              className="text-xl mb-2 text-on-accent opacity-90"
+              className="mb-2 text-xl text-on-accent opacity-90"
               variants={item}
             >
               {c.tagline}
             </motion.p>
 
             <motion.p
-              className="text-xl mb-8 leading-relaxed text-on-accent"
+              className="mb-8 text-xl leading-relaxed text-on-accent"
               variants={item}
             >
               {c.description.split('.').map(
@@ -141,17 +141,17 @@ export default function HeroSection() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+              className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
               variants={item}
             >
-              <ConfettiButton className="btn bg-white text-dsa-red hover:bg-dsa-red-t4 font-medium transition transform hover:scale-105 focus:ring-4 focus:ring-white focus:ring-opacity-50 animation-pulse">
+              <ConfettiButton className="font-medium transition transform bg-white btn text-dsa-red hover:bg-dsa-red-t4 hover:scale-105 focus:ring-4 focus:ring-white focus:ring-opacity-50 animation-pulse">
                 <Link href={c.buttons.primary.href}>
                   {c.buttons.primary.text}
                 </Link>
               </ConfettiButton>
               <Link
                 href={c.buttons.secondary.href}
-                className="btn border-2 border-white text-on-accent hover:bg-white hover:text-dsa-red font-medium transition"
+                className="font-medium transition border-2 border-white btn text-on-accent hover:bg-white hover:text-dsa-red"
               >
                 {c.buttons.secondary.text}
               </Link>

@@ -1,11 +1,11 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import Blob from '@/core/components/ui/Blob';
 import homeJson from '@/core/content/pages/home.json';
 import { StrategicPrioritiesSectionContent } from '@/core/types/pages/home';
 import { useTypewriterEffect } from '@/core/utils/animations';
-import Blob from '@/core/components/ui/Blob';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 // Inline cast to drop a separate binding
 const c =
@@ -25,7 +25,7 @@ export default function StrategicPrioritiesSection() {
   const { displayText } = useTypewriterEffect(c.heading, 100);
 
   return (
-    <section ref={ref} className="py-20 bg-dsa-red-t4 relative overflow-hidden">
+    <section ref={ref} className="relative py-20 overflow-hidden bg-dsa-red-t4">
       {/* Dot-pattern background */}
       <div className="absolute inset-0 opacity-5">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -55,20 +55,20 @@ export default function StrategicPrioritiesSection() {
         size="400px"
       />
 
-      <div className="container-page relative z-10">
+      <div className="relative z-10 container-page">
         <motion.h2
-          className="text-3xl md:text-5xl font-bold mb-2 text-center text-heading"
+          className="mb-2 text-3xl font-bold text-center md:text-5xl text-heading"
           style={{ fontVariationSettings: `'wght' ${fontWeight.get()}` }}
         >
           {displayText}
         </motion.h2>
-        <p className="text-center mb-12 text-lg text-secondary">{c.subtitle}</p>
+        <p className="mb-12 text-lg text-center text-secondary">{c.subtitle}</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {c.priorities.map((p, i) => (
             <motion.div
               key={p.title}
-              className="group bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 border-l-4 border-dsa-red relative overflow-hidden"
+              className="relative p-8 overflow-hidden transition-all duration-500 bg-white border-l-4 shadow-md group rounded-xl hover:shadow-lg border-dsa-red"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
@@ -76,23 +76,24 @@ export default function StrategicPrioritiesSection() {
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
               <motion.div
-                className="absolute -right-20 -bottom-20 w-40 h-40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
+                className="absolute w-40 h-40 transition-opacity duration-500 ease-in-out rounded-full opacity-0 -right-20 -bottom-20 group-hover:opacity-100"
                 style={{
                   background:
                     'radial-gradient(circle,rgba(236,31,39,0.1) 0%,rgba(255,255,255,0) 70%)',
                 }}
               />
 
-              <div className="flex items-start mb-4 relative z-10">
+              <div className="relative z-10 flex items-start mb-4">
                 <motion.div
-                  className="p-3 bg-red-50 rounded-full mr-4 group-hover:bg-red-100 transition-colors duration-300"
+                  className="p-3 mr-4 transition-colors duration-300 rounded-full bg-red-50 group-hover:bg-red-100"
                   whileHover={{ rotate: [0, -10, 10, -10, 0] }}
                   transition={{ duration: 0.5 }}
                 >
                   <svg
-                    className="w-6 h-6 text-dsa-red group-hover:scale-110 transition-transform duration-300"
+                    className="w-6 h-6 transition-transform duration-300 text-dsa-red group-hover:scale-110"
                     fill="none"
                     stroke="currentColor"
+                    aria-label={`${p.title} campaign icon`}
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -103,12 +104,12 @@ export default function StrategicPrioritiesSection() {
                     />
                   </svg>
                 </motion.div>
-                <h3 className="text-xl font-bold text-card-title group-hover:text-dsa-red transition-colors duration-300">
+                <h3 className="text-xl font-bold transition-colors duration-300 text-card-title group-hover:text-dsa-red">
                   {p.title}
                 </h3>
               </div>
 
-              <p className="pl-12 relative z-10 text-card-body transition-all duration-300">
+              <p className="relative z-10 pl-12 transition-all duration-300 text-card-body">
                 {p.description}
               </p>
             </motion.div>
@@ -116,7 +117,7 @@ export default function StrategicPrioritiesSection() {
         </div>
 
         <motion.div
-          className="text-center mt-12"
+          className="mt-12 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -124,11 +125,11 @@ export default function StrategicPrioritiesSection() {
         >
           <a
             href={c.linkHref}
-            className="inline-flex items-center text-link hover:underline font-medium group"
+            className="inline-flex items-center font-medium text-link hover:underline group"
           >
             <span>{c.linkText}</span>
             <motion.svg
-              className="ml-2 w-5 h-5"
+              className="w-5 h-5 ml-2"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

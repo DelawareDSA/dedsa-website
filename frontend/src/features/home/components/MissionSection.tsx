@@ -1,11 +1,11 @@
 'use client';
 
+import homeJson from '@/core/content/pages/home.json';
+import { MissionSectionContent } from '@/core/types/pages/home';
 import { motion, MotionValue, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
-import homeJson from '@/core/content/pages/home.json';
-import { MissionSectionContent } from '@/core/types/pages/home';
 
 // Inline cast so we can drop a separate typed variable
 const m = homeJson.missionSection as MissionSectionContent;
@@ -58,7 +58,7 @@ export default function MissionSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.6, 1], [0, 1, 1, 0]);
 
   return (
-    <section ref={ref} className="py-20 relative bg-white overflow-hidden">
+    <section ref={ref} className="relative py-20 overflow-hidden bg-white">
       <div className="absolute inset-0 pointer-events-none">
         {bgConfigs.map((config, i) => (
           <AnimatedBlob
@@ -72,16 +72,16 @@ export default function MissionSection() {
       </div>
 
       <div className="container-page">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center md:space-x-12">
+        <div className="flex flex-col max-w-5xl mx-auto md:flex-row md:items-center md:space-x-12">
           <motion.div
-            className="md:w-1/2 mb-8 md:mb-0"
+            className="mb-8 md:w-1/2 md:mb-0"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
             <motion.h2
-              className="text-4xl font-bold mb-6 relative text-heading"
+              className="mb-6 text-3xl font-bold font-manifold md:text-5xl text-dsa-black tracking-heading"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -96,7 +96,7 @@ export default function MissionSection() {
               >
                 <span>{m.heading}</span>
                 <motion.span
-                  className="absolute bottom-0 left-0 w-full h-1 bg-dsa-red rounded"
+                  className="absolute bottom-0 left-0 w-full h-1 rounded bg-dsa-red"
                   initial={{ width: 0 }}
                   whileInView={{ width: '100%' }}
                   viewport={{ once: true }}
@@ -105,16 +105,17 @@ export default function MissionSection() {
               </motion.div>
             </motion.h2>
 
-            {m.paragraphs.map((p, i) => (
+            {m.paragraphs.map((paragraph, index) => (
               <motion.p
-                key={i}
-                className="text-lg mb-6 leading-relaxed text-primary"
+                key={index}
+                className="mb-4 text-lg leading-relaxed max-w-70ch text-dsa-slate"
+                style={{ fontSize: 'max(16px, 1rem)' }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
               >
-                {p}
+                {paragraph}
               </motion.p>
             ))}
 
@@ -126,7 +127,7 @@ export default function MissionSection() {
             >
               <Link
                 href={m.button.href}
-                className="btn btn-primary shadow-md hover:shadow-lg transition-all duration-300 hover-scale"
+                className="transition-all duration-300 shadow-md btn btn-primary hover:shadow-lg hover-scale"
               >
                 {m.button.text}
               </Link>

@@ -1,11 +1,11 @@
 'use client';
 
+import hJson from '@/core/content/layout/header.json';
+import { HeaderContent } from '@/core/types/layout';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import hJson from '@/core/content/layout/header.json';
-import { HeaderContent } from '@/core/types/layout';
 
 const h = hJson as HeaderContent;
 
@@ -28,12 +28,12 @@ export default function Header() {
         sc ? 'bg-white bg-opacity-95 shadow-md py-2' : 'bg-transparent py-4'
       }`}
     >
-      <div className="container-page flex items-center justify-between space-x-6">
+      <div className="flex items-center justify-between space-x-6 container-page">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/dedsa-logo.png"
-            alt="Logo"
+            alt="DSA logo featuring clasped black and white hands shaking in front of a red rose"
             width={40}
             height={40}
             className={`transition ${sc ? 'scale-90' : 'scale-100'}`}
@@ -48,7 +48,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav, now centered */}
-        <div className="hidden md:flex flex-1 items-center justify-center space-x-6">
+        <div className="items-center justify-center flex-1 hidden space-x-6 md:flex">
           {h.navItems.map((i: { name: string; href: string }) => (
             <Link
               key={i.name}
@@ -113,7 +113,7 @@ export default function Header() {
 
       {/* Mobile nav, text-centered */}
       {open && (
-        <nav className="md:hidden flex flex-col items-center p-4 bg-white shadow-md space-y-2">
+        <nav className="flex flex-col items-center p-4 space-y-2 bg-white shadow-md md:hidden">
           {h.navItems.map((i: { name: string; href: string }) => (
             <Link
               key={i.name}
@@ -126,7 +126,7 @@ export default function Header() {
           ))}
           <Link
             href="/join"
-            className="block w-full mt-2 px-2 py-1 text-center bg-dsa-red text-white"
+            className="block w-full px-2 py-1 mt-2 text-center text-white bg-dsa-red"
             onClick={() => setOpen(false)}
           >
             {h.joinButtonText}

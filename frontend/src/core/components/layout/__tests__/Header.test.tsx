@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { usePathname } from 'next/navigation';
 import Header from '../Header';
 
@@ -18,7 +18,11 @@ describe('Header', () => {
 
   it('renders logo and site name', () => {
     render(<Header />);
-    expect(screen.getByAltText('Logo')).toBeInTheDocument();
+    expect(
+      screen.getByAltText(
+        'DSA logo featuring clasped black and white hands shaking in front of a red rose'
+      )
+    ).toBeInTheDocument();
     expect(screen.getByText('Delaware DSA')).toBeInTheDocument();
   });
 

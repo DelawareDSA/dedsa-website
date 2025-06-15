@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run check-readability && next build",
     "start": "next start",
     "lint": "next lint",
     "prepare": "cd .. && husky",
     "analyze": "ANALYZE=true next build",
     "lint-report": "node scripts/lint-report.js",
     "type-check": "tsc --noEmit",
-    "test": "jest --passWithNoTests",
+    "check-readability": "node scripts/check-readability.js",
+    "test:compliance": "npm run check-readability && npm run test",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {

@@ -25,7 +25,7 @@ describe('HeroSection', () => {
     });
     expect(screen.getByText('Delaware DSA')).toBeInTheDocument();
     expect(
-      screen.getByText('Building Power for Working People')
+      screen.getByText('Building working-class power across Delaware')
     ).toBeInTheDocument();
   });
 
@@ -34,9 +34,13 @@ describe('HeroSection', () => {
       render(<HeroSection />);
     });
     expect(
-      screen.getByText('Member-run, progressive activism since 2021')
+      screen.getByText('Member-run organizing since 2021')
     ).toBeInTheDocument();
-    expect(screen.getByText(/We're building a democratic/)).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        'Building working-class power across Delaware through democratic organizing.'
+      )
+    ).toBeInTheDocument();
   });
 
   maybeIt('renders action buttons', () => {

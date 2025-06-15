@@ -12,6 +12,9 @@ const withAnalyzer = withBundleAnalyzer({
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
+  // remove the X-Powered-By header
+  poweredByHeader: false,
+
   // Exclude specific routes from output file tracing
   outputFileTracingExcludes: {
     '/_not-found': [],
@@ -21,11 +24,10 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'delawardsa.org', pathname: '/**' },
       {
-        protocol: process.env.NODE_ENV === 'development' ? 'http' : 'https',
-        hostname:
-          process.env.NODE_ENV === 'development'
-            ? 'delaware-dsa-backend.local'
-            : process.env.WORDPRESS_HOST || 'delawardsa.org',
+        protocol: isDev ? 'http' : 'https',
+        hostname: isDev
+          ? 'delaware-dsa-backend.local'
+          : process.env.WORDPRESS_HOST || 'delawardsa.org',
         pathname: '/**',
       },
     ],
@@ -67,13 +69,10 @@ const nextConfig: NextConfig = {
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
-              // Allow embedding of Google Calendar & account login within your page
+              // Allow embedding of Google Calendar & account login
               "frame-src 'self' https://calendar.google.com https://accounts.google.com",
               // Deprecated alias for older browsers
               "child-src 'self' https://calendar.google.com https://accounts.google.com",
-              // Continue to prevent your page being embedded elsewhere
-              "frame-src 'self' https://calendar.google.com https://*.google.com",
-              "frame-ancestors 'none'",
               'block-all-mixed-content',
             ].join('; '),
           },
@@ -95,6 +94,10 @@ const nextConfig: NextConfig = {
       {
         source: '/(.*)',
         headers: [
+          // From your JS config
+          { key: 'Referrer-Policy', value: 'no-referrer' },
+
+          // From your TS config
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'X-XSS-Protection', value: '1; mode=block' },

@@ -8,6 +8,25 @@ import localFont from 'next/font/local';
 import React from 'react';
 import PageTransition from './PageTransition';
 import { Providers } from './providers';
+
+// Add Styrene B font definition
+const styreneB = localFont({
+  src: [
+    {
+      path: '../../public/fonts/StyreneB-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/StyreneB-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-styrene-b',
+  display: 'swap',
+});
+
 const manifoldDSA = localFont({
   src: [
     {
@@ -21,7 +40,7 @@ const manifoldDSA = localFont({
       style: 'normal',
     },
     {
-      path: '../../public/fonts/ManifoldDSA-ExtraBold.woff2',
+      path: '../../public/fonts/ManifoldDSA-Black.woff2',
       weight: '900',
       style: 'normal',
     },
@@ -45,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={manifoldDSA.variable}>
+    <html lang="en" className={`${manifoldDSA.variable} ${styreneB.variable}`}>
       <body className="flex flex-col min-h-screen">
         <a href="#main" className="sr-only focus:not-sr-only">
           Skip to content

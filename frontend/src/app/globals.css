@@ -7,28 +7,20 @@
 -----------------------------------------------*/
 @layer base {
   :root {
-    /* Semantic tokens for typography & colors */
-    --text-primary: #1f2937;
-    --text-secondary: #4b5563;
-    --text-muted: #6b7280;
-    --heading-text: #111827;
-    --link-text: #ec1f27;
-    --nav-text: #374151;
-    --on-accent: #ffffff;
-    --btn-primary-text: var(--on-accent);
-    --btn-secondary-text: #ec1f27;
-    --card-title: #1f2937;
-    --card-text: #4b5563;
+    /* DSA Typography Variables */
+    --font-heading: var(--font-styrene-b);
+    --font-body: var(--font-manifold-dsa);
 
+    /* DSA Type Scale */
     --type-4xl: 4rem; /* 64pt */
     --type-3xl: 3rem; /* 48pt */
     --type-2xl: 2.25rem; /* 36pt */
     --type-xl: 1.75rem; /* 28pt */
     --type-lg: 1.25rem; /* 20pt */
-    --type-base: 1rem; /* 16pt */
+    --type-base: 1rem; /* 16pt - MINIMUM */
     --type-sm: 0.875rem; /* 14pt */
 
-    /* Tracking */
+    /* DSA Letter Spacing */
     --tracking-display: -0.02em; /* ≥64pt */
     --tracking-heading: 0; /* 16-48pt */
     --tracking-small: 0.08em; /* ≤12pt */
@@ -44,7 +36,10 @@
   }
 
   body {
-    @apply antialiased leading-relaxed bg-white text-primary;
+    font-family: var(--font-body);
+    font-size: max(16px, 1rem);
+    line-height: 1.5;
+    @apply antialiased bg-white text-dsa-black;
   }
 
   h1 {
@@ -63,28 +58,55 @@
   h1,
   h2,
   h3,
-  h4 {
-    @apply font-bold tracking-tight text-heading;
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    @apply text-dsa-black;
   }
+
   h1 {
-    @apply mb-4 text-4xl md:text-7xl;
+    font-size: var(--type-4xl);
+    letter-spacing: var(--tracking-display);
+    font-weight: 700;
   }
+
   h2 {
-    @apply mb-6 text-3xl md:text-5xl;
+    font-size: var(--type-3xl);
+    letter-spacing: var(--tracking-heading);
+    font-weight: 700;
   }
+
   h3 {
-    @apply mb-4 text-2xl;
-  }
-  h4 {
-    @apply mb-2 text-xl;
+    font-size: var(--type-2xl);
+    letter-spacing: var(--tracking-heading);
+    font-weight: 700;
   }
 
   p {
-    @apply mb-4 text-lg;
+    max-width: 70ch;
+    line-height: 1.5;
+    font-size: max(16px, 1rem);
+    @apply mb-4;
   }
 
   a {
-    @apply transition-colors duration-200 text-link hover:underline;
+    @apply transition-colors duration-200 text-dsa-red hover:text-dsa-red;
+  }
+
+  /* Remove pink/rose colors - replace with DSA Red */
+  .bg-pink-50,
+  .bg-rose-50 {
+    @apply bg-dsa-red-t4;
+  }
+  .bg-pink-100,
+  .bg-rose-100 {
+    @apply bg-dsa-red-t3;
+  }
+  .text-pink-600,
+  .text-rose-600 {
+    @apply text-dsa-red;
   }
 
   :focus {
