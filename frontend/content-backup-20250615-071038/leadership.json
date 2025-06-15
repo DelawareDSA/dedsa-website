@@ -1,0 +1,32 @@
+{
+  "title": "Leadership & Structure",
+  "introContent": "<p>Delaware DSA is a member-led organization with a democratically elected leadership team. Our chapter is structured to ensure accountability, transparency, and member involvement at every level.</p><p>Our elected officers serve two-year terms and are responsible for implementing the decisions and priorities established by our membership.</p>",
+  "fallbackContent": "<p>Delaware DSA is a member-led organization with a democratically elected leadership team. Our chapter is structured to ensure accountability, transparency, and member involvement at every level.</p><p>Our elected officers serve two-year terms and are responsible for implementing the decisions and priorities established by our membership.</p>",
+  "chapterStructure": {
+    "title": "Chapter Structure",
+    "description": "Our chapter operates with the following organizational structure:",
+    "structureItems": {
+      "generalMembership": {
+        "title": "General Membership",
+        "description": "All dues-paying members have voting rights at general meetings"
+      },
+      "steeringCommittee": {
+        "title": "Steering Committee",
+        "description": "Elected officers who coordinate chapter activities"
+      },
+      "workingGroups": {
+        "title": "Working Groups & Committees",
+        "description": "Focus on specific campaigns and chapter operations"
+      }
+    },
+    "meetingsInfo": "We hold general membership meetings monthly and steering committee meetings bi-weekly. All meetings are open to members, and meeting minutes are made available to ensure transparency.",
+    "bylawsLinkText": "Read our chapter bylaws",
+    "bylawsLinkHref": "/bylaws"
+  },
+  "leadershipCard": {
+    "roleDefault": "Chapter Member",
+    "nameDefault": "",
+    "bioDefault": "",
+    "emailDefault": ""
+  }
+}

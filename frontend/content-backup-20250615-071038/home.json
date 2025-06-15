@@ -1,0 +1,171 @@
+{
+  "heroSection": {
+    "mainHeading": "Delaware DSA",
+    "subHeading": "Building working-class power across Delaware",
+    "tagline": "Member-run organizing since 2021",
+    "description": "Building working-class power across Delaware through democratic organizing.",
+    "buttons": {
+      "primary": { "text": "Join Our Chapter", "href": "/join" },
+      "secondary": { "text": "Learn More", "href": "/about" }
+    }
+  },
+  "missionSection": {
+    "heading": "Our Mission",
+    "paragraphs": [
+      "We build worker power through democratic organizing.",
+      "We fight for housing, immigration justice, and Palestine solidarity."
+    ],
+    "button": { "text": "What We Stand For", "href": "/what-we-stand-for" }
+  },
+  "strategicPrioritiesSection": {
+    "heading": "Chapter Priorities for 2025",
+    "subtitle": "Fighting for working people across Delaware",
+    "linkText": "Learn more about our work",
+    "linkHref": "/what-we-stand-for",
+    "priorities": [
+      {
+        "title": "Stop ICE. Protect neighbors.",
+        "description": "Working alongside migrants' rights organizations to protect communities from ICE.",
+        "iconPath": "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+      },
+      {
+        "title": "End apartheid. Free Palestine.",
+        "description": "Building coalitions to decrease economic support for the state of Israel.",
+        "iconPath": "M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      },
+      {
+        "title": "Housing for all workers.",
+        "description": "Fighting for tenant protections and affordable housing through H.O.M.E.S. Campaign.",
+        "iconPath": "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+      },
+      {
+        "title": "Protect trans lives.",
+        "description": "Working to transform Delaware to actively support transgender people.",
+        "iconPath": "M12 14l9-5-9-5-9 5 9 5z"
+      }
+    ]
+  },
+  "getInvolvedSection": {
+    "heading": "Get Involved",
+    "subheading": "Join us in building a better Delaware"
+  },
+  "upcomingEventsCard": {
+    "heading": "Upcoming Events",
+    "buttonText": "View All Events",
+    "buttonHref": "/calendar",
+    "events": [
+      {
+        "date": "May 26, 2025 • 7:30 PM",
+        "isVirtual": true,
+        "location": "Zoom",
+        "title": "Communications Committee Meeting"
+      },
+      {
+        "date": "May 27, 2025 • 6:30 PM",
+        "isVirtual": true,
+        "location": "Jitsi",
+        "title": "International Solidarity Working Group Meeting"
+      }
+    ]
+  },
+  "committeesCard": {
+    "heading": "Committees & Working Groups",
+    "buttonText": "View All Committees",
+    "buttonHref": "/committees",
+    "committees": [
+      {
+        "description": "Advocate for tenant rights and campaign for affordable housing policies across Delaware.",
+        "icon": "M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z",
+        "title": "Housing Justice Working Group"
+      },
+      {
+        "description": "Organize global solidarity actions and build anti-imperialist alliances worldwide.",
+        "icon": "M12 2a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-9h2v2h-2zm0-6h2v4h-2z",
+        "title": "International Solidarity Working Group"
+      },
+      {
+        "description": "Build support networks and resources to uphold the rights of migrants and refugees.",
+        "icon": "M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-4 0c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm0 2c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4zm4 0c-1.33 0-4 .67-4 2v1h8v-1c0-1.33-2.67-2-4-2z",
+        "title": "Migrant Rights Working Group"
+      },
+      {
+        "description": "Amplify LGBTQ+ voices and integrate queer perspectives within our socialist campaigns.",
+        "icon": "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z",
+        "title": "Queer-Socialists Working Group"
+      },
+      {
+        "description": "Focus on member onboarding, retention, and creating meaningful opportunities for involvement.",
+        "icon": "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+        "title": "Membership Engagement Committee"
+      },
+      {
+        "description": "Handle chapter messaging, newsletter production, and manage social media presence.",
+        "icon": "M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9",
+        "title": "Communications Committee"
+      },
+      {
+        "description": "Provide safety and security coordination for chapter actions, events, and demonstrations.",
+        "icon": "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4",
+        "title": "Red Rabbits Committee"
+      },
+      {
+        "description": "Manage electoral work, candidate relations, and strategic political engagement.",
+        "icon": "M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3",
+        "title": "Socialists-in-Office Committee"
+      },
+      {
+        "description": "Organize educational events, reading groups, and develop resources for member development.",
+        "icon": "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+        "title": "Political Education Committee"
+      },
+      {
+        "description": "Organize community support networks and direct aid initiatives to meet immediate needs.",
+        "icon": "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+        "title": "Mutual Aid Working Group"
+      },
+      {
+        "description": "Monitor and report on Delaware legislative activity and policy developments.",
+        "icon": "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+        "title": "Legislation Tracking Working Group"
+      },
+      {
+        "description": "Integrate creative approaches to organizing and develop artistic expressions of socialist values.",
+        "icon": "M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z",
+        "title": "Arts-and-Culture Working Group"
+      }
+    ],
+    "initialDisplayCount": 4
+  },
+  "chapterStatsSection": {
+    "heading": "Our Chapter at a Glance",
+    "stats": [
+      {
+        "color": "#ec1f27",
+        "key": "members",
+        "label": "Chapter Members",
+        "prefix": "",
+        "value": 220
+      },
+      {
+        "color": "#ef4444",
+        "key": "groups",
+        "label": "Working Groups & Committees",
+        "prefix": "+",
+        "value": 11
+      },
+      {
+        "color": "#f87171",
+        "key": "counties",
+        "label": "Counties Organized",
+        "prefix": "",
+        "value": 3
+      }
+    ]
+  },
+  "joinCTASection": {
+    "heading": "Ready to Join the Movement?",
+    "description": "Become part of Delaware's growing democratic socialist movement.",
+    "buttonText": "Join Delaware DSA",
+    "buttonHref": "/join"
+  }
+}

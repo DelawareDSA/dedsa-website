@@ -40,7 +40,7 @@ const manifoldDSA = localFont({
       style: 'normal',
     },
     {
-      path: '../../public/fonts/ManifoldDSA-Black.woff2',
+      path: '../../public/fonts/ManifoldDSA-ExtraBold.woff2',
       weight: '900',
       style: 'normal',
     },
