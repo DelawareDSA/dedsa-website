@@ -1,10 +1,11 @@
+import './globals.css';
+
 import { ThemeProvider } from '@/app/theme/ThemeProvider';
 import Footer from '@/core/components/layout/Footer';
 import Header from '@/core/components/layout/Header';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import React from 'react';
-import './globals.css';
 import PageTransition from './PageTransition';
 import { Providers } from './providers';
 const manifoldDSA = localFont({
