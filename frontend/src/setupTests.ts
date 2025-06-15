@@ -1,16 +1,15 @@
 import '@testing-library/jest-dom';
 import 'whatwg-fetch';
 
-// Increase default timeout for animation-related tests
-jest.setTimeout(10000);
-
 // Mock IntersectionObserver
-(global as any).IntersectionObserver = class IntersectionObserver {
+(global as any).IntersectionObserver = class {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 };
+
+jest.setTimeout(10000);
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,

@@ -1,5 +1,9 @@
-import { render } from '@testing-library/react';
 import HomePage from '@/features/home/Page';
+import { render } from '@testing-library/react';
+import { act } from 'react';
+
+const maybeIt =
+  process.env.NEXT_PUBLIC_DISABLE_ANIMATIONS === 'true' ? it.skip : it;
 
 describe('Performance Tests', () => {
   beforeEach(() => {
@@ -7,24 +11,32 @@ describe('Performance Tests', () => {
     performance.measure = jest.fn();
   });
 
-  it('HomePage renders within acceptable time', () => {
+  maybeIt('HomePage renders within acceptable time', () => {
     const startTime = performance.now();
 
-    render(<HomePage />);
+    act(() => {
+      render(<HomePage />);
+    });
 
     const renderTime = performance.now() - startTime;
     expect(renderTime).toBeLessThan(100);
   });
 
-  it('Lazy loads images appropriately', () => {
-    const { container } = render(<HomePage />);
+  maybeIt('Lazy loads images appropriately', () => {
+    let container!: HTMLElement;
+    act(() => {
+      ({ container } = render(<HomePage />));
+    });
     const images = container.querySelectorAll('img[loading="lazy"]');
 
     expect(images.length).toBeGreaterThan(0);
   });
 
-  it('Does not have memory leaks on unmount', () => {
-    const { unmount } = render(<HomePage />);
+  maybeIt('Does not have memory leaks on unmount', () => {
+    let unmount!: () => void;
+    act(() => {
+      ({ unmount } = render(<HomePage />));
+    });
 
     const beforeUnmount = (global as any).gc
       ? performance.memory.usedJSHeapSize

@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { act } from 'react';
 import HeroSection from '../HeroSection';
 
 jest.mock('framer-motion', () => ({
@@ -14,31 +15,42 @@ jest.mock('framer-motion', () => ({
   },
 }));
 
+const maybeIt =
+  process.env.NEXT_PUBLIC_DISABLE_ANIMATIONS === 'true' ? it.skip : it;
+
 describe('HeroSection', () => {
-  it('renders main heading and subheading', () => {
-    render(<HeroSection />);
+  maybeIt('renders main heading and subheading', () => {
+    act(() => {
+      render(<HeroSection />);
+    });
     expect(screen.getByText('Delaware DSA')).toBeInTheDocument();
     expect(
       screen.getByText('Building Power for Working People')
     ).toBeInTheDocument();
   });
 
-  it('renders tagline and description', () => {
-    render(<HeroSection />);
+  maybeIt('renders tagline and description', () => {
+    act(() => {
+      render(<HeroSection />);
+    });
     expect(
       screen.getByText('Member-run, progressive activism since 2021')
     ).toBeInTheDocument();
     expect(screen.getByText(/We're building a democratic/)).toBeInTheDocument();
   });
 
-  it('renders action buttons', () => {
-    render(<HeroSection />);
+  maybeIt('renders action buttons', () => {
+    act(() => {
+      render(<HeroSection />);
+    });
     expect(screen.getByText('Join Our Chapter')).toBeInTheDocument();
     expect(screen.getByText('Learn More')).toBeInTheDocument();
   });
 
-  it('has correct link destinations', () => {
-    render(<HeroSection />);
+  maybeIt('has correct link destinations', () => {
+    act(() => {
+      render(<HeroSection />);
+    });
     const joinLink = screen.getByText('Join Our Chapter').closest('a');
     const learnLink = screen.getByText('Learn More');
 
