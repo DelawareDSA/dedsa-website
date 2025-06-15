@@ -15,6 +15,7 @@ jest.mock('next/image', () => ({
       typeof props.src === 'string'
         ? props.src
         : ((props.src as { src: string })?.src ?? '');
+    // eslint-disable-next-line @next/next/no-img-element
     return <img {...props} src={src} alt={props.alt || ''} />;
   },
 }));

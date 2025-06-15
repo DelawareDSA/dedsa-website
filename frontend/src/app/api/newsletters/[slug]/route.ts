@@ -3,9 +3,9 @@ import path from 'path';
 
 export async function GET(
   _req: Request,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
-  const { slug } = params;
+  const { slug } = await params;
   const filePath = path.join(
     process.cwd(),
     'public/newsletters',

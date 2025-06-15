@@ -18,8 +18,8 @@ describe('Accessibility Compliance', () => {
       { bg: '#FBD2D4', fg: '#231F20' },
     ];
 
-    combinations.forEach(({ bg, fg }) => {
-      const ratio = calculateContrastRatio(bg, fg);
+    combinations.forEach((combination) => {
+      const ratio = calculateContrastRatio(combination.bg, combination.fg);
       expect(ratio).toBeGreaterThanOrEqual(4.5);
     });
   });
