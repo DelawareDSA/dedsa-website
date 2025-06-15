@@ -1,3 +1,4 @@
+import { EventDisplay } from '@/core/components/events';
 import type {
   CampaignsSectionContent,
   EventsSectionContent,
@@ -7,7 +8,6 @@ import type {
   MeetingInfoSectionContent,
   UdYdsaPageContent,
 } from '@/core/types/pages/ud-ydsa';
-import { EventDisplay } from '@/core/components/events';
 
 type Props = UdYdsaPageContent;
 
@@ -31,15 +31,6 @@ export default function UdYdsaPage(props: Props) {
 
       {/* eventsSection already has the right shape */}
       <EventsSection {...eventsSection} />
-
-      {/* meetingInfoSection contains socialLinks */}
-      <MeetingInfoSection {...meetingInfoSection} />
-
-      {/* leadershipSection has leaders/contactLink */}
-      <LeadershipSection {...leadershipSection} />
-
-      {/* joinSection has title/description/buttonText */}
-      <JoinSection {...joinSection} />
     </div>
   );
 }
@@ -47,9 +38,9 @@ export default function UdYdsaPage(props: Props) {
 // Hero Section
 function HeroSection({ hero }: { hero: HeroSectionContent }) {
   return (
-    <section className="bg-gradient-to-r from-dsa-red to-red-700 text-white py-20">
+    <section className="py-20 text-white bg-gradient-to-r from-dsa-red to-red-700">
       <div className="container-page">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">{hero.title}</h1>
+        <h1 className="mb-4 text-4xl font-bold md:text-6xl">{hero.title}</h1>
         <p className="text-xl md:text-2xl">{hero.subtitle}</p>
       </div>
     </section>
@@ -65,16 +56,16 @@ function CampaignsSection({
   return (
     <section className="py-16">
       <div className="container-page">
-        <h2 className="text-3xl font-bold mb-8">Current Campaigns</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <h2 className="mb-8 text-3xl font-bold">Current Campaigns</h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {campaigns?.map(
             (
               campaign: CampaignsSectionContent['campaigns'][number],
               index: number
             ) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-3">{campaign.title}</h3>
-                <p className="text-dsa-black mb-4">{campaign.description}</p>
+              <div key={index} className="p-6 bg-white rounded-lg shadow-md">
+                <h3 className="mb-3 text-xl font-bold">{campaign.title}</h3>
+                <p className="mb-4 text-dsa-black">{campaign.description}</p>
                 <a
                   href={campaign.linkHref}
                   className="text-dsa-red hover:underline"
@@ -99,8 +90,8 @@ function EventsSection({
   return (
     <section className="py-16 bg-white">
       <div className="container-page">
-        <h2 className="text-3xl font-bold mb-8">Upcoming Events</h2>
-        <div className="space-y-4 mb-8">
+        <h2 className="mb-8 text-3xl font-bold">Upcoming Events</h2>
+        <div className="mb-8 space-y-4">
           {upcomingEvents?.map((event, index) => (
             <EventDisplay key={index} event={event} />
           ))}
@@ -118,9 +109,9 @@ function MeetingInfoSection(props: MeetingInfoSectionContent) {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container-page">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div>
-            <h2 className="text-2xl font-bold mb-4">
+            <h2 className="mb-4 text-2xl font-bold">
               {props.meetingInfoTitle}
             </h2>
             <div className="space-y-2">
@@ -139,7 +130,7 @@ function MeetingInfoSection(props: MeetingInfoSectionContent) {
             </div>
           </div>
           <div>
-            <h2 className="text-2xl font-bold mb-4">{props.followTitle}</h2>
+            <h2 className="mb-4 text-2xl font-bold">{props.followTitle}</h2>
             <div className="flex space-x-4">
               {Object.entries(props.socialLinks).map(([key, link]) => (
                 <a
@@ -169,15 +160,15 @@ function LeadershipSection({
   return (
     <section className="py-16">
       <div className="container-page">
-        <h2 className="text-3xl font-bold mb-8">Chapter Leadership</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <h2 className="mb-8 text-3xl font-bold">Chapter Leadership</h2>
+        <div className="grid grid-cols-1 gap-6 mb-8 md:grid-cols-3">
           {leaders?.map(
             (
               leader: LeadershipSectionContent['leaders'][number],
               index: number
             ) => (
               <div key={index} className="text-center">
-                <div className="w-24 h-24 mx-auto mb-4 bg-dsa-red text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                <div className="flex items-center justify-center w-24 h-24 mx-auto mb-4 text-2xl font-bold text-white rounded-full bg-dsa-red">
                   {leader.imageInitials}
                 </div>
                 <h3 className="font-bold">{leader.name}</h3>
@@ -199,13 +190,13 @@ function LeadershipSection({
 // Join Section
 function JoinSection({ title, description, buttonText }: JoinSectionContent) {
   return (
-    <section className="py-16 bg-dsa-red text-white">
-      <div className="container-page text-center">
-        <h2 className="text-3xl font-bold mb-4">{title}</h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">{description}</p>
+    <section className="py-16 text-white bg-dsa-red">
+      <div className="text-center container-page">
+        <h2 className="mb-4 text-3xl font-bold">{title}</h2>
+        <p className="max-w-2xl mx-auto mb-8 text-xl">{description}</p>
         <a
           href="/join"
-          className="btn bg-white text-dsa-red hover:bg-dsa-red-t4"
+          className="bg-white btn text-dsa-red hover:bg-dsa-red-t4"
         >
           {buttonText}
         </a>

@@ -1,0 +1,121 @@
+{
+  "title": "Membership Handbook",
+  "pdfUrl": "/documents/delaware-dsa-handbook.pdf",
+  "fallbackContent": "<p>The Delaware DSA Membership Handbook serves as your comprehensive guide to getting involved with our chapter. Whether you're a new member or a longtime participant, this handbook provides essential information about our structure, activities, and how to make the most of your membership.</p><p>Our handbook covers everything from chapter governance and meeting procedures to committee involvement and organizing campaigns. It reflects our commitment to transparency, member engagement, and building a strong democratic socialist movement in Delaware.</p>",
+  "currentVersionLabel": "Current Version:",
+  "lastUpdatedLabel": "Last updated December 2024",
+  "downloadButtonText": "Download PDF",
+  "handbookDocument": {
+    "title": "Delaware DSA Membership Handbook",
+    "fallbackMessage": "If the document doesn't load properly, you can",
+    "downloadLinkText": "download the PDF directly"
+  },
+  "keyMembershipSections": [
+    {
+      "title": "Getting Started",
+      "description": "New member orientation, understanding DSA's mission, and taking your first steps in democratic socialist organizing.",
+      "pageLink": "page=3",
+      "linkText": "Go to Getting Started"
+    },
+    {
+      "title": "Chapter Structure & Governance",
+      "description": "Learn about our democratic structure, how decisions are made, and the roles of officers, committees, and working groups.",
+      "pageLink": "page=8",
+      "linkText": "Go to Governance"
+    },
+    {
+      "title": "Committees & Working Groups",
+      "description": "Explore opportunities to get involved through our standing committees and issue-based working groups.",
+      "pageLink": "page=15",
+      "linkText": "Go to Committees"
+    },
+    {
+      "title": "Meetings & Participation",
+      "description": "Understanding meeting procedures, voting processes, and how to effectively participate in chapter democracy.",
+      "pageLink": "page=22",
+      "linkText": "Go to Meetings"
+    },
+    {
+      "title": "Organizing & Campaigns",
+      "description": "How we organize campaigns, build coalitions, and work toward democratic socialist goals in Delaware.",
+      "pageLink": "page=28",
+      "linkText": "Go to Organizing"
+    },
+    {
+      "title": "Resources & Support",
+      "description": "Educational resources, mutual aid networks, and support systems available to all members.",
+      "pageLink": "page=35",
+      "linkText": "Go to Resources"
+    }
+  ],
+  "frequentlyAskedQuestions": [
+    {
+      "question": "How do I get involved as a new member?",
+      "answer": "Start by attending our monthly General Meetings and joining our new member orientation. Consider joining a committee or working group that aligns with your interests and availability. Don't hesitate to reach out to our Membership Coordinator with questions."
+    },
+    {
+      "question": "What committees and working groups can I join?",
+      "answer": "We have five standing committees (Political Education, Communications, Membership Engagement, Red Rabbits, and Socialists-in-Office) plus several working groups including Housing Justice, Migrant Rights, Queer Socialists, and Mutual Aid. All are open to members in good standing."
+    },
+    {
+      "question": "How often are meetings and events held?",
+      "answer": "General Meetings are held monthly, typically on the second Sunday. Committee meetings vary but usually occur monthly or bi-weekly. We also host regular educational events, social gatherings, and campaign actions throughout the year."
+    },
+    {
+      "question": "What is expected of members?",
+      "answer": "We ask members to stay current on dues, participate in chapter democracy through meetings and votes, and contribute to our collective work through committee participation, volunteering, or campaign involvement according to their capacity."
+    },
+    {
+      "question": "How can I propose new initiatives or campaigns?",
+      "answer": "Any member can bring proposals to the Steering Committee or General Meetings. For major initiatives, gather input from relevant committees and ensure your proposal aligns with our democratic socialist values and strategic priorities."
+    },
+    {
+      "question": "What support is available for new organizers?",
+      "answer": "We provide mentorship through our buddy system, regular political education opportunities, organizing training workshops, and access to national DSA resources. Our Political Education Committee offers ongoing support for developing organizing skills."
+    }
+  ],
+  "membershipBenefits": [
+    {
+      "title": "Democratic Participation",
+      "description": "Vote on chapter priorities, officer elections, and major decisions that shape our organizing work and political direction.",
+      "icon": "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+    },
+    {
+      "title": "Political Education",
+      "description": "Access to educational events, reading groups, workshops, and resources to deepen your understanding of democratic socialism.",
+      "icon": "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+    },
+    {
+      "title": "Organizing Opportunities",
+      "description": "Participate in campaigns for housing justice, worker rights, electoral work, and other democratic socialist priorities.",
+      "icon": "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+    },
+    {
+      "title": "Community & Solidarity",
+      "description": "Connect with like-minded socialists, access mutual aid networks, and build lasting relationships through shared struggle.",
+      "icon": "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+    }
+  ],
+  "nextSteps": [
+    {
+      "step": "1",
+      "title": "Attend a General Meeting",
+      "description": "Join our monthly membership meetings to see chapter democracy in action and meet fellow members."
+    },
+    {
+      "step": "2",
+      "title": "Join a Committee",
+      "description": "Find a committee or working group that matches your interests and availability for regular involvement."
+    },
+    {
+      "step": "3",
+      "title": "Get Organizing Training",
+      "description": "Participate in our political education programs and organizing workshops to build your skills."
+    },
+    {
+      "step": "4",
+      "title": "Take on Leadership",
+      "description": "Consider running for chapter positions or taking on coordinator roles within committees and campaigns."
+    }
+  ]
+}

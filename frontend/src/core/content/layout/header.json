@@ -6,8 +6,9 @@
     { "name": "What We Stand For", "href": "/what-we-stand-for" },
     { "name": "Calendar", "href": "/calendar" },
     { "name": "Leadership & Structure", "href": "/leadership" },
-    { "name": "Committees & Working Groups", "href": "/committees" },
+    { "name": "Committees", "href": "/committees" },
     { "name": "Bylaws", "href": "/bylaws" },
+    { "name": "Handbook", "href": "/handbook" },
     { "name": "Contact", "href": "/contact" },
     { "name": "UD YDSA", "href": "/ud-ydsa" }
   ]
