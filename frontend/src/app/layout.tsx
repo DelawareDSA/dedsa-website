@@ -5,8 +5,8 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import React from 'react';
 import './globals.css';
+import PageTransition from './PageTransition';
 import { Providers } from './providers';
-
 const manifoldDSA = localFont({
   src: [
     {
@@ -53,7 +53,7 @@ export default function RootLayout({
           <ThemeProvider>
             <Header />
             <main id="main" className="flex-grow">
-              {children}
+              <PageTransition>{children}</PageTransition>
             </main>
             <Footer />
           </ThemeProvider>
