@@ -36,7 +36,7 @@ export default function CalendarEventClient({
   relatedEvents,
 }: CalendarEventClientProps) {
   return (
-    <div className="min-h-screen bg-dsa-red-t4 py-12">
+    <div className="min-h-screen py-12 bg-dsa-red-t4">
       <div className="container-page">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export default function CalendarEventClient({
           </nav>
 
           {}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="overflow-hidden bg-white rounded-lg shadow-md">
             <div className="p-8">
               <div className="flex items-start justify-between mb-6">
                 <div className="flex-1">
@@ -83,12 +83,12 @@ export default function CalendarEventClient({
                         event.category.slice(1)}
                     </span>
                     {isUpcoming && (
-                      <span className="px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                      <span className="px-3 py-1 text-sm font-medium text-yellow-800 bg-yellow-100 rounded-full">
                         Upcoming
                       </span>
                     )}
                   </div>
-                  <h1 className="text-4xl font-bold text-dsa-black mb-2">
+                  <h1 className="mb-2 text-4xl font-bold text-dsa-black">
                     {event.title}
                   </h1>
                   <p className="text-xl text-dsa-black">
@@ -98,10 +98,10 @@ export default function CalendarEventClient({
               </div>
 
               {}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div className="grid grid-cols-1 gap-8 mb-8 md:grid-cols-2">
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-lg font-semibold text-dsa-black mb-2">
+                    <h3 className="mb-2 text-lg font-semibold text-dsa-black">
                       Date & Time
                     </h3>
                     <div className="text-dsa-black">
@@ -123,7 +123,7 @@ export default function CalendarEventClient({
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-dsa-black mb-2">
+                    <h3 className="mb-2 text-lg font-semibold text-dsa-black">
                       Location
                     </h3>
                     <p className="text-dsa-black">{event.location}</p>
@@ -143,7 +143,7 @@ export default function CalendarEventClient({
                 <div className="space-y-4">
                   {event.registrationRequired && (
                     <div>
-                      <h3 className="text-lg font-semibold text-dsa-black mb-2">
+                      <h3 className="mb-2 text-lg font-semibold text-dsa-black">
                         Registration
                       </h3>
                       {event.registrationLink ? (
@@ -161,7 +161,7 @@ export default function CalendarEventClient({
                         </p>
                       )}
                       {event.capacity && (
-                        <p className="text-sm text-dsa-black mt-2">
+                        <p className="mt-2 text-sm text-dsa-black">
                           {event.attendeeCount || 0} / {event.capacity}{' '}
                           registered
                         </p>
@@ -171,14 +171,14 @@ export default function CalendarEventClient({
 
                   {event.tags && event.tags.length > 0 && (
                     <div>
-                      <h3 className="text-lg font-semibold text-dsa-black mb-2">
+                      <h3 className="mb-2 text-lg font-semibold text-dsa-black">
                         Tags
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         {event.tags.map((tag, index) => (
                           <span
                             key={index}
-                            className="px-2 py-1 bg-dsa-red-t4 text-dsa-black rounded text-sm"
+                            className="px-2 py-1 text-sm rounded bg-dsa-red-t4 text-dsa-black"
                           >
                             {tag}
                           </span>
@@ -190,8 +190,8 @@ export default function CalendarEventClient({
               </div>
 
               {}
-              <div className="border-t pt-8">
-                <h3 className="text-lg font-semibold text-dsa-black mb-4">
+              <div className="pt-8 border-t">
+                <h3 className="mb-4 text-lg font-semibold text-dsa-black">
                   About This Event
                 </h3>
                 <div className="prose max-w-none text-dsa-black">
@@ -200,12 +200,12 @@ export default function CalendarEventClient({
               </div>
 
               {}
-              <div className="border-t pt-8 flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 pt-8 border-t">
                 <Link href="/calendar" className="btn btn-secondary">
                   ← Back to Calendar
                 </Link>
                 <a
-                  href={`mailto:info@delawardsa.org?subject=Question about ${event.title}`}
+                  href={`mailto:delaware.socialists@gmail.com?subject=Question about ${event.title}`}
                   className="btn btn-outline"
                 >
                   Contact Organizers
@@ -220,21 +220,21 @@ export default function CalendarEventClient({
           </div>
 
           {}
-          <div className="mt-12 bg-white rounded-lg shadow-md p-8">
-            <h3 className="text-2xl font-bold text-dsa-black mb-6">
+          <div className="p-8 mt-12 bg-white rounded-lg shadow-md">
+            <h3 className="mb-6 text-2xl font-bold text-dsa-black">
               More Events
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {relatedEvents.map((relatedEvent) => (
                 <Link
                   key={relatedEvent.id}
                   href={`/calendar/events/${relatedEvent.id}`}
-                  className="block p-4 border rounded-lg hover:border-dsa-red transition-colors"
+                  className="block p-4 transition-colors border rounded-lg hover:border-dsa-red"
                 >
-                  <h4 className="font-semibold text-dsa-black mb-2">
+                  <h4 className="mb-2 font-semibold text-dsa-black">
                     {relatedEvent.title}
                   </h4>
-                  <p className="text-sm text-dsa-black mb-2">
+                  <p className="mb-2 text-sm text-dsa-black">
                     {new Date(relatedEvent.date).toLocaleDateString()}
                   </p>
                   <p className="text-sm text-dsa-black">

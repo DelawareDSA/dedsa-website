@@ -63,14 +63,14 @@ export default function CalendarEventClient({
     ? event.startTime + (event.endTime ? ` – ${event.endTime}` : '')
     : null;
 
-  const mailtoLink = `mailto:info@delawardsa.org?subject=${encodeURIComponent(
+  const mailtoLink = `mailto:delaware.socialists@gmail.com?subject=${encodeURIComponent(
     `Question about ${event.title}`
   )}`;
 
   const categoryStyle = CATEGORY_STYLES[event.category];
 
   return (
-    <article className="min-h-screen bg-dsa-red-t4 py-12">
+    <article className="min-h-screen py-12 bg-dsa-red-t4">
       <div className="container-page">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -99,8 +99,8 @@ export default function CalendarEventClient({
           </nav>
 
           {}
-          <header className="bg-white rounded-lg shadow-md overflow-hidden p-8">
-            <div className="flex flex-col md:flex-row justify-between mb-6">
+          <header className="p-8 overflow-hidden bg-white rounded-lg shadow-md">
+            <div className="flex flex-col justify-between mb-6 md:flex-row">
               <div>
                 <span
                   className={`px-3 py-1 rounded-full text-sm font-medium ${categoryStyle.bg} ${categoryStyle.text}`}
@@ -108,7 +108,7 @@ export default function CalendarEventClient({
                   {categoryStyle.label}
                 </span>
                 {isUpcoming && (
-                  <span className="ml-2 px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                  <span className="px-3 py-1 ml-2 text-sm font-medium text-yellow-800 bg-yellow-100 rounded-full">
                     Upcoming
                   </span>
                 )}
@@ -122,13 +122,13 @@ export default function CalendarEventClient({
             </div>
 
             {}
-            <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <section className="grid grid-cols-1 gap-8 mb-8 md:grid-cols-2">
               {}
               <div>
-                <h2 className="text-lg font-semibold text-dsa-black mb-2">
+                <h2 className="mb-2 text-lg font-semibold text-dsa-black">
                   Date &amp; Time
                 </h2>
-                <p className="text-dsa-black font-medium">
+                <p className="font-medium text-dsa-black">
                   <time dateTime={event.date}>{formattedDate}</time>
                 </p>
                 {timeRange && <p className="text-dsa-black">{timeRange}</p>}
@@ -136,7 +136,7 @@ export default function CalendarEventClient({
 
               {}
               <div>
-                <h2 className="text-lg font-semibold text-dsa-black mb-2">
+                <h2 className="mb-2 text-lg font-semibold text-dsa-black">
                   Location
                 </h2>
                 <p className="text-dsa-black">{event.location}</p>
@@ -158,7 +158,7 @@ export default function CalendarEventClient({
             {}
             {event.registrationRequired && (
               <section className="mb-8">
-                <h2 className="text-lg font-semibold text-dsa-black mb-2">
+                <h2 className="mb-2 text-lg font-semibold text-dsa-black">
                   Registration
                 </h2>
                 {event.registrationLink ? (
@@ -176,7 +176,7 @@ export default function CalendarEventClient({
                   </p>
                 )}
                 {event.capacity != null && (
-                  <p className="text-sm text-dsa-black mt-2">
+                  <p className="mt-2 text-sm text-dsa-black">
                     {event.attendeeCount ?? 0} / {event.capacity} registered
                   </p>
                 )}
@@ -186,14 +186,14 @@ export default function CalendarEventClient({
             {}
             {event.tags && event.tags.length > 0 && (
               <section className="mb-8">
-                <h2 className="text-lg font-semibold text-dsa-black mb-2">
+                <h2 className="mb-2 text-lg font-semibold text-dsa-black">
                   Tags
                 </h2>
                 <div className="flex flex-wrap gap-2">
                   {event.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 bg-dsa-red-t4 text-dsa-black rounded text-sm"
+                      className="px-2 py-1 text-sm rounded bg-dsa-red-t4 text-dsa-black"
                     >
                       {tag}
                     </span>
@@ -203,8 +203,8 @@ export default function CalendarEventClient({
             )}
 
             {}
-            <section className="border-t pt-8 mb-8">
-              <h2 className="text-lg font-semibold text-dsa-black mb-4">
+            <section className="pt-8 mb-8 border-t">
+              <h2 className="mb-4 text-lg font-semibold text-dsa-black">
                 About This Event
               </h2>
               <div className="prose max-w-none text-dsa-black">
@@ -213,7 +213,7 @@ export default function CalendarEventClient({
             </section>
 
             {}
-            <div className="border-t pt-8 flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 pt-8 border-t">
               <Link href="/calendar" className="btn btn-secondary">
                 ← Back to Calendar
               </Link>
@@ -228,21 +228,21 @@ export default function CalendarEventClient({
 
           {}
           {relatedEvents.length > 0 && (
-            <aside className="mt-12 bg-white rounded-lg shadow-md p-8">
-              <h2 className="text-2xl font-bold text-dsa-black mb-6">
+            <aside className="p-8 mt-12 bg-white rounded-lg shadow-md">
+              <h2 className="mb-6 text-2xl font-bold text-dsa-black">
                 More Events
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 {relatedEvents.map(({ id, title, description, date }) => (
                   <Link
                     key={id}
                     href={`/calendar/events/${id}`}
-                    className="block p-4 border rounded-lg hover:border-dsa-red transition-colors"
+                    className="block p-4 transition-colors border rounded-lg hover:border-dsa-red"
                   >
-                    <h3 className="font-semibold text-dsa-black mb-2">
+                    <h3 className="mb-2 font-semibold text-dsa-black">
                       {title}
                     </h3>
-                    <p className="text-sm text-dsa-black mb-2">
+                    <p className="mb-2 text-sm text-dsa-black">
                       <time dateTime={date}>
                         {new Date(date).toLocaleDateString()}
                       </time>

@@ -56,6 +56,13 @@ export const metadata: Metadata = {
   },
   description:
     'The Delaware chapter of the Democratic Socialists of America (DSA). Member-run, progressive activism since 2021.',
+  icons: {
+    icon: [{ url: '/dedsa-logo.png' }],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({

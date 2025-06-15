@@ -10,8 +10,13 @@ import type { ImageProps } from 'next/image';
 
 jest.mock('next/image', () => ({
   __esModule: true,
-  // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
-  default: (props: ImageProps) => <img {...props} />,
+  default: (props: ImageProps) => {
+    const src =
+      typeof props.src === 'string'
+        ? props.src
+        : ((props.src as { src: string })?.src ?? '');
+    return <img {...props} src={src} alt={props.alt || ''} />;
+  },
 }));
 
 describe('Header', () => {

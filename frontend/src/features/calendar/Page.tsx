@@ -57,14 +57,14 @@ export default function CalendarFeature({
   }, [title, subtitle, eventCalendar, monthSelectorData, subscription]);
 
   return (
-    <div className="min-h-screen bg-dsa-red-t4 py-12">
+    <div className="min-h-screen py-12 bg-dsa-red-t4">
       <div className="container-page">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="mb-4 text-4xl font-bold">
             {title || 'Events Calendar'}
           </h1>
           <p className="text-xl text-dsa-black">
@@ -75,19 +75,19 @@ export default function CalendarFeature({
 
         {}
         {process.env.NODE_ENV === 'development' && debugInfo && (
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-            <h3 className="font-bold text-yellow-800 mb-2">Debug Info:</h3>
-            <pre className="text-xs text-yellow-700 overflow-auto">
+          <div className="p-4 mb-6 border border-yellow-200 rounded-lg bg-yellow-50">
+            <h3 className="mb-2 font-bold text-yellow-800">Debug Info:</h3>
+            <pre className="overflow-auto text-xs text-yellow-700">
               {JSON.stringify(debugInfo, null, 2)}
             </pre>
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
           {}
           <div className="lg:col-span-3">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="flex justify-between items-center mb-6">
+            <div className="p-6 bg-white rounded-lg shadow-md">
+              <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold">Delaware DSA Calendar</h2>
                 <div className="flex gap-2">
                   <button
@@ -118,20 +118,20 @@ export default function CalendarFeature({
                     style={{ border: 0 }}
                     width="100%"
                     height="600"
-                    className="rounded w-full border-none"
+                    className="w-full border-none rounded"
                     title="Delaware DSA Calendar"
                     onError={() => setShowEmbed(false)}
                   ></iframe>
                   {}
                   <div
                     id="calendar-fallback"
-                    className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-90 text-center p-8 rounded"
+                    className="absolute inset-0 flex items-center justify-center p-8 text-center bg-white rounded bg-opacity-90"
                   >
                     <div>
-                      <h3 className="text-lg font-semibold text-dsa-black mb-2">
+                      <h3 className="mb-2 text-lg font-semibold text-dsa-black">
                         {errorTitle || 'Calendar Temporarily Unavailable'}
                       </h3>
-                      <p className="text-dsa-black mb-4">
+                      <p className="mb-4 text-dsa-black">
                         {errorMessage ||
                           'The embedded calendar cannot be displayed. Please use the links below to view our calendar.'}
                       </p>
@@ -139,7 +139,7 @@ export default function CalendarFeature({
                         href={googleCalendarUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-primary mr-2"
+                        className="mr-2 btn btn-primary"
                       >
                         {googleCalendarButtonText || 'Open in Google Calendar'}
                       </a>
@@ -154,17 +154,17 @@ export default function CalendarFeature({
                 </div>
               ) : (
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold mb-4">Upcoming Events</h3>
+                  <h3 className="mb-4 text-xl font-bold">Upcoming Events</h3>
                   {eventCalendar.events.length > 0 ? (
                     eventCalendar.events.slice(0, 10).map((event) => (
                       <div
                         key={event.id}
-                        className="border-l-4 border-dsa-red bg-white p-4 rounded-r-lg shadow-sm"
+                        className="p-4 bg-white border-l-4 rounded-r-lg shadow-sm border-dsa-red"
                       >
-                        <h4 className="font-semibold text-lg mb-1">
+                        <h4 className="mb-1 text-lg font-semibold">
                           {event.title}
                         </h4>
-                        <p className="text-sm text-dsa-black mb-2">
+                        <p className="mb-2 text-sm text-dsa-black">
                           {new Date(event.startDate).toLocaleDateString(
                             'en-US',
                             {
@@ -192,14 +192,14 @@ export default function CalendarFeature({
               )}
 
               {}
-              <div className="bg-white rounded-lg shadow-md p-6 mt-6">
-                <h3 className="text-xl font-bold mb-4">Event Information</h3>
-                <div className="text-center py-8">
-                  <p className="text-dsa-black mb-2">
+              <div className="p-6 mt-6 bg-white rounded-lg shadow-md">
+                <h3 className="mb-4 text-xl font-bold">Event Information</h3>
+                <div className="py-8 text-center">
+                  <p className="mb-2 text-dsa-black">
                     {eventCalendar?.noEventsMessage ||
                       'No upcoming events scheduled.'}
                   </p>
-                  <p className="text-dsa-black text-sm">
+                  <p className="text-sm text-dsa-black">
                     {eventCalendar?.checkBackMessage ||
                       'Please check back later for updates.'}
                   </p>
@@ -211,8 +211,8 @@ export default function CalendarFeature({
           {}
           <div className="space-y-6">
             {}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-semibold mb-4">
+            <div className="p-6 bg-white rounded-lg shadow-md">
+              <h3 className="mb-4 text-lg font-semibold">
                 {monthSelectorData?.label || 'Browse by Month'}
               </h3>
               <select
@@ -236,11 +236,11 @@ export default function CalendarFeature({
               </select>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-semibold mb-4">
+            <div className="p-6 bg-white rounded-lg shadow-md">
+              <h3 className="mb-4 text-lg font-semibold">
                 {subscribeTitle || 'Subscribe to Our Calendar'}
               </h3>
-              <p className="text-dsa-black mb-4">
+              <p className="mb-4 text-dsa-black">
                 {subscribeText ||
                   'Stay up-to-date with all Delaware DSA events by subscribing to our calendar.'}
               </p>
@@ -250,7 +250,7 @@ export default function CalendarFeature({
                   href={`https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(subscription?.googleCalendarEmbedUrl?.split('?cid=')[1] || '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary w-full flex items-center justify-center"
+                  className="flex items-center justify-center w-full btn btn-primary"
                 >
                   {googleCalendarButtonText || 'Subscribe to Google Calendar'}
                 </a>
@@ -258,7 +258,7 @@ export default function CalendarFeature({
                   href={`https://outlook.live.com/calendar/0/addcalendar?url=${encodeURIComponent(iCalUrl || '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-secondary w-full flex items-center justify-center"
+                  className="flex items-center justify-center w-full btn btn-secondary"
                 >
                   Add to Outlook
                 </a>
@@ -266,15 +266,15 @@ export default function CalendarFeature({
                   href={iCalUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-secondary w-full flex items-center justify-center"
+                  className="flex items-center justify-center w-full btn btn-secondary"
                 >
                   {iCalOutlookButtonText || 'iCal/Apple Calendar'}
                 </a>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <div className="p-6 bg-white rounded-lg shadow-md">
+              <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
               <div className="space-y-2">
                 <Link
                   href="/join"
@@ -303,8 +303,8 @@ export default function CalendarFeature({
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-semibold mb-4">
+            <div className="p-6 bg-white rounded-lg shadow-md">
+              <h3 className="mb-4 text-lg font-semibold">
                 Meeting Information
               </h3>
               <div className="space-y-3 text-sm">
@@ -322,10 +322,10 @@ export default function CalendarFeature({
                   <strong>Contact:</strong>
                   <p className="text-dsa-black">
                     <a
-                      href="mailto:info@delawardsa.org"
+                      href="mailto:delaware.socialists@gmail.com"
                       className="text-dsa-red hover:underline"
                     >
-                      info@delawardsa.org
+                      delaware.socialists@gmail.com
                     </a>
                   </p>
                 </div>
@@ -333,8 +333,8 @@ export default function CalendarFeature({
             </div>
 
             {}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-semibold mb-4">Event Categories</h3>
+            <div className="p-6 bg-white rounded-lg shadow-md">
+              <h3 className="mb-4 text-lg font-semibold">Event Categories</h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
@@ -360,15 +360,15 @@ export default function CalendarFeature({
             </div>
 
             {}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-semibold mb-4">Need Help?</h3>
+            <div className="p-6 bg-white rounded-lg shadow-md">
+              <h3 className="mb-4 text-lg font-semibold">Need Help?</h3>
               <div className="space-y-3 text-sm">
                 <p className="text-dsa-black">
                   Having trouble viewing the calendar or need event details?
                 </p>
                 <div className="space-y-2">
                   <a
-                    href="mailto:info@delawardsa.org"
+                    href="mailto:delaware.socialists@gmail.com"
                     className="block text-dsa-red hover:underline"
                   >
                     Email us for support →
