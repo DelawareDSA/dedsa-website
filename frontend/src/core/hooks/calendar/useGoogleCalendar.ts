@@ -1,7 +1,7 @@
 'use client';
 
-import useSWR from 'swr';
 import sampleData from '@/core/content/sample-events.json';
+import useSWR from 'swr';
 
 export interface Event {
   title: string;
