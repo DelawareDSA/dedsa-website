@@ -33,10 +33,10 @@ export default function Header() {
         <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/dedsa-logo.png"
-            alt="DSA logo featuring clasped black and white hands shaking in front of a red rose"
+            alt="DSA logo"
             width={40}
             height={40}
-            className={`transition ${sc ? 'scale-90' : 'scale-100'}`}
+            className={`transition ${sc ? 'scale-90' : 'scale-100'} rounded`}
           />
           <span
             className={`text-xl font-bold ${

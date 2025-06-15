@@ -80,10 +80,7 @@ export default function Footer() {
               )}
             </p>
             <p className="mt-2 md:mt-0">
-              <Link
-                href="/privacy-policy"
-                className="text-white hover:text-dsa-red"
-              >
+              <Link href="/privacy" className="text-white hover:text-dsa-red">
                 {f.privacyPolicy}
               </Link>
             </p>
