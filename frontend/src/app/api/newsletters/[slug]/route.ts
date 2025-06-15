@@ -1,7 +1,10 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-export async function GET(_req: Request, { params }: any) {
+export async function GET(
+  _req: Request,
+  { params }: { params: { slug: string } }
+) {
   const { slug } = params;
   const filePath = path.join(
     process.cwd(),

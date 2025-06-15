@@ -11,7 +11,7 @@ export default function NextSteps({ data }: NextStepsProps) {
     <div className="p-8 mb-8 bg-white rounded-lg shadow-md">
       <h2 className="mb-6 text-2xl font-bold">Your Next Steps</h2>
       <p className="mb-8 text-gray-600">
-        Ready to dive deeper into democratic socialist organizing? Here's a
+        Ready to dive deeper into democratic socialist organizing? Here&apos;s a
         pathway to help you grow from new member to active organizer and leader.
       </p>
 
@@ -39,7 +39,7 @@ export default function NextSteps({ data }: NextStepsProps) {
         </h3>
         <p className="text-gray-700 mb-4">
           Our Membership Coordinator and chapter leaders are here to help you
-          find your place in Delaware DSA. Don't hesitate to reach out with
+          find your place in Delaware DSA. Don&apos;t hesitate to reach out with
           questions or to learn more about specific opportunities.
         </p>
         <a

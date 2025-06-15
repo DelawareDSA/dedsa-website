@@ -56,8 +56,9 @@ export default function KeyMembershipSections({
       <div className="p-4 mt-8 rounded-lg bg-dsa-red-t4">
         <p className="text-sm text-gray-700">
           <strong>Navigation Tip:</strong> Links will open the PDF in a new tab
-          and attempt to jump to the specified page. If page navigation doesn't
-          work automatically, use your PDF viewer's page navigation controls.
+          and attempt to jump to the specified page. If page navigation
+          doesn&apos;t work automatically, use your PDF viewer&apos;s page
+          navigation controls.
         </p>
       </div>
     </div>

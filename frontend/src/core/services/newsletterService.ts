@@ -46,7 +46,9 @@ export class NewsletterService {
         try {
           await fs.access(htmlPath);
           newsletter.htmlPath = `/newsletters/${newsletter.slug}.html`;
-        } catch {}
+        } catch {
+          // HTML file for newsletter is optional
+        }
       }
 
       this.newsletters = newsletters;

@@ -4,15 +4,8 @@ import { useNewsletterSubscription } from '@/core/hooks/useNewsletterSubscriptio
 import Button from './Button';
 
 export default function NewsletterSubscription() {
-  const {
-    email,
-    setEmail,
-    status,
-    errorMessage,
-    subscribe,
-    isSubmitting,
-    isSuccess,
-  } = useNewsletterSubscription();
+  const { email, setEmail, errorMessage, subscribe, isSubmitting, isSuccess } =
+    useNewsletterSubscription();
 
   return (
     <form className="flex flex-col space-y-2">
