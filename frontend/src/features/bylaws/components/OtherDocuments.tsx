@@ -1,47 +1,90 @@
-import otherDocumentsContent from '@/core/content/pages/bylaws/otherDocuments.json';
-import { OtherDocumentsContent } from '@/core/types/pages/bylaws';
+// frontend/src/features/bylaws/components/OtherDocuments.tsx
+import { BylawsPageContent } from '@/core/types/pages/bylaws';
 
-// Type assertion for the imported JSON
-const typedOtherDocumentsContent =
-  otherDocumentsContent as OtherDocumentsContent;
+interface OtherDocumentsProps {
+  data: BylawsPageContent;
+}
 
-export default function OtherDocuments() {
+export default function OtherDocuments({ data }: OtherDocumentsProps) {
+  const documents = data.otherDocuments || [];
+
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-6">
-        {typedOtherDocumentsContent.title}
-      </h2>
+    <div className="p-8 mb-8 bg-white rounded-lg shadow-md">
+      <h2 className="mb-6 text-2xl font-bold">Related Documents</h2>
+      <p className="mb-6 text-gray-600">
+        Additional documents and resources related to our chapter governance and
+        national DSA policies.
+      </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {typedOtherDocumentsContent.documents.map((document, index) => (
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {documents.map((doc, index) => (
           <a
             key={index}
-            href={document.href}
-            target={document.href.startsWith('http') ? '_blank' : undefined}
+            href={doc.href}
+            target={doc.href.startsWith('http') ? '_blank' : '_self'}
             rel={
-              document.href.startsWith('http')
-                ? 'noopener noreferrer'
-                : undefined
+              doc.href.startsWith('http') ? 'noopener noreferrer' : undefined
             }
-            className="border border-gray-200 rounded-lg p-6 hover:bg-gray-50 transition-colors block"
+            className="block p-6 transition-all border border-gray-200 rounded-lg hover:shadow-md hover:border-dsa-red group"
           >
-            <svg
-              className="h-12 w-12 text-dsa-red mb-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={document.icon}
-              />
-            </svg>
-            <h3 className="text-xl font-bold mb-2">{document.title}</h3>
-            <p>{document.description}</p>
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                <svg
+                  className="w-8 h-8 transition-colors text-dsa-red group-hover:text-red-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d={doc.icon}
+                  />
+                </svg>
+              </div>
+              <div className="ml-4">
+                <h3 className="text-lg font-semibold text-gray-900 transition-colors group-hover:text-dsa-red">
+                  {doc.title}
+                </h3>
+                <p className="mt-2 text-sm text-gray-700">{doc.description}</p>
+                <div className="flex items-center mt-3 text-sm font-medium text-dsa-red">
+                  {doc.href.startsWith('http')
+                    ? 'View External Document'
+                    : 'View Document'}
+                  <svg
+                    className="w-4 h-4 ml-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </a>
         ))}
+      </div>
+
+      <div className="p-4 mt-8 border rounded-lg bg-gray-50">
+        <h3 className="mb-2 font-semibold text-gray-900">
+          Need the bylaws in another format?
+        </h3>
+        <p className="text-sm text-gray-700">
+          Our bylaws are available as a PDF above. If you need the document in
+          an accessible format or have trouble viewing the PDF, please{' '}
+          <a
+            href="/contact"
+            className="font-medium text-dsa-red hover:underline"
+          >
+            contact our chapter
+          </a>{' '}
+          and we'll be happy to provide alternative formats.
+        </p>
       </div>
     </div>
   );

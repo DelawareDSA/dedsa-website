@@ -1,4 +1,5 @@
-// src/core/types/pages/bylaws.ts
+// frontend/src/core/types/pages/bylaws.ts
+
 export interface BylawsDocumentContent {
   title: string;
   fallbackMessage: string;
@@ -18,7 +19,7 @@ export interface FAQContent {
 export interface GovernanceSection {
   title: string;
   description: string;
-  pageLink: string;
+  pageLink: string; // PDF page reference like "page=5"
   linkText: string;
 }
 
@@ -42,13 +43,13 @@ export interface OtherDocumentsContent {
 // Main page content interface
 export interface BylawsPageContent {
   title: string;
-  pdfUrl: string; // Added missing property
+  pdfUrl: string; // Path to the PDF file
   fallbackContent: string;
   currentVersionLabel: string;
   lastUpdatedLabel: string;
   downloadButtonText: string;
   bylawsDocument?: BylawsDocumentContent;
-  keyGovernanceSections?: KeyGovernanceSectionsContent['sections'];
-  frequentlyAskedQuestions?: FAQContent['questions'];
-  otherDocuments?: OtherDocumentsContent['documents'];
+  keyGovernanceSections?: GovernanceSection[];
+  frequentlyAskedQuestions?: FAQItem[];
+  otherDocuments?: Document[];
 }
