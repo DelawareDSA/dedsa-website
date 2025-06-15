@@ -18,6 +18,11 @@
       "name": "Instagram",
       "url": "https://www.instagram.com/delawaredsa",
       "icon": "instagram"
+    },
+    {
+      "name": "Bluesky",
+      "url": "https://bsky.app/profile/delawaredsa.bsky.social",
+      "icon": "bluesky"
     }
   ],
   "sections": [
