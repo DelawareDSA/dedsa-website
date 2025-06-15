@@ -12,8 +12,8 @@ export default function MembershipBenefits({ data }: MembershipBenefitsProps) {
       <h2 className="mb-6 text-2xl font-bold">Membership Benefits</h2>
       <p className="mb-8 text-gray-600">
         Delaware DSA membership connects you to a vibrant community of
-        democratic socialists working for transformative change. Here's what
-        membership offers:
+        democratic socialists working for transformative change. Here&apos;s
+        what membership offers:
       </p>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

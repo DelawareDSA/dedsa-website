@@ -38,11 +38,12 @@ describe('Performance Tests', () => {
       ({ unmount } = render(<HomePage />));
     });
 
-    const beforeUnmount = (global as any).gc
+    const globalWithGc = global as typeof globalThis & { gc?: () => void };
+    const beforeUnmount = globalWithGc.gc
       ? performance.memory.usedJSHeapSize
       : 0;
     unmount();
-    const afterUnmount = (global as any).gc
+    const afterUnmount = globalWithGc.gc
       ? performance.memory.usedJSHeapSize
       : 0;
 

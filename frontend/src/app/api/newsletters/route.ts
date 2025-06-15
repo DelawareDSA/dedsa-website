@@ -43,7 +43,9 @@ export async function GET() {
                     date = parsedDate.toISOString();
                     break;
                   }
-                } catch (e) {}
+                } catch {
+                  // ignore date parsing errors
+                }
               }
             }
           }

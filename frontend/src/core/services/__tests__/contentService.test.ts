@@ -1,4 +1,5 @@
 import { contentService } from '../contentService';
+import type { PageName } from '../contentService';
 
 describe('contentService', () => {
   describe('getPageContent', () => {
@@ -13,21 +14,27 @@ describe('contentService', () => {
     });
 
     it('returns undefined for invalid page names', () => {
-      const content = contentService.getPageContent('invalid' as any);
+      const content = contentService.getPageContent('invalid' as PageName);
       expect(content).toBeUndefined();
     });
   });
 
   describe('getComponentContent', () => {
     it('returns header content', () => {
-      const header = contentService.getComponentContent('header') as any;
+      const header = contentService.getComponentContent('header') as Record<
+        string,
+        unknown
+      >;
       expect(header).toHaveProperty('siteName');
       expect(header).toHaveProperty('navItems');
       expect(header.siteName).toBe('Delaware DSA');
     });
 
     it('returns footer content', () => {
-      const footer = contentService.getComponentContent('footer') as any;
+      const footer = contentService.getComponentContent('footer') as Record<
+        string,
+        unknown
+      >;
       expect(footer).toHaveProperty('organizationName');
       expect(footer).toHaveProperty('socialLinks');
       expect(footer).toHaveProperty('sections');

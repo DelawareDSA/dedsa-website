@@ -65,10 +65,10 @@ export default function FAQSection({ data }: FAQSectionProps) {
           Have More Questions?
         </h3>
         <p className="mb-4 text-gray-700">
-          Can't find the answer you're looking for? Our membership team is here
-          to help you navigate your involvement with Delaware DSA. Reach out
-          anytime with questions about committees, events, or organizing
-          opportunities.
+          Can&apos;t find the answer you&apos;re looking for? Our membership
+          team is here to help you navigate your involvement with Delaware DSA.
+          Reach out anytime with questions about committees, events, or
+          organizing opportunities.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <a

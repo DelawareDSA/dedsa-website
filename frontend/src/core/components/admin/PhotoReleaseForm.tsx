@@ -28,7 +28,13 @@ export default function PhotoReleaseForm({
   });
 
   return (
-    <form className="max-w-md p-6 mx-auto bg-white border border-gray-200 rounded-lg">
+    <form
+      className="max-w-md p-6 mx-auto bg-white border border-gray-200 rounded-lg"
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSubmit(formData);
+      }}
+    >
       <h3 className="mb-4 text-lg font-bold text-dsa-black">
         Photo Release Form
       </h3>

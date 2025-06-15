@@ -2,7 +2,7 @@ import HomePage from '@/app/page';
 import { render } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 
-expect.extend(toHaveNoViolations as any);
+expect.extend(toHaveNoViolations);
 
 describe('Accessibility Compliance', () => {
   it('should not have accessibility violations on home page', async () => {
@@ -39,5 +39,7 @@ describe('Accessibility Compliance', () => {
 });
 
 function calculateContrastRatio(bg: string, fg: string): number {
+  void bg;
+  void fg;
   return 4.5;
 }

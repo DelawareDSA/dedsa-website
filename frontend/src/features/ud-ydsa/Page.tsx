@@ -3,23 +3,13 @@ import type {
   CampaignsSectionContent,
   EventsSectionContent,
   HeroSectionContent,
-  JoinSectionContent,
-  LeadershipSectionContent,
-  MeetingInfoSectionContent,
   UdYdsaPageContent,
 } from '@/core/types/pages/ud-ydsa';
 
 type Props = UdYdsaPageContent;
 
 export default function UdYdsaPage(props: Props) {
-  const {
-    hero,
-    campaignsSection,
-    eventsSection,
-    meetingInfoSection,
-    leadershipSection,
-    joinSection,
-  } = props;
+  const { hero, campaignsSection, eventsSection } = props;
 
   return (
     <div className="min-h-screen bg-dsa-red-t4">
@@ -95,104 +85,6 @@ function EventsSection({
         </div>
         <a href={viewAllLinkHref} className="text-dsa-red hover:underline">
           {viewAllLinkText}
-        </a>
-      </div>
-    </section>
-  );
-}
-
-function MeetingInfoSection(props: MeetingInfoSectionContent) {
-  return (
-    <section className="py-16 bg-gray-50">
-      <div className="container-page">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div>
-            <h2 className="mb-4 text-2xl font-bold">
-              {props.meetingInfoTitle}
-            </h2>
-            <div className="space-y-2">
-              <p>
-                <strong>{props.meetingWhenLabel}:</strong> Second Tuesday of
-                each month, 7:00 PM
-              </p>
-              <p>
-                <strong>{props.meetingWhereLabel}:</strong> Morris Library, Room
-                202
-              </p>
-              <p>
-                <strong>{props.meetingEmailLabel}:</strong>{' '}
-                udydsa@delawardsa.org
-              </p>
-            </div>
-          </div>
-          <div>
-            <h2 className="mb-4 text-2xl font-bold">{props.followTitle}</h2>
-            <div className="flex space-x-4">
-              {Object.entries(props.socialLinks).map(([key, link]) => (
-                <a
-                  key={key}
-                  href={link.href}
-                  className="text-dsa-red hover:text-red-700"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function LeadershipSection({
-  leaders,
-  contactLinkText,
-  contactLinkHref,
-}: LeadershipSectionContent) {
-  return (
-    <section className="py-16">
-      <div className="container-page">
-        <h2 className="mb-8 text-3xl font-bold">Chapter Leadership</h2>
-        <div className="grid grid-cols-1 gap-6 mb-8 md:grid-cols-3">
-          {leaders?.map(
-            (
-              leader: LeadershipSectionContent['leaders'][number],
-              index: number
-            ) => (
-              <div key={index} className="text-center">
-                <div className="flex items-center justify-center w-24 h-24 mx-auto mb-4 text-2xl font-bold text-white rounded-full bg-dsa-red">
-                  {leader.imageInitials}
-                </div>
-                <h3 className="font-bold">{leader.name}</h3>
-                <p className="text-dsa-black">{leader.role}</p>
-              </div>
-            )
-          )}
-        </div>
-        <div className="text-center">
-          <a href={contactLinkHref} className="text-dsa-red hover:underline">
-            {contactLinkText}
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function JoinSection({ title, description, buttonText }: JoinSectionContent) {
-  return (
-    <section className="py-16 text-white bg-dsa-red">
-      <div className="text-center container-page">
-        <h2 className="mb-4 text-3xl font-bold">{title}</h2>
-        <p className="max-w-2xl mx-auto mb-8 text-xl">{description}</p>
-        <a
-          href="/join"
-          className="bg-white btn text-dsa-red hover:bg-dsa-red-t4"
-        >
-          {buttonText}
         </a>
       </div>
     </section>

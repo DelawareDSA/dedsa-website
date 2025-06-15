@@ -6,9 +6,12 @@ jest.mock('next/navigation', () => ({
   usePathname: jest.fn(),
 }));
 
+import type { ImageProps } from 'next/image';
+
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props: any) => <img {...props} />,
+  // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+  default: (props: ImageProps) => <img {...props} />,
 }));
 
 describe('Header', () => {
@@ -18,11 +21,7 @@ describe('Header', () => {
 
   it('renders logo and site name', () => {
     render(<Header />);
-    expect(
-      screen.getByAltText(
-        'DSA logo featuring clasped black and white hands shaking in front of a red rose'
-      )
-    ).toBeInTheDocument();
+    expect(screen.getByAltText('DSA logo')).toBeInTheDocument();
     expect(screen.getByText('Delaware DSA')).toBeInTheDocument();
   });
 

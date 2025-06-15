@@ -1,12 +1,16 @@
 import '@testing-library/jest-dom';
 import 'whatwg-fetch';
 
-(global as any).IntersectionObserver = class {
-  constructor() {}
+class MockIntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+}
+
+Object.defineProperty(global, 'IntersectionObserver', {
+  writable: true,
+  value: MockIntersectionObserver,
+});
 
 jest.setTimeout(10000);
 

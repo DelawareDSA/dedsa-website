@@ -28,13 +28,15 @@ const pageContent = {
   udYdsa,
 };
 
+export type PageName = keyof typeof pageContent;
+
 const componentContent = {
   header,
   footer,
 };
 
 export const contentService = {
-  getPageContent: (pageName: keyof typeof pageContent) => {
+  getPageContent: (pageName: PageName) => {
     return pageContent[pageName];
   },
 

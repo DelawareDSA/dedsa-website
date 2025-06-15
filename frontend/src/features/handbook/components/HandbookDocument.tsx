@@ -130,10 +130,10 @@ export default function HandbookDocument({ data }: HandbookDocumentProps) {
           <div>
             <h5 className="mb-1 font-medium text-blue-900">Viewing Tips</h5>
             <p className="text-sm text-blue-800">
-              Click "View PDF" to open the document in your browser's PDF
-              viewer. Most browsers support searching, zooming, and navigation
-              within the PDF. If you have trouble viewing, try downloading the
-              file instead.
+              Click &quot;View PDF&quot; to open the document in your
+              browser&apos;s PDF viewer. Most browsers support searching,
+              zooming, and navigation within the PDF. If you have trouble
+              viewing, try downloading the file instead.
             </p>
           </div>
         </div>

@@ -82,7 +82,7 @@ export default function OtherDocuments({ data }: OtherDocumentsProps) {
           >
             contact our chapter
           </a>{' '}
-          and we'll be happy to provide alternative formats.
+          and we&apos;ll be happy to provide alternative formats.
         </p>
       </div>
     </div>

@@ -2,16 +2,43 @@ import { render, screen } from '@testing-library/react';
 import { act } from 'react';
 import HeroSection from '../HeroSection';
 
+import type { PropsWithChildren } from 'react';
+
 jest.mock('framer-motion', () => ({
   motion: {
-    section: ({ children, ...props }: any) => (
+    section: ({
+      children,
+      ...props
+    }: PropsWithChildren<Record<string, unknown>>) => (
       <section {...props}>{children}</section>
     ),
-    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-    h1: ({ children, ...props }: any) => <h1 {...props}>{children}</h1>,
-    h2: ({ children, ...props }: any) => <h2 {...props}>{children}</h2>,
-    p: ({ children, ...props }: any) => <p {...props}>{children}</p>,
-    span: ({ children, ...props }: any) => <span {...props}>{children}</span>,
+    div: ({
+      children,
+      ...props
+    }: PropsWithChildren<Record<string, unknown>>) => (
+      <div {...props}>{children}</div>
+    ),
+    h1: ({
+      children,
+      ...props
+    }: PropsWithChildren<Record<string, unknown>>) => (
+      <h1 {...props}>{children}</h1>
+    ),
+    h2: ({
+      children,
+      ...props
+    }: PropsWithChildren<Record<string, unknown>>) => (
+      <h2 {...props}>{children}</h2>
+    ),
+    p: ({ children, ...props }: PropsWithChildren<Record<string, unknown>>) => (
+      <p {...props}>{children}</p>
+    ),
+    span: ({
+      children,
+      ...props
+    }: PropsWithChildren<Record<string, unknown>>) => (
+      <span {...props}>{children}</span>
+    ),
   },
 }));
 
