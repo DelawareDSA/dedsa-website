@@ -6,10 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "start": "next start",
+    "start": "node .next/standalone/server.js",
     "build:static": "next build && next export",
     "lint": "next lint",
     "prepare": "cd .. && husky",
+    "postbuild": "rm -rf .next/standalone/public/public && cp -R public/. .next/standalone/public/ && cp -R .next/static .next/standalone/.next/static",
     "analyze": "ANALYZE=true next build",
     "lint-report": "node scripts/lint-report.js",
     "type-check": "tsc --noEmit",
@@ -26,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "cpy-cli": "^4.1.0",
     "@apollo/client": "^3.13.8",
     "@apollo/client-integration-nextjs": "^0.12.2",
     "@hookform/resolvers": "^5.1.1",

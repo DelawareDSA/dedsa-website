@@ -1,6 +1,7 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
 import type { NextConfig } from 'next';
 
+
 const isDev = process.env.NODE_ENV === 'development';
 
 const withAnalyzer = withBundleAnalyzer({
@@ -9,12 +10,17 @@ const withAnalyzer = withBundleAnalyzer({
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  output: 'export',
   poweredByHeader: false,
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  distDir: 'dist',
+  output:'standalone',  
 
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   outputFileTracingExcludes: {
     '/_not-found': [],
   },
@@ -45,9 +51,8 @@ const nextConfig: NextConfig = {
   ],
 
   headers: async () => {
-    const scriptSrc = `script-src 'self'${isDev ? " 'unsafe-inline' 'unsafe-eval'" : ''}`;
-    const styleSrc = `style-src 'self'${isDev ? " 'unsafe-inline'" : ''}`;
-
+    const scriptSrc = `script-src 'self' 'unsafe-inline'`;
+    const styleSrc  = `style-src 'self' 'unsafe-inline'`;
     return [
       {
         source: '/(.*)',

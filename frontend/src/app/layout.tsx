@@ -10,6 +10,17 @@ import MainWrapper from './MainWrapper';
 import PageTransition from './PageTransition';
 import { Providers } from './providers';
 
+export const metadata = {
+  title: 'Delaware DSA | Democratic Socialists of America',
+  description:
+    'The Delaware chapter of the Democratic Socialists of America (DSA). Member-run, progressive activism since 2021.',
+  icons: {
+    icon: '/favicon.ico', // your newly generated favicon
+    apple: '/apple-touch-icon.png', // existing Apple touch icon
+    shortcut: '/favicon.ico',
+  },
+};
+
 const styreneB = localFont({
   src: [
     {
@@ -48,22 +59,6 @@ const manifoldDSA = localFont({
   variable: '--font-manifold-dsa',
   display: 'swap',
 });
-
-export const metadata: Metadata = {
-  title: {
-    template: '%s | Delaware DSA',
-    default: 'Delaware DSA | Democratic Socialists of America',
-  },
-  description:
-    'The Delaware chapter of the Democratic Socialists of America (DSA). Member-run, progressive activism since 2021.',
-  icons: {
-    icon: [{ url: '/dedsa-logo.png' }],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-  },
-  manifest: '/manifest.json',
-};
 
 export default function RootLayout({
   children,
