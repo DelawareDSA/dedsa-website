@@ -1,4 +1,57 @@
-node_modules
-/frontend/.next/
-frontend/.next/
-coverage
+# ─── Node & Next.js / Frontend ────────────────────────────────────────────────
+# Dependency directories
+node_modules/                           # turn0search5
+.pnpm-store/                            # if using pnpm
+.yarn/cache/                            # if using Yarn v2+ Plug’n’Play
+.yarn/unplugged/                        # turn0search5
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Build outputs
+.next/                                  # Next.js build directory :contentReference[oaicite:0]{index=0}
+out/                                    # Next.js export directory :contentReference[oaicite:1]{index=1}
+dist/ build/                            # other common output dirs :contentReference[oaicite:2]{index=2}
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*                         # :contentReference[oaicite:3]{index=3}
+
+# Environment files
+.env
+.env.*.local
+.env.local                             # local secrets :contentReference[oaicite:4]{index=4}
+
+# Editors & OS
+.vscode/
+.idea/
+*.suo *.ntvs* *.njsproj *.sln
+.DS_Store
+Thumbs.db
+
+# ─── WordPress / CMS ────────────────────────────────────────────────────────
+# Ignore core, uploads, caches, upgrades
+wp-admin/
+wp-includes/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+
+# Track only custom themes/plugins—ignore everything else
+wp-content/plugins/*
+!wp-content/plugins/your-custom-plugin/  # exception for your plugin :contentReference[oaicite:5]{index=5}
+wp-content/themes/*
+!wp-content/themes/your-custom-theme/     # exception for your theme :contentReference[oaicite:6]{index=6}
+
+# WordPress config & server‐specific files
+wp-config.php
+.htaccess
+
+# ─── Misc / Tools ──────────────────────────────────────────────────────────
+# IDE, OS, build tools, caches
+*.cache/
+.cache-loader/
+bower_components/
+.DS_Store
+npm-packages-offline-cache/

@@ -1,0 +1,1071 @@
+.
+├── cms.dedsa.org
+│   ├── cms_wp_backup_2025-06-17.sql
+│   ├── cms_wp_backup_full.sql
+│   ├── frontend
+│   ├── google40d1fcda811e9d46.html
+│   ├── googled870dea774f22f07.html
+│   ├── index.php
+│   ├── index.php.orig
+│   ├── license.txt
+│   ├── readme.html
+│   ├── robots.txt
+│   ├── wp-activate.php
+│   ├── wp-admin
+│   │   ├── about.php
+│   │   ├── admin-ajax.php
+│   │   ├── admin-footer.php
+│   │   ├── admin-functions.php
+│   │   ├── admin-header.php
+│   │   ├── admin-post.php
+│   │   ├── admin.php
+│   │   ├── async-upload.php
+│   │   ├── authorize-application.php
+│   │   ├── comment.php
+│   │   ├── contribute.php
+│   │   ├── credits.php
+│   │   ├── custom-background.php
+│   │   ├── custom-header.php
+│   │   ├── customize.php
+│   │   ├── edit-comments.php
+│   │   ├── edit-form-advanced.php
+│   │   ├── edit-form-blocks.php
+│   │   ├── edit-form-comment.php
+│   │   ├── edit-link-form.php
+│   │   ├── edit-tag-form.php
+│   │   ├── edit-tags.php
+│   │   ├── edit.php
+│   │   ├── erase-personal-data.php
+│   │   ├── export-personal-data.php
+│   │   ├── export.php
+│   │   ├── freedoms.php
+│   │   ├── import.php
+│   │   ├── includes
+│   │   │   ├── admin-filters.php
+│   │   │   ├── admin.php
+│   │   │   ├── ajax-actions.php
+│   │   │   ├── bookmark.php
+│   │   │   ├── class-automatic-upgrader-skin.php
+│   │   │   ├── class-bulk-plugin-upgrader-skin.php
+│   │   │   ├── class-bulk-theme-upgrader-skin.php
+│   │   │   ├── class-bulk-upgrader-skin.php
+│   │   │   ├── class-core-upgrader.php
+│   │   │   ├── class-custom-background.php
+│   │   │   ├── class-custom-image-header.php
+│   │   │   ├── class-file-upload-upgrader.php
+│   │   │   ├── class-ftp-pure.php
+│   │   │   ├── class-ftp-sockets.php
+│   │   │   ├── class-ftp.php
+│   │   │   ├── class-language-pack-upgrader-skin.php
+│   │   │   ├── class-language-pack-upgrader.php
+│   │   │   ├── class-pclzip.php
+│   │   │   ├── class-plugin-installer-skin.php
+│   │   │   ├── class-plugin-upgrader-skin.php
+│   │   │   ├── class-plugin-upgrader.php
+│   │   │   ├── class-theme-installer-skin.php
+│   │   │   ├── class-theme-upgrader-skin.php
+│   │   │   ├── class-theme-upgrader.php
+│   │   │   ├── class-walker-category-checklist.php
+│   │   │   ├── class-walker-nav-menu-checklist.php
+│   │   │   ├── class-walker-nav-menu-edit.php
+│   │   │   ├── class-wp-ajax-upgrader-skin.php
+│   │   │   ├── class-wp-application-passwords-list-table.php
+│   │   │   ├── class-wp-automatic-updater.php
+│   │   │   ├── class-wp-comments-list-table.php
+│   │   │   ├── class-wp-community-events.php
+│   │   │   ├── class-wp-debug-data.php
+│   │   │   ├── class-wp-filesystem-base.php
+│   │   │   ├── class-wp-filesystem-direct.php
+│   │   │   ├── class-wp-filesystem-ftpext.php
+│   │   │   ├── class-wp-filesystem-ftpsockets.php
+│   │   │   ├── class-wp-filesystem-ssh2.php
+│   │   │   ├── class-wp-importer.php
+│   │   │   ├── class-wp-internal-pointers.php
+│   │   │   ├── class-wp-links-list-table.php
+│   │   │   ├── class-wp-list-table-compat.php
+│   │   │   ├── class-wp-list-table.php
+│   │   │   ├── class-wp-media-list-table.php
+│   │   │   ├── class-wp-ms-sites-list-table.php
+│   │   │   ├── class-wp-ms-themes-list-table.php
+│   │   │   ├── class-wp-ms-users-list-table.php
+│   │   │   ├── class-wp-plugin-install-list-table.php
+│   │   │   ├── class-wp-plugins-list-table.php
+│   │   │   ├── class-wp-post-comments-list-table.php
+│   │   │   ├── class-wp-posts-list-table.php
+│   │   │   ├── class-wp-privacy-data-export-requests-list-table.php
+│   │   │   ├── class-wp-privacy-data-removal-requests-list-table.php
+│   │   │   ├── class-wp-privacy-policy-content.php
+│   │   │   ├── class-wp-privacy-requests-table.php
+│   │   │   ├── class-wp-screen.php
+│   │   │   ├── class-wp-site-health-auto-updates.php
+│   │   │   ├── class-wp-site-health.php
+│   │   │   ├── class-wp-site-icon.php
+│   │   │   ├── class-wp-terms-list-table.php
+│   │   │   ├── class-wp-theme-install-list-table.php
+│   │   │   ├── class-wp-themes-list-table.php
+│   │   │   ├── class-wp-upgrader-skin.php
+│   │   │   ├── class-wp-upgrader-skins.php
+│   │   │   ├── class-wp-upgrader.php
+│   │   │   ├── class-wp-users-list-table.php
+│   │   │   ├── comment.php
+│   │   │   ├── continents-cities.php
+│   │   │   ├── credits.php
+│   │   │   ├── dashboard.php
+│   │   │   ├── deprecated.php
+│   │   │   ├── edit-tag-messages.php
+│   │   │   ├── export.php
+│   │   │   ├── file.php
+│   │   │   ├── image-edit.php
+│   │   │   ├── image.php
+│   │   │   ├── import.php
+│   │   │   ├── list-table.php
+│   │   │   ├── media.php
+│   │   │   ├── menu.php
+│   │   │   ├── meta-boxes.php
+│   │   │   ├── misc.php
+│   │   │   ├── ms-admin-filters.php
+│   │   │   ├── ms-deprecated.php
+│   │   │   ├── ms.php
+│   │   │   ├── nav-menu.php
+│   │   │   ├── network.php
+│   │   │   ├── noop.php
+│   │   │   ├── options.php
+│   │   │   ├── plugin-install.php
+│   │   │   ├── plugin.php
+│   │   │   ├── post.php
+│   │   │   ├── privacy-tools.php
+│   │   │   ├── revision.php
+│   │   │   ├── schema.php
+│   │   │   ├── screen.php
+│   │   │   ├── taxonomy.php
+│   │   │   ├── template.php
+│   │   │   ├── theme-install.php
+│   │   │   ├── theme.php
+│   │   │   ├── translation-install.php
+│   │   │   ├── update-core.php
+│   │   │   ├── update.php
+│   │   │   ├── upgrade.php
+│   │   │   ├── user.php
+│   │   │   └── widgets.php
+│   │   ├── index.php
+│   │   ├── install-helper.php
+│   │   ├── install.php
+│   │   ├── link-add.php
+│   │   ├── link-manager.php
+│   │   ├── link-parse-opml.php
+│   │   ├── link.php
+│   │   ├── load-scripts.php
+│   │   ├── load-styles.php
+│   │   ├── maint
+│   │   │   └── repair.php
+│   │   ├── media-new.php
+│   │   ├── media-upload.php
+│   │   ├── media.php
+│   │   ├── menu-header.php
+│   │   ├── menu.php
+│   │   ├── moderation.php
+│   │   ├── ms-admin.php
+│   │   ├── ms-delete-site.php
+│   │   ├── ms-edit.php
+│   │   ├── ms-options.php
+│   │   ├── ms-sites.php
+│   │   ├── ms-themes.php
+│   │   ├── ms-upgrade-network.php
+│   │   ├── ms-users.php
+│   │   ├── my-sites.php
+│   │   ├── nav-menus.php
+│   │   ├── network
+│   │   │   ├── about.php
+│   │   │   ├── admin.php
+│   │   │   ├── contribute.php
+│   │   │   ├── credits.php
+│   │   │   ├── edit.php
+│   │   │   ├── freedoms.php
+│   │   │   ├── index.php
+│   │   │   ├── menu.php
+│   │   │   ├── plugin-editor.php
+│   │   │   ├── plugin-install.php
+│   │   │   ├── plugins.php
+│   │   │   ├── privacy.php
+│   │   │   ├── profile.php
+│   │   │   ├── settings.php
+│   │   │   ├── setup.php
+│   │   │   ├── site-info.php
+│   │   │   ├── site-new.php
+│   │   │   ├── site-settings.php
+│   │   │   ├── site-themes.php
+│   │   │   ├── site-users.php
+│   │   │   ├── sites.php
+│   │   │   ├── theme-editor.php
+│   │   │   ├── theme-install.php
+│   │   │   ├── themes.php
+│   │   │   ├── update-core.php
+│   │   │   ├── update.php
+│   │   │   ├── upgrade.php
+│   │   │   ├── user-edit.php
+│   │   │   ├── user-new.php
+│   │   │   └── users.php
+│   │   ├── network.php
+│   │   ├── options-discussion.php
+│   │   ├── options-general.php
+│   │   ├── options-head.php
+│   │   ├── options-media.php
+│   │   ├── options-permalink.php
+│   │   ├── options-privacy.php
+│   │   ├── options-reading.php
+│   │   ├── options-writing.php
+│   │   ├── options.php
+│   │   ├── plugin-editor.php
+│   │   ├── plugin-install.php
+│   │   ├── plugins.php
+│   │   ├── post-new.php
+│   │   ├── post.php
+│   │   ├── press-this.php
+│   │   ├── privacy-policy-guide.php
+│   │   ├── privacy.php
+│   │   ├── profile.php
+│   │   ├── revision.php
+│   │   ├── setup-config.php
+│   │   ├── site-editor.php
+│   │   ├── site-health-info.php
+│   │   ├── site-health.php
+│   │   ├── term.php
+│   │   ├── theme-editor.php
+│   │   ├── theme-install.php
+│   │   ├── themes.php
+│   │   ├── tools.php
+│   │   ├── update-core.php
+│   │   ├── update.php
+│   │   ├── upgrade-functions.php
+│   │   ├── upgrade.php
+│   │   ├── upload.php
+│   │   ├── user
+│   │   │   ├── about.php
+│   │   │   ├── admin.php
+│   │   │   ├── contribute.php
+│   │   │   ├── credits.php
+│   │   │   ├── freedoms.php
+│   │   │   ├── index.php
+│   │   │   ├── menu.php
+│   │   │   ├── privacy.php
+│   │   │   ├── profile.php
+│   │   │   └── user-edit.php
+│   │   ├── user-edit.php
+│   │   ├── user-new.php
+│   │   ├── users.php
+│   │   ├── widgets-form-blocks.php
+│   │   ├── widgets-form.php
+│   │   └── widgets.php
+│   ├── wp-blog-header.php
+│   ├── wp-comments-post.php
+│   ├── wp-config-sample.php
+│   ├── wp-config.php
+│   ├── wp-config.php.bak
+│   ├── wp-content
+│   │   ├── debug.log.old
+│   │   ├── index.php
+│   │   ├── mu-plugins
+│   │   │   └── lock-caps.php
+│   │   ├── plugins
+│   │   │   ├── about.php
+│   │   │   ├── akismet
+│   │   │   │   ├── LICENSE.txt
+│   │   │   │   ├── _inc
+│   │   │   │   │   ├── akismet-admin.css
+│   │   │   │   │   ├── akismet-admin.js
+│   │   │   │   │   ├── akismet-frontend.js
+│   │   │   │   │   ├── akismet.css
+│   │   │   │   │   ├── akismet.js
+│   │   │   │   │   ├── img
+│   │   │   │   │   │   ├── akismet-activation-banner-elements.png
+│   │   │   │   │   │   ├── akismet-refresh-logo.svg
+│   │   │   │   │   │   ├── akismet-refresh-logo@2x.png
+│   │   │   │   │   │   ├── arrow-left.svg
+│   │   │   │   │   │   ├── icon-external.svg
+│   │   │   │   │   │   └── logo-a-2x.png
+│   │   │   │   │   └── rtl
+│   │   │   │   │       ├── akismet-admin-rtl.css
+│   │   │   │   │       └── akismet-rtl.css
+│   │   │   │   ├── akismet.php
+│   │   │   │   ├── changelog.txt
+│   │   │   │   ├── class.akismet-admin.php
+│   │   │   │   ├── class.akismet-cli.php
+│   │   │   │   ├── class.akismet-rest-api.php
+│   │   │   │   ├── class.akismet-widget.php
+│   │   │   │   ├── class.akismet.php
+│   │   │   │   ├── index.php
+│   │   │   │   ├── readme.txt
+│   │   │   │   ├── views
+│   │   │   │   │   ├── activate.php
+│   │   │   │   │   ├── config.php
+│   │   │   │   │   ├── connect-jp.php
+│   │   │   │   │   ├── enter.php
+│   │   │   │   │   ├── get.php
+│   │   │   │   │   ├── logo.php
+│   │   │   │   │   ├── notice.php
+│   │   │   │   │   ├── predefined.php
+│   │   │   │   │   ├── setup.php
+│   │   │   │   │   ├── start.php
+│   │   │   │   │   ├── stats.php
+│   │   │   │   │   └── title.php
+│   │   │   │   └── wrapper.php
+│   │   │   ├── calendar-rest
+│   │   │   │   ├── calendar-rest.php
+│   │   │   │   ├── composer.json
+│   │   │   │   ├── composer.lock
+│   │   │   │   └── credentials.json
+│   │   │   ├── dsa-content
+│   │   │   │   ├── bin
+│   │   │   │   │   └── install-wp-tests.sh
+│   │   │   │   ├── composer.json
+│   │   │   │   ├── dsa-content.php
+│   │   │   │   ├── phpunit.xml.dist
+│   │   │   │   ├── post-types
+│   │   │   │   │   ├── bylaws.php
+│   │   │   │   │   ├── committees.php
+│   │   │   │   │   ├── events.php
+│   │   │   │   │   ├── events.php.bak
+│   │   │   │   │   ├── leadership.php
+│   │   │   │   │   ├── newsletters.php
+│   │   │   │   │   ├── pages.php
+│   │   │   │   │   └── settings.php
+│   │   │   │   ├── readme.txt
+│   │   │   │   └── tests
+│   │   │   │       ├── bootstrap.php
+│   │   │   │       └── test-sample.php
+│   │   │   ├── hello.php
+│   │   │   ├── index.php
+│   │   │   └── wp-graphql
+│   │   │       ├── LICENSE
+│   │   │       ├── access-functions.php
+│   │   │       ├── activation.php
+│   │   │       ├── build
+│   │   │       │   ├── 113.js
+│   │   │       │   ├── 148.js
+│   │   │       │   ├── 253.js
+│   │   │       │   ├── 260.js
+│   │   │       │   ├── 271.js
+│   │   │       │   ├── 277.js
+│   │   │       │   ├── 331.js
+│   │   │       │   ├── 338.js
+│   │   │       │   ├── 382.js
+│   │   │       │   ├── 385.js
+│   │   │       │   ├── 391.js
+│   │   │       │   ├── 420.js
+│   │   │       │   ├── 482.js
+│   │   │       │   ├── 528.js
+│   │   │       │   ├── 61.js
+│   │   │       │   ├── 627.js
+│   │   │       │   ├── 669.js
+│   │   │       │   ├── 681.js
+│   │   │       │   ├── 77.js
+│   │   │       │   ├── 910.js
+│   │   │       │   ├── 912.js
+│   │   │       │   ├── 924.js
+│   │   │       │   ├── 93.js
+│   │   │       │   ├── 951.js
+│   │   │       │   ├── 983.js
+│   │   │       │   ├── app-rtl.css
+│   │   │       │   ├── app.asset.php
+│   │   │       │   ├── app.css
+│   │   │       │   ├── app.js
+│   │   │       │   ├── extensions-rtl.css
+│   │   │       │   ├── extensions.asset.php
+│   │   │       │   ├── extensions.css
+│   │   │       │   ├── extensions.js
+│   │   │       │   ├── graphiqlAuthSwitch.asset.php
+│   │   │       │   ├── graphiqlAuthSwitch.js
+│   │   │       │   ├── graphiqlFullscreenToggle-rtl.css
+│   │   │       │   ├── graphiqlFullscreenToggle.asset.php
+│   │   │       │   ├── graphiqlFullscreenToggle.css
+│   │   │       │   ├── graphiqlFullscreenToggle.js
+│   │   │       │   ├── graphiqlQueryComposer-rtl.css
+│   │   │       │   ├── graphiqlQueryComposer.asset.php
+│   │   │       │   ├── graphiqlQueryComposer.css
+│   │   │       │   ├── graphiqlQueryComposer.js
+│   │   │       │   ├── index.asset.php
+│   │   │       │   ├── index.js
+│   │   │       │   ├── style-app-rtl.css
+│   │   │       │   ├── style-app.css
+│   │   │       │   ├── updates-rtl.css
+│   │   │       │   ├── updates.asset.php
+│   │   │       │   └── updates.css
+│   │   │       ├── cli
+│   │   │       │   └── wp-cli.php
+│   │   │       ├── constants.php
+│   │   │       ├── deactivation.php
+│   │   │       ├── phpcs
+│   │   │       │   └── WPGraphQL
+│   │   │       │       └── PHPCS
+│   │   │       │           ├── Sniffs
+│   │   │       │           │   ├── Commenting
+│   │   │       │           │   │   └── ValidSinceTagSniff.php
+│   │   │       │           │   └── Functions
+│   │   │       │           │       └── VersionParameterSniff.php
+│   │   │       │           └── ruleset.xml
+│   │   │       ├── readme.txt
+│   │   │       ├── release_notes.md
+│   │   │       ├── src
+│   │   │       │   ├── Admin
+│   │   │       │   │   ├── Admin.php
+│   │   │       │   │   ├── AdminNotices.php
+│   │   │       │   │   ├── Extensions
+│   │   │       │   │   │   ├── Extensions.php
+│   │   │       │   │   │   └── Registry.php
+│   │   │       │   │   ├── GraphiQL
+│   │   │       │   │   │   └── GraphiQL.php
+│   │   │       │   │   ├── Settings
+│   │   │       │   │   │   ├── Settings.php
+│   │   │       │   │   │   └── SettingsRegistry.php
+│   │   │       │   │   └── Updates
+│   │   │       │   │       ├── PluginsScreenLoader.php
+│   │   │       │   │       ├── SemVer.php
+│   │   │       │   │       ├── UpdateChecker.php
+│   │   │       │   │       ├── Updates.php
+│   │   │       │   │       └── UpdatesScreenLoader.php
+│   │   │       │   ├── AppContext.php
+│   │   │       │   ├── Connection
+│   │   │       │   │   ├── Comments.php
+│   │   │       │   │   ├── MenuItems.php
+│   │   │       │   │   ├── PostObjects.php
+│   │   │       │   │   ├── Taxonomies.php
+│   │   │       │   │   ├── TermObjects.php
+│   │   │       │   │   └── Users.php
+│   │   │       │   ├── Data
+│   │   │       │   │   ├── CommentMutation.php
+│   │   │       │   │   ├── Config.php
+│   │   │       │   │   ├── Connection
+│   │   │       │   │   │   ├── AbstractConnectionResolver.php
+│   │   │       │   │   │   ├── CommentConnectionResolver.php
+│   │   │       │   │   │   ├── ContentTypeConnectionResolver.php
+│   │   │       │   │   │   ├── EnqueuedScriptsConnectionResolver.php
+│   │   │       │   │   │   ├── EnqueuedStylesheetConnectionResolver.php
+│   │   │       │   │   │   ├── MenuConnectionResolver.php
+│   │   │       │   │   │   ├── MenuItemConnectionResolver.php
+│   │   │       │   │   │   ├── PluginConnectionResolver.php
+│   │   │       │   │   │   ├── PostObjectConnectionResolver.php
+│   │   │       │   │   │   ├── TaxonomyConnectionResolver.php
+│   │   │       │   │   │   ├── TermObjectConnectionResolver.php
+│   │   │       │   │   │   ├── ThemeConnectionResolver.php
+│   │   │       │   │   │   ├── UserConnectionResolver.php
+│   │   │       │   │   │   └── UserRoleConnectionResolver.php
+│   │   │       │   │   ├── Cursor
+│   │   │       │   │   │   ├── AbstractCursor.php
+│   │   │       │   │   │   ├── CommentObjectCursor.php
+│   │   │       │   │   │   ├── CursorBuilder.php
+│   │   │       │   │   │   ├── PostObjectCursor.php
+│   │   │       │   │   │   ├── TermObjectCursor.php
+│   │   │       │   │   │   └── UserCursor.php
+│   │   │       │   │   ├── DataSource.php
+│   │   │       │   │   ├── Loader
+│   │   │       │   │   │   ├── AbstractDataLoader.php
+│   │   │       │   │   │   ├── CommentAuthorLoader.php
+│   │   │       │   │   │   ├── CommentLoader.php
+│   │   │       │   │   │   ├── EnqueuedScriptLoader.php
+│   │   │       │   │   │   ├── EnqueuedStylesheetLoader.php
+│   │   │       │   │   │   ├── PluginLoader.php
+│   │   │       │   │   │   ├── PostObjectLoader.php
+│   │   │       │   │   │   ├── PostTypeLoader.php
+│   │   │       │   │   │   ├── TaxonomyLoader.php
+│   │   │       │   │   │   ├── TermObjectLoader.php
+│   │   │       │   │   │   ├── ThemeLoader.php
+│   │   │       │   │   │   ├── UserLoader.php
+│   │   │       │   │   │   └── UserRoleLoader.php
+│   │   │       │   │   ├── MediaItemMutation.php
+│   │   │       │   │   ├── NodeResolver.php
+│   │   │       │   │   ├── PostObjectMutation.php
+│   │   │       │   │   ├── TermObjectMutation.php
+│   │   │       │   │   └── UserMutation.php
+│   │   │       │   ├── Model
+│   │   │       │   │   ├── Avatar.php
+│   │   │       │   │   ├── Comment.php
+│   │   │       │   │   ├── CommentAuthor.php
+│   │   │       │   │   ├── Menu.php
+│   │   │       │   │   ├── MenuItem.php
+│   │   │       │   │   ├── Model.php
+│   │   │       │   │   ├── Plugin.php
+│   │   │       │   │   ├── Post.php
+│   │   │       │   │   ├── PostType.php
+│   │   │       │   │   ├── Taxonomy.php
+│   │   │       │   │   ├── Term.php
+│   │   │       │   │   ├── Theme.php
+│   │   │       │   │   ├── User.php
+│   │   │       │   │   └── UserRole.php
+│   │   │       │   ├── Mutation
+│   │   │       │   │   ├── CommentCreate.php
+│   │   │       │   │   ├── CommentDelete.php
+│   │   │       │   │   ├── CommentRestore.php
+│   │   │       │   │   ├── CommentUpdate.php
+│   │   │       │   │   ├── MediaItemCreate.php
+│   │   │       │   │   ├── MediaItemDelete.php
+│   │   │       │   │   ├── MediaItemUpdate.php
+│   │   │       │   │   ├── PostObjectCreate.php
+│   │   │       │   │   ├── PostObjectDelete.php
+│   │   │       │   │   ├── PostObjectUpdate.php
+│   │   │       │   │   ├── ResetUserPassword.php
+│   │   │       │   │   ├── SendPasswordResetEmail.php
+│   │   │       │   │   ├── TermObjectCreate.php
+│   │   │       │   │   ├── TermObjectDelete.php
+│   │   │       │   │   ├── TermObjectUpdate.php
+│   │   │       │   │   ├── UpdateSettings.php
+│   │   │       │   │   ├── UserCreate.php
+│   │   │       │   │   ├── UserDelete.php
+│   │   │       │   │   ├── UserRegister.php
+│   │   │       │   │   └── UserUpdate.php
+│   │   │       │   ├── Registry
+│   │   │       │   │   ├── SchemaRegistry.php
+│   │   │       │   │   ├── TypeRegistry.php
+│   │   │       │   │   └── Utils
+│   │   │       │   │       ├── PostObject.php
+│   │   │       │   │       └── TermObject.php
+│   │   │       │   ├── Request.php
+│   │   │       │   ├── Router.php
+│   │   │       │   ├── Server
+│   │   │       │   │   ├── ValidationRules
+│   │   │       │   │   │   ├── DisableIntrospection.php
+│   │   │       │   │   │   ├── QueryDepth.php
+│   │   │       │   │   │   └── RequireAuthentication.php
+│   │   │       │   │   └── WPHelper.php
+│   │   │       │   ├── Type
+│   │   │       │   │   ├── Connection
+│   │   │       │   │   │   ├── Comments.php
+│   │   │       │   │   │   ├── MenuItems.php
+│   │   │       │   │   │   ├── PostObjects.php
+│   │   │       │   │   │   ├── Taxonomies.php
+│   │   │       │   │   │   ├── TermObjects.php
+│   │   │       │   │   │   └── Users.php
+│   │   │       │   │   ├── Enum
+│   │   │       │   │   │   ├── AvatarRatingEnum.php
+│   │   │       │   │   │   ├── CommentNodeIdTypeEnum.php
+│   │   │       │   │   │   ├── CommentStatusEnum.php
+│   │   │       │   │   │   ├── CommentsConnectionOrderbyEnum.php
+│   │   │       │   │   │   ├── ContentNodeIdTypeEnum.php
+│   │   │       │   │   │   ├── ContentTypeEnum.php
+│   │   │       │   │   │   ├── ContentTypeIdTypeEnum.php
+│   │   │       │   │   │   ├── MediaItemSizeEnum.php
+│   │   │       │   │   │   ├── MediaItemStatusEnum.php
+│   │   │       │   │   │   ├── MenuItemNodeIdTypeEnum.php
+│   │   │       │   │   │   ├── MenuLocationEnum.php
+│   │   │       │   │   │   ├── MenuNodeIdTypeEnum.php
+│   │   │       │   │   │   ├── MimeTypeEnum.php
+│   │   │       │   │   │   ├── OrderEnum.php
+│   │   │       │   │   │   ├── PluginStatusEnum.php
+│   │   │       │   │   │   ├── PostObjectFieldFormatEnum.php
+│   │   │       │   │   │   ├── PostObjectsConnectionDateColumnEnum.php
+│   │   │       │   │   │   ├── PostObjectsConnectionOrderbyEnum.php
+│   │   │       │   │   │   ├── PostStatusEnum.php
+│   │   │       │   │   │   ├── RelationEnum.php
+│   │   │       │   │   │   ├── ScriptLoadingGroupLocationEnum.php
+│   │   │       │   │   │   ├── ScriptLoadingStrategyEnum.php
+│   │   │       │   │   │   ├── TaxonomyEnum.php
+│   │   │       │   │   │   ├── TaxonomyIdTypeEnum.php
+│   │   │       │   │   │   ├── TermNodeIdTypeEnum.php
+│   │   │       │   │   │   ├── TermObjectsConnectionOrderbyEnum.php
+│   │   │       │   │   │   ├── TimezoneEnum.php
+│   │   │       │   │   │   ├── UserNodeIdTypeEnum.php
+│   │   │       │   │   │   ├── UserRoleEnum.php
+│   │   │       │   │   │   ├── UsersConnectionOrderbyEnum.php
+│   │   │       │   │   │   └── UsersConnectionSearchColumnEnum.php
+│   │   │       │   │   ├── Input
+│   │   │       │   │   │   ├── DateInput.php
+│   │   │       │   │   │   ├── DateQueryInput.php
+│   │   │       │   │   │   ├── PostObjectsConnectionOrderbyInput.php
+│   │   │       │   │   │   └── UsersConnectionOrderbyInput.php
+│   │   │       │   │   ├── InterfaceType
+│   │   │       │   │   │   ├── Commenter.php
+│   │   │       │   │   │   ├── Connection.php
+│   │   │       │   │   │   ├── ContentNode.php
+│   │   │       │   │   │   ├── ContentTemplate.php
+│   │   │       │   │   │   ├── DatabaseIdentifier.php
+│   │   │       │   │   │   ├── Edge.php
+│   │   │       │   │   │   ├── EnqueuedAsset.php
+│   │   │       │   │   │   ├── HierarchicalContentNode.php
+│   │   │       │   │   │   ├── HierarchicalNode.php
+│   │   │       │   │   │   ├── HierarchicalTermNode.php
+│   │   │       │   │   │   ├── MenuItemLinkable.php
+│   │   │       │   │   │   ├── Node.php
+│   │   │       │   │   │   ├── NodeWithAuthor.php
+│   │   │       │   │   │   ├── NodeWithComments.php
+│   │   │       │   │   │   ├── NodeWithContentEditor.php
+│   │   │       │   │   │   ├── NodeWithExcerpt.php
+│   │   │       │   │   │   ├── NodeWithFeaturedImage.php
+│   │   │       │   │   │   ├── NodeWithPageAttributes.php
+│   │   │       │   │   │   ├── NodeWithRevisions.php
+│   │   │       │   │   │   ├── NodeWithTemplate.php
+│   │   │       │   │   │   ├── NodeWithTitle.php
+│   │   │       │   │   │   ├── NodeWithTrackbacks.php
+│   │   │       │   │   │   ├── OneToOneConnection.php
+│   │   │       │   │   │   ├── PageInfo.php
+│   │   │       │   │   │   ├── Previewable.php
+│   │   │       │   │   │   ├── TermNode.php
+│   │   │       │   │   │   └── UniformResourceIdentifiable.php
+│   │   │       │   │   ├── ObjectType
+│   │   │       │   │   │   ├── Avatar.php
+│   │   │       │   │   │   ├── Comment.php
+│   │   │       │   │   │   ├── CommentAuthor.php
+│   │   │       │   │   │   ├── ContentType.php
+│   │   │       │   │   │   ├── EnqueuedScript.php
+│   │   │       │   │   │   ├── EnqueuedStylesheet.php
+│   │   │       │   │   │   ├── MediaDetails.php
+│   │   │       │   │   │   ├── MediaItemMeta.php
+│   │   │       │   │   │   ├── MediaSize.php
+│   │   │       │   │   │   ├── Menu.php
+│   │   │       │   │   │   ├── MenuItem.php
+│   │   │       │   │   │   ├── Plugin.php
+│   │   │       │   │   │   ├── PostObject.php
+│   │   │       │   │   │   ├── PostTypeLabelDetails.php
+│   │   │       │   │   │   ├── RootMutation.php
+│   │   │       │   │   │   ├── RootQuery.php
+│   │   │       │   │   │   ├── SettingGroup.php
+│   │   │       │   │   │   ├── Settings.php
+│   │   │       │   │   │   ├── Taxonomy.php
+│   │   │       │   │   │   ├── TermObject.php
+│   │   │       │   │   │   ├── Theme.php
+│   │   │       │   │   │   ├── User.php
+│   │   │       │   │   │   └── UserRole.php
+│   │   │       │   │   ├── Union
+│   │   │       │   │   │   ├── MenuItemObjectUnion.php
+│   │   │       │   │   │   ├── PostObjectUnion.php
+│   │   │       │   │   │   └── TermObjectUnion.php
+│   │   │       │   │   ├── WPConnectionType.php
+│   │   │       │   │   ├── WPEnumType.php
+│   │   │       │   │   ├── WPInputObjectType.php
+│   │   │       │   │   ├── WPInterfaceTrait.php
+│   │   │       │   │   ├── WPInterfaceType.php
+│   │   │       │   │   ├── WPMutationType.php
+│   │   │       │   │   ├── WPObjectType.php
+│   │   │       │   │   ├── WPScalar.php
+│   │   │       │   │   └── WPUnionType.php
+│   │   │       │   ├── Types.php
+│   │   │       │   ├── Utils
+│   │   │       │   │   ├── DebugLog.php
+│   │   │       │   │   ├── InstrumentSchema.php
+│   │   │       │   │   ├── Preview.php
+│   │   │       │   │   ├── QueryAnalyzer.php
+│   │   │       │   │   ├── QueryLog.php
+│   │   │       │   │   ├── Tracing.php
+│   │   │       │   │   └── Utils.php
+│   │   │       │   ├── WPGraphQL.php
+│   │   │       │   ├── WPSchema.php
+│   │   │       │   └── assets
+│   │   │       │       └── wpgraphql-elephant.svg
+│   │   │       └── wp-graphql.php
+│   │   └── uploads
+│   │       └── 2025
+│   │           └── 06
+│   ├── wp-cron.php
+│   ├── wp-links-opml.php
+│   ├── wp-load.php
+│   ├── wp-login.php
+│   ├── wp-mail.php
+│   ├── wp-settings.php
+│   ├── wp-signup.php
+│   ├── wp-trackback.php
+│   └── xmlrpc.php
+├── dedsa-website
+│   ├── README.md
+│   ├── count-tokens-dir.js
+│   ├── docs
+│   │   └── development-guide.md
+│   ├── frontend
+│   │   ├── app.webmanifest
+│   │   ├── cypress.config.ts
+│   │   ├── ecosystem.config.js
+│   │   ├── frontend
+│   │   │   └── pages
+│   │   │       └── api
+│   │   │           └── graphql.ts
+│   │   ├── jest.config.js
+│   │   ├── middleware.ts
+│   │   ├── next-env.d.ts
+│   │   ├── next.config.ts
+│   │   ├── next.config.ts.bak
+│   │   ├── next.config.ts.bak.1752100520
+│   │   ├── next.config.ts.bak.1752100568
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── package.json.bak
+│   │   ├── patch-and-redeploy.sh
+│   │   ├── postcss.config.js
+│   │   ├── public
+│   │   │   ├── dedsa-logo.png
+│   │   │   ├── documents
+│   │   │   │   ├── bylaws.pdf
+│   │   │   │   └── delaware-dsa-handbook.pdf
+│   │   │   ├── favicon.ico
+│   │   │   ├── home-page-photos
+│   │   │   │   ├── 1.jpg
+│   │   │   │   ├── 2.jpg
+│   │   │   │   └── 3.jpg
+│   │   │   ├── manifest.json
+│   │   │   ├── newsletters
+│   │   │   │   └── may-2025-newsletter.html
+│   │   │   └── sw.js
+│   │   ├── scripts
+│   │   │   └── run-tests.sh
+│   │   ├── src
+│   │   │   ├── __tests__
+│   │   │   │   ├── accessibility
+│   │   │   │   │   └── a11y.test.tsx
+│   │   │   │   ├── integration
+│   │   │   │   │   └── newsletter-subscription.test.tsx
+│   │   │   │   ├── performance
+│   │   │   │   │   └── performance.test.tsx
+│   │   │   │   └── placeholder.test.ts
+│   │   │   ├── app
+│   │   │   │   ├── MainWrapper.tsx
+│   │   │   │   ├── PageTransition.tsx
+│   │   │   │   ├── about
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── api
+│   │   │   │   │   ├── contact
+│   │   │   │   │   │   ├── __tests__
+│   │   │   │   │   │   │   └── route.test.ts
+│   │   │   │   │   │   └── route.ts
+│   │   │   │   │   ├── events
+│   │   │   │   │   │   ├── route.ts
+│   │   │   │   │   │   ├── route.ts.BAK-1751754958
+│   │   │   │   │   │   ├── route.ts.BAK.1751918142
+│   │   │   │   │   │   ├── route.ts.BAK.1751918266
+│   │   │   │   │   │   ├── route.ts.backup.1751753590
+│   │   │   │   │   │   ├── route.ts.backup.1751754875
+│   │   │   │   │   │   ├── route.ts.backup.1751754885
+│   │   │   │   │   │   ├── route.ts.backup.1751754928
+│   │   │   │   │   │   ├── route.ts.backup.1751918329
+│   │   │   │   │   │   ├── route.ts.bak.1751919916
+│   │   │   │   │   │   ├── route.ts.bak.1751920148
+│   │   │   │   │   │   ├── route.ts.bak.1751920224
+│   │   │   │   │   │   ├── route.ts.bak.1751920281
+│   │   │   │   │   │   ├── route.ts.bak.1751921090
+│   │   │   │   │   │   ├── route.ts.bak.1752100621
+│   │   │   │   │   │   ├── route.ts.fixbak
+│   │   │   │   │   │   └── route.ts.pre-replace-backup
+│   │   │   │   │   ├── graphql
+│   │   │   │   │   │   └── route.ts
+│   │   │   │   │   ├── newsletters
+│   │   │   │   │   │   ├── [slug]
+│   │   │   │   │   │   │   └── route.ts
+│   │   │   │   │   │   └── route.ts
+│   │   │   │   │   └── revalidate
+│   │   │   │   │       └── route.ts
+│   │   │   │   ├── bylaws
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── calendar
+│   │   │   │   │   ├── events
+│   │   │   │   │   │   ├── [slug]
+│   │   │   │   │   │   │   ├── client.tsx
+│   │   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   │   └── client.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── committees
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── contact
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── error.tsx
+│   │   │   │   ├── globals.css
+│   │   │   │   ├── handbook
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── head.tsx
+│   │   │   │   ├── join
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── layout.tsx
+│   │   │   │   ├── leadership
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── loading.tsx
+│   │   │   │   ├── newsletter
+│   │   │   │   │   ├── [slug]
+│   │   │   │   │   │   ├── client.tsx
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── not-found.tsx
+│   │   │   │   ├── page.tsx
+│   │   │   │   ├── privacy
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── providers.tsx
+│   │   │   │   ├── theme
+│   │   │   │   │   └── ThemeProvider.tsx
+│   │   │   │   ├── ud-ydsa
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── what-we-stand-for
+│   │   │   │       └── page.tsx
+│   │   │   ├── core
+│   │   │   │   ├── components
+│   │   │   │   │   ├── admin
+│   │   │   │   │   │   └── PhotoReleaseForm.tsx
+│   │   │   │   │   ├── dsa-components
+│   │   │   │   │   │   ├── DSALogo.tsx
+│   │   │   │   │   │   ├── SocialMediaTemplate.tsx
+│   │   │   │   │   │   └── UnionBug.tsx
+│   │   │   │   │   ├── error-boundaries
+│   │   │   │   │   │   ├── ErrorBoundary.tsx
+│   │   │   │   │   │   ├── ErrorBoundaryWrapper.tsx
+│   │   │   │   │   │   ├── ErrorFallback.tsx
+│   │   │   │   │   │   ├── PageErrorBoundary.tsx
+│   │   │   │   │   │   └── __tests__
+│   │   │   │   │   │       ├── ErrorBoundary.test.tsx
+│   │   │   │   │   │       └── ErrorBoundaryWrapper.test.tsx
+│   │   │   │   │   ├── events
+│   │   │   │   │   │   ├── EventDisplay.tsx
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── forms
+│   │   │   │   │   │   └── ValidatedForm.tsx
+│   │   │   │   │   ├── layout
+│   │   │   │   │   │   ├── Footer.tsx
+│   │   │   │   │   │   ├── Header.tsx
+│   │   │   │   │   │   └── __tests__
+│   │   │   │   │   │       ├── Footer.test.tsx
+│   │   │   │   │   │       └── Header.test.tsx
+│   │   │   │   │   ├── motion
+│   │   │   │   │   │   └── MotionDiv.tsx
+│   │   │   │   │   ├── optimized-image
+│   │   │   │   │   │   └── OptimizedImage.tsx
+│   │   │   │   │   ├── shared
+│   │   │   │   │   │   ├── GenericCard.tsx
+│   │   │   │   │   │   └── GenericSection.tsx
+│   │   │   │   │   ├── types
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   └── ui
+│   │   │   │   │       ├── AnimatedBackground.tsx
+│   │   │   │   │       ├── Blob.tsx
+│   │   │   │   │       ├── Button.tsx
+│   │   │   │   │       ├── Confetti.tsx
+│   │   │   │   │       ├── GlowButton.tsx
+│   │   │   │   │       ├── Icons.tsx
+│   │   │   │   │       ├── NewsletterSubscription.tsx
+│   │   │   │   │       ├── ParallaxSection.tsx
+│   │   │   │   │       ├── UiString.tsx
+│   │   │   │   │       └── __tests__
+│   │   │   │   │           └── Button.test.tsx
+│   │   │   │   ├── content
+│   │   │   │   │   ├── layout
+│   │   │   │   │   │   ├── footer.json
+│   │   │   │   │   │   └── header.json
+│   │   │   │   │   ├── pages
+│   │   │   │   │   │   ├── about.json
+│   │   │   │   │   │   ├── bylaws
+│   │   │   │   │   │   │   ├── bylawsDocument.json
+│   │   │   │   │   │   │   ├── frequentlyAskedQuestions.json
+│   │   │   │   │   │   │   ├── keyGovernanceSections.json
+│   │   │   │   │   │   │   └── otherDocuments.json
+│   │   │   │   │   │   ├── bylaws.json
+│   │   │   │   │   │   ├── calendar.json
+│   │   │   │   │   │   ├── committees.json
+│   │   │   │   │   │   ├── contact.json
+│   │   │   │   │   │   ├── handbook.json
+│   │   │   │   │   │   ├── home.json
+│   │   │   │   │   │   ├── join.json
+│   │   │   │   │   │   ├── leadership.json
+│   │   │   │   │   │   ├── newsletter.json
+│   │   │   │   │   │   ├── privacy.json
+│   │   │   │   │   │   ├── ud-ydsa.json
+│   │   │   │   │   │   └── what-we-stand-for.json
+│   │   │   │   │   └── sample-events.json
+│   │   │   │   ├── context
+│   │   │   │   │   └── AppContext.tsx
+│   │   │   │   ├── design-system
+│   │   │   │   │   └── tokens.ts
+│   │   │   │   ├── hooks
+│   │   │   │   │   ├── __tests__
+│   │   │   │   │   │   ├── useForm.test.ts
+│   │   │   │   │   │   └── useLocalStorage.test.ts
+│   │   │   │   │   ├── calendar
+│   │   │   │   │   │   ├── useCalendar.ts
+│   │   │   │   │   │   └── useCalendarEvents.ts
+│   │   │   │   │   ├── content
+│   │   │   │   │   │   └── useUiString.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── useForm.ts
+│   │   │   │   │   ├── useInfiniteScroll.ts
+│   │   │   │   │   ├── useLocalStorage.ts
+│   │   │   │   │   ├── useNewsletterSubscription.ts
+│   │   │   │   │   ├── usePerformanceMetrics.ts
+│   │   │   │   │   ├── useRateLimit.ts
+│   │   │   │   │   └── useWindowSize.ts
+│   │   │   │   ├── services
+│   │   │   │   │   ├── __tests__
+│   │   │   │   │   │   └── contentService.test.ts
+│   │   │   │   │   ├── cmsService.ts
+│   │   │   │   │   ├── contentService.ts
+│   │   │   │   │   └── newsletterService.ts
+│   │   │   │   ├── types
+│   │   │   │   │   ├── api
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── hooks
+│   │   │   │   │   │   └── index.ts
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   ├── layout.ts
+│   │   │   │   │   ├── pages
+│   │   │   │   │   │   ├── about.ts
+│   │   │   │   │   │   ├── bylaws.ts
+│   │   │   │   │   │   ├── calendar.ts
+│   │   │   │   │   │   ├── committees.ts
+│   │   │   │   │   │   ├── contact.ts
+│   │   │   │   │   │   ├── home.ts
+│   │   │   │   │   │   ├── index.ts
+│   │   │   │   │   │   ├── join.ts
+│   │   │   │   │   │   ├── leadership.ts
+│   │   │   │   │   │   ├── newsletter.ts
+│   │   │   │   │   │   ├── ud-ydsa.ts
+│   │   │   │   │   │   └── whatWeStandFor.ts
+│   │   │   │   │   └── shared
+│   │   │   │   │       └── index.ts
+│   │   │   │   └── utils
+│   │   │   │       ├── __tests__
+│   │   │   │       │   ├── accessibility.test.tsx
+│   │   │   │       │   ├── sanitization.test.ts
+│   │   │   │       │   └── validation.test.ts
+│   │   │   │       ├── accessibility.ts
+│   │   │   │       ├── analytics.ts
+│   │   │   │       ├── animations.ts
+│   │   │   │       ├── contentValidation.ts
+│   │   │   │       ├── errorTracking.ts
+│   │   │   │       ├── graphql
+│   │   │   │       │   ├── apollo.ts
+│   │   │   │       │   ├── fetcher.ts
+│   │   │   │       │   └── graphql.ts
+│   │   │   │       ├── sanitization.ts
+│   │   │   │       ├── styles
+│   │   │   │       │   └── tailwindClasses.ts
+│   │   │   │       └── validation.ts
+│   │   │   ├── data
+│   │   │   │   └── newsletters.json
+│   │   │   ├── features
+│   │   │   │   ├── about
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── AboutHero.tsx
+│   │   │   │   │   │   ├── Achievements.tsx
+│   │   │   │   │   │   ├── DemocraticSocialism.tsx
+│   │   │   │   │   │   ├── GetInvolved.tsx
+│   │   │   │   │   │   ├── NationalInfo.tsx
+│   │   │   │   │   │   └── Timeline.tsx
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── types
+│   │   │   │   │       └── index.ts
+│   │   │   │   ├── bylaws
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── BylawsDocument.tsx
+│   │   │   │   │   │   ├── FrequentlyAskedQuestions.tsx
+│   │   │   │   │   │   ├── KeyGovernanceSections.tsx
+│   │   │   │   │   │   ├── OtherDocuments.tsx
+│   │   │   │   │   │   └── queries.ts
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── calendar
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── CalendarComponents.tsx
+│   │   │   │   │   │   ├── CalendarFilters.tsx
+│   │   │   │   │   │   ├── CalendarHeader.tsx
+│   │   │   │   │   │   ├── CalendarSubscription.tsx
+│   │   │   │   │   │   ├── CustomMonthView.tsx
+│   │   │   │   │   │   ├── EventCard.tsx
+│   │   │   │   │   │   ├── ListView.tsx
+│   │   │   │   │   │   └── MonthView.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── contact
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── ContactForm.tsx
+│   │   │   │   │   │   ├── ContactInfo.tsx
+│   │   │   │   │   │   └── __tests__
+│   │   │   │   │   │       └── ContactForm.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── handbook
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   └── components
+│   │   │   │   │       ├── FAQSection.tsx
+│   │   │   │   │       ├── HandbookDocument.tsx
+│   │   │   │   │       ├── KeyMembershipSections.tsx
+│   │   │   │   │       ├── MembershipBenefits.tsx
+│   │   │   │   │       └── NextSteps.tsx
+│   │   │   │   ├── home
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   ├── __tests__
+│   │   │   │   │   │   └── Page.test.tsx
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── ChapterStatsSection.tsx
+│   │   │   │   │   │   ├── GetInvolvedSection
+│   │   │   │   │   │   │   ├── CommitteeItem.tsx
+│   │   │   │   │   │   │   ├── CommitteesCard.tsx
+│   │   │   │   │   │   │   ├── EventItem.tsx
+│   │   │   │   │   │   │   ├── UpcomingEventsCard.tsx
+│   │   │   │   │   │   │   ├── index.tsx
+│   │   │   │   │   │   │   └── types.ts
+│   │   │   │   │   │   ├── HeroSection.tsx
+│   │   │   │   │   │   ├── JoinCTASection.tsx
+│   │   │   │   │   │   ├── LatestUpdatesSection.tsx
+│   │   │   │   │   │   ├── MissionSection.tsx
+│   │   │   │   │   │   ├── StrategicPrioritiesSection.tsx
+│   │   │   │   │   │   └── __tests__
+│   │   │   │   │   │       └── HeroSection.test.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── join
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── FAQ.tsx
+│   │   │   │   │   │   ├── JoinHero.tsx
+│   │   │   │   │   │   ├── MembershipOptions.tsx
+│   │   │   │   │   │   ├── Testimonials.tsx
+│   │   │   │   │   │   └── WhyJoinDSA.tsx
+│   │   │   │   │   ├── index.ts
+│   │   │   │   │   └── types
+│   │   │   │   │       └── index.ts
+│   │   │   │   ├── leadership
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── member-portal
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   └── components
+│   │   │   │   │       └── LoginForm.tsx
+│   │   │   │   ├── newsletter
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   ├── components
+│   │   │   │   │   │   ├── NewsletterArchive.tsx
+│   │   │   │   │   │   └── NewsletterSearch.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   ├── privacy
+│   │   │   │   │   └── Page.tsx
+│   │   │   │   ├── search
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   └── components
+│   │   │   │   │       ├── SearchBar.tsx
+│   │   │   │   │       └── SearchResults.tsx
+│   │   │   │   ├── ud-ydsa
+│   │   │   │   │   ├── Page.tsx
+│   │   │   │   │   └── index.ts
+│   │   │   │   └── what-we-stand-for
+│   │   │   │       ├── CorePrinciplesSection.tsx
+│   │   │   │       ├── OrganizationSection.tsx
+│   │   │   │       ├── Page.tsx
+│   │   │   │       ├── StrategicGoalsSection.tsx
+│   │   │   │       └── index.ts
+│   │   │   ├── googleService.json
+│   │   │   ├── hooks
+│   │   │   │   └── useCalendarEvents.ts
+│   │   │   ├── mocks
+│   │   │   │   └── api
+│   │   │   │       └── mockApiHandlers.ts
+│   │   │   ├── services
+│   │   │   │   ├── cmsService.ts
+│   │   │   │   └── cmsService.ts.bak
+│   │   │   ├── setupTests.ts
+│   │   │   ├── types
+│   │   │   │   ├── jest-axe-matchers.d.ts
+│   │   │   │   ├── jest-axe.d.ts
+│   │   │   │   └── performance-memory.d.ts
+│   │   │   └── utils
+│   │   │       └── safeFilter.ts
+│   │   ├── tailwind.config.js
+│   │   ├── tsconfig.json
+│   │   └── utils
+│   │       └── safeFilter.js
+│   ├── next.config.js
+│   ├── next.config.js.bak
+│   └── setup.sh
+└── output.txt
+
+176 directories, 892 files
