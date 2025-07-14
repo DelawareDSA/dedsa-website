@@ -55,3 +55,10 @@ wp-config.php
 bower_components/
 .DS_Store
 npm-packages-offline-cache/
+
+**/new-key.json
+/etc/keys/dedsa-sa-key.json
+cms.dedsa.org/wp-content/plugins/calendar-rest/credentials.json
+
+/etc/keys/*.json
+**/credentials.json
