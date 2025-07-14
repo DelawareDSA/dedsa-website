@@ -1,0 +1,203 @@
+{
+  "title": "Privacy Policy",
+  "lastUpdated": "June 15, 2025",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "content": "Delaware DSA is committed to protecting your privacy and being transparent about how we collect, use, and protect your personal information. This privacy policy explains our data practices for the Delaware DSA website and our organizing activities."
+    },
+    {
+      "id": "organization-info",
+      "title": "Organization Information",
+      "content": "Delaware DSA is a local chapter of the Democratic Socialists of America, a member-run democratic socialist organization. We are committed to advancing democratic socialist values and organizing for political and economic justice.",
+      "contact": {
+        "email": "delaware.socialists@gmail.com",
+        "website": "https://www.dedsa.org"
+      }
+    },
+    {
+      "id": "information-we-collect",
+      "title": "Information We Collect",
+      "content": "We collect information in several ways to support our organizing and communication efforts:",
+      "subsections": [
+        {
+          "title": "Contact Forms",
+          "content": "When you submit our contact form, we collect:",
+          "items": [
+            "Your name",
+            "Email address",
+            "Subject line (optional)",
+            "Message content",
+            "Timestamp of submission"
+          ]
+        },
+        {
+          "title": "Event Photography",
+          "content": "At Delaware DSA events, we may collect:",
+          "items": [
+            "Your name and email address for photo release forms",
+            "Visual likeness through photography at public events",
+            "Consent preferences for use of your image"
+          ]
+        },
+        {
+          "title": "Newsletter Subscriptions",
+          "content": "For our newsletter, we may collect:",
+          "items": [
+            "Email address",
+            "Name (if provided)",
+            "Subscription preferences",
+            "Engagement metrics (opens, clicks)"
+          ]
+        },
+        {
+          "title": "Website Usage",
+          "content": "We automatically collect certain technical information:",
+          "items": [
+            "IP address",
+            "Browser type and version",
+            "Pages visited and time spent",
+            "Referring website",
+            "Device and operating system information"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-we-use-information",
+      "title": "How We Use Your Information",
+      "content": "We use the information we collect for the following purposes:",
+      "items": [
+        "Responding to your inquiries and contact form submissions",
+        "Sending newsletters and updates about Delaware DSA activities",
+        "Organizing events and campaigns",
+        "Creating promotional materials using event photography (with consent)",
+        "Improving our website and digital organizing tools",
+        "Communicating with members and supporters about DSA activities"
+      ]
+    },
+    {
+      "id": "data-retention",
+      "title": "Data Retention",
+      "content": "We retain different types of information for different periods based on our organizing needs and legal requirements:",
+      "subsections": [
+        {
+          "title": "Contact Form Data",
+          "content": "Contact form submissions are retained for up to 18 months to allow us to respond to your inquiry and follow up as needed."
+        },
+        {
+          "title": "Photo Release Forms",
+          "content": "Photo release forms and consent records are retained indefinitely or until you withdraw consent, as they serve as legal documentation for our use of your image."
+        },
+        {
+          "title": "Newsletter Data",
+          "content": "Newsletter subscription data is retained until you unsubscribe or request deletion."
+        },
+        {
+          "title": "Website Analytics",
+          "content": "Technical website usage data is retained for up to 24 months for analysis and improvement purposes."
+        }
+      ]
+    },
+    {
+      "id": "data-sharing",
+      "title": "How We Share Your Information",
+      "content": "Delaware DSA does not sell or rent your personal information to third parties. We may share your information in the following limited circumstances:",
+      "items": [
+        "With national DSA for membership coordination and organizing support",
+        "With trusted service providers who help us operate our website and communications (like email services)",
+        "When required by law or to protect our legal rights",
+        "With other progressive organizations for coalition work, only with your explicit consent"
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Security Measures",
+      "content": "We implement appropriate technical and organizational security measures to protect your personal information:",
+      "items": [
+        "Secure transmission of data using HTTPS encryption",
+        "Regular security updates and patches",
+        "Access controls limiting who can view personal information",
+        "Secure hosting infrastructure with backup systems",
+        "Regular review of our security practices"
+      ]
+    },
+    {
+      "id": "your-rights",
+      "title": "Your Rights and Choices",
+      "content": "You have several rights regarding your personal information:",
+      "items": [
+        "**Access**: Request a copy of the personal information we have about you",
+        "**Correction**: Request correction of inaccurate or incomplete information",
+        "**Deletion**: Request deletion of your personal information (subject to our legitimate organizing needs)",
+        "**Opt-out**: Unsubscribe from newsletters or withdraw consent for photography",
+        "**Portability**: Request your data in a commonly used format"
+      ],
+      "contact_info": "To exercise these rights, contact us at delaware.socialists@gmail.com"
+    },
+    {
+      "id": "cookies",
+      "title": "Cookies and Tracking",
+      "content": "Our website uses minimal tracking technologies:",
+      "items": [
+        "Essential cookies required for website functionality",
+        "Analytics cookies to understand how visitors use our site (anonymized data)",
+        "No advertising or marketing cookies from third parties",
+        "No cross-site tracking or profiling"
+      ]
+    },
+    {
+      "id": "third-party-services",
+      "title": "Third-Party Services",
+      "content": "We use the following third-party services that may collect information:",
+      "services": [
+        {
+          "name": "Action Network (ActionNetwork.org)",
+          "purpose": "Sending newsletters and responding to contact forms",
+          "privacy_policy": "Subject to our email provider's privacy policy"
+        },
+        {
+          "name": "Website Hosting (Vercel)",
+          "purpose": "Hosting our website and ensuring uptime",
+          "privacy_policy": "Subject to Vercel's privacy policy"
+        },
+        {
+          "name": "Content Management (WordPress)",
+          "purpose": "Managing website content through headless WordPress",
+          "privacy_policy": "Subject to our hosting provider's privacy policy"
+        }
+      ]
+    },
+    {
+      "id": "children-privacy",
+      "title": "Children's Privacy",
+      "content": "Our website and services are not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If we learn that we have collected information from a child under 13, we will delete that information promptly."
+    },
+    {
+      "id": "changes",
+      "title": "Changes to This Policy",
+      "content": "We may update this privacy policy from time to time to reflect changes in our practices or legal requirements. We will notify users of material changes by posting the updated policy on our website with a new 'Last Updated' date. Continued use of our website after changes constitutes acceptance of the updated policy."
+    },
+    {
+      "id": "contact",
+      "title": "Contact Us About Privacy",
+      "content": "If you have questions about this privacy policy or our data practices, please contact us:",
+      "contact_methods": [
+        {
+          "method": "Email",
+          "value": "delaware.socialists@gmail.com"
+        },
+        {
+          "method": "Website",
+          "value": "https://www.dedsa.org/contact"
+        },
+        {
+          "method": "Mail",
+          "value": "Delaware DSA, c/o Privacy Concerns"
+        }
+      ]
+    }
+  ],
+  "legalNotice": "This privacy policy is effective as of the date listed above and applies to all information collected by Delaware DSA through our website and organizing activities."
+}

@@ -1,0 +1,48 @@
+// src/app/api/events/route.ts
+
+import { NextResponse } from 'next/server';
+
+export async function GET() {
+  console.log('🛠️  /api/events invoked');
+  console.log('  WORDPRESS_API_URL=', process.env.WORDPRESS_API_URL);
+
+  // Ensure the WP URL is set
+  const wpUrl = process.env.WORDPRESS_API_URL;
+  if (!wpUrl) {
+    console.error('❌ WORDPRESS_API_URL is not set');
+    return NextResponse.json(
+      { error: 'Missing WORDPRESS_API_URL' },
+      { status: 500 }
+    );
+  }
+
+  try {
+    // Build the WP REST endpoint URL
+    const base = wpUrl.replace(/\/graphql$/, '');
+    const now = new Date();
+    const month = now.getMonth() + 1;
+    const year = now.getFullYear();
+    const endpoint = `${base}/wp-json/calendar/v1/events?month=${month}&year=${year}`;
+
+    console.log('🌐 Fetching events from', endpoint);
+    const res = await fetch(endpoint);
+
+    if (!res.ok) {
+      console.error(`❌ WP events fetch failed (${res.status})`);
+      return NextResponse.json(
+        { error: 'Failed to fetch events from WP' },
+        { status: res.status }
+      );
+    }
+
+    const events = await res.json();
+    console.log(`✅ Retrieved ${Array.isArray(events) ? events.length : '?'} WP events`);
+    return NextResponse.json(events);
+  } catch (err) {
+    console.error('❌ Calendar API error:', err);
+    return NextResponse.json(
+      { error: 'Failed to fetch events' },
+      { status: 500 }
+    );
+  }
+}

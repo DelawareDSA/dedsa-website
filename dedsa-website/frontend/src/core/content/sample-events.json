@@ -1,0 +1,17 @@
+[
+  {
+    "summary": "General Meeting",
+    "start": { "dateTime": "2024-07-15T19:00:00" },
+    "location": "Zoom"
+  },
+  {
+    "summary": "Street Outreach",
+    "start": { "dateTime": "2024-07-20T12:00:00" },
+    "location": "Downtown"
+  },
+  {
+    "summary": "Social Event",
+    "start": { "dateTime": "2024-07-25T18:00:00" },
+    "location": "Community Center"
+  }
+]

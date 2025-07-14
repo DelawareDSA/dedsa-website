@@ -1,0 +1,45 @@
+name: WordPress CI
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/wordpress-ci.yml'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/wordpress-ci.yml'
+
+jobs:
+  php-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          tools: phpcs, wp-cli
+      - run: |
+          composer global require dealerdirect/phpcodesniffer-composer-installer
+          composer global require wp-coding-standards/wpcs
+          phpcs --config-set installed_paths $HOME/.composer/vendor/wp-coding-standards/wpcs
+      - run: |
+          find backend -name "*.php" -print0 | xargs -0 -n1 php -l
+      - run: |
+          phpcs --standard=WordPress backend/wp-content/plugins/delaware-dsa-graphql --extensions=php
+
+  deploy-to-staging:
+    needs: php-lint
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.STAGING_SERVER }}
+          username: ${{ secrets.STAGING_USERNAME }}
+          password: ${{ secrets.STAGING_PASSWORD }}
+          local-dir: ./backend/wp-content/plugins/delaware-dsa-graphql/
+          server-dir: ${{ secrets.STAGING_PATH }}/wp-content/plugins/delaware-dsa-graphql/

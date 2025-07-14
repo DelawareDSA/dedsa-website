@@ -1,0 +1,15 @@
+{
+  "name": "Delaware DSA",
+  "short_name": "DEDSA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#b21f2d",
+  "icons": [
+    {
+      "src": "/dedsa-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

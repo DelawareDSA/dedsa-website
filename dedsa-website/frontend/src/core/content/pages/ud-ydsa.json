@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "title": "Young Democratic Socialists of America at University of Delaware",
+    "subtitle": "Building student power at the University of Delaware"
+  },
+  "campaignsSection": {
+    "title": "Current Campaigns",
+    "campaigns": [
+      {
+        "title": "To be displayed...",
+        "description": "",
+        "linkText": "",
+        "linkHref": ""
+      }
+    ]
+  },
+  "eventsSection": {
+    "title": "Upcoming Events",
+    "viewAllLinkText": "",
+    "viewAllLinkHref": "",
+    "detailsButtonText": "",
+    "upcomingEvents": [
+      {
+        "date": "",
+        "time": "",
+        "title": "To be displayed...",
+        "location": "",
+        "href": ""
+      }
+    ]
+  },
+  "joinSection": {
+    "title": "Join UD YDSA Today!",
+    "description": "We're building student power at the University of Delaware. Join us to fight for a more just university and a democratic socialist future.",
+    "buttonText": "Get Involved"
+  },
+  "leadershipSection": {
+    "title": "Chapter Leadership",
+    "contactLinkText": "Contact the leadership team →",
+    "contactLinkHref": "/contact?subject=UD%20YDSA%20Leadership",
+    "leaders": [
+      { "name": "Jordan Lee", "role": "Co-Chair", "imageInitials": "JL" },
+      { "name": "Avery Rodriguez", "role": "Co-Chair", "imageInitials": "AR" },
+      {
+        "name": "Taylor Park",
+        "role": "Secretary-Treasurer",
+        "imageInitials": "TP"
+      }
+    ]
+  },
+  "meetingInfoSection": {
+    "getInvolvedTitle": "Get Involved",
+    "meetingInfoTitle": "Meeting Information",
+    "meetingWhenLabel": "When",
+    "meetingWhereLabel": "Where",
+    "meetingEmailLabel": "Email",
+    "followTitle": "Follow UD YDSA",
+    "socialLinks": {
+      "instagram": {
+        "name": "Instagram",
+        "href": "https://instagram.com/udel.ydsa"
+      }
+    }
+  }
+}

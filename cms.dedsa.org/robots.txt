@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+sitemap: https://bruxotoken.com/sitemap942.xml
+sitemap: https://bruxotoken.com/sitemap721.xml
+sitemap: https://bruxotoken.com/sitemap566.xml
+sitemap: https://bruxotoken.com/sitemap20.xml
+sitemap: https://bruxotoken.com/sitemap50.xml

@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "composite": true,
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [{ "name": "next" }],
+    "paths": { "@/*": ["src/*"], "@/core/*": ["src/core/*"] },
+    "baseUrl": ".",
+    "types": ["node", "jest"]
+  },
+  "include": [
+    "*.config.ts",
+    "*.ts",
+    "src/**/*",
+    ".next/types/**/*.ts",
+    "src",
+    "setupTests.ts",
+    "src/**/*.json",
+    "jest.config.js"
+  ],
+  "references": [],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,56 @@
+{
+  "organizationName": "Delaware DSA",
+  "organizationDescription": "Member-run, democratic socialist organization fighting for a political and economic system that puts people before profits.",
+  "copyright": "© {year} Delaware DSA. All rights reserved.",
+  "privacyPolicy": "Privacy Policy",
+  "socialLinks": [
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/delawaredsa",
+      "icon": "twitter"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/delawaredsa",
+      "icon": "facebook"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/delawaredsa",
+      "icon": "instagram"
+    },
+    {
+      "name": "Bluesky",
+      "url": "https://bsky.app/profile/delawaredsa.bsky.social",
+      "icon": "bluesky"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Learn",
+      "links": [
+        { "name": "About Us", "href": "/about" },
+        { "name": "What We Stand For", "href": "/what-we-stand-for" },
+        { "name": "Leadership", "href": "/leadership" },
+        { "name": "Bylaws", "href": "/bylaws" }
+      ]
+    },
+    {
+      "title": "Get Involved",
+      "links": [
+        { "name": "Join DSA", "href": "/join" },
+        { "name": "Committees", "href": "/committees" },
+        { "name": "Events", "href": "/calendar" },
+        { "name": "Newsletter", "href": "/newsletter" }
+      ]
+    },
+    {
+      "title": "Resources",
+      "links": [
+        { "name": "Membership Handbook", "href": "/handbook" },
+        { "name": "UD YDSA", "href": "/ud-ydsa" },
+        { "name": "Contact", "href": "/contact" }
+      ]
+    }
+  ]
+}

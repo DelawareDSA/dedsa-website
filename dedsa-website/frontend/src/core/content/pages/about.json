@@ -1,0 +1,78 @@
+{
+  "page": {
+    "title": "About Delaware DSA",
+    "fallbackContent": "<p>Delaware DSA is Delaware's state chapter of the Democratic Socialists of America. We work to build a fair society that puts people before profit.</p>"
+  },
+  "aboutHero": {
+    "title": "Our Mission",
+    "defaultMissionStatement": "Delaware DSA works to build a fair society where all people can thrive. We bring together people from different backgrounds to fight for justice and equality."
+  },
+  "achievements": {
+    "title": "Our Achievements",
+    "defaultAchievements": [
+      "Successfully advocated for tenant protections in Wilmington",
+      "Organized mutual aid networks during the COVID-19 pandemic",
+      "Campaigned for Medicare for All in partnership with healthcare workers",
+      "Supported labor organizing efforts across the state",
+      "Built coalitions with community organizations fighting for racial justice"
+    ]
+  },
+  "democraticSocialism": {
+    "title": "What is Democratic Socialism?",
+    "principles": [
+      {
+        "title": "Economic Democracy",
+        "description": "We believe the economy should be democratically owned and controlled to meet human needs."
+      },
+      {
+        "title": "Social Justice",
+        "description": "We fight for racial, gender, and economic justice for all people."
+      },
+      {
+        "title": "Workers' Rights",
+        "description": "We support workers organizing for better wages, benefits, and working conditions."
+      },
+      {
+        "title": "Healthcare",
+        "description": "We advocate for a universal, single-payer healthcare system."
+      }
+    ]
+  },
+  "getInvolved": {
+    "title": "Get Involved",
+    "involvementOptions": [
+      {
+        "title": "Become a Member",
+        "icon": "M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z",
+        "description": "Join DSA to become part of the largest socialist organization in the United States. Membership includes Delaware DSA chapter membership.",
+        "link": "/join",
+        "linkText": "Join Delaware DSA →"
+      },
+      {
+        "title": "Join a Committee",
+        "icon": "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+        "description": "Our committees and working groups are where the real work happens. Find an area that matches your interests and skills.",
+        "link": "/committees",
+        "linkText": "View Committees →"
+      },
+      {
+        "title": "Attend an Event",
+        "icon": "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z",
+        "description": "Come to a meeting, rally, or social event to learn more about our work and meet fellow members and organizers.",
+        "link": "/calendar",
+        "linkText": "View Calendar →"
+      }
+    ]
+  },
+  "nationalInfo": {
+    "title": "DSA National",
+    "description": "Delaware DSA is a chapter of the Democratic Socialists of America (DSA), the largest socialist organization in the United States. DSA members are building progressive movements for social change while establishing an openly democratic socialist presence in American communities and politics.",
+    "linkText": "Visit DSA National",
+    "linkHref": "https://www.dsausa.org"
+  },
+  "timeline": {
+    "defaultFoundingYear": 2021,
+    "foundedLabel": "Founded",
+    "yearsActiveLabel": "Years Active"
+  }
+}

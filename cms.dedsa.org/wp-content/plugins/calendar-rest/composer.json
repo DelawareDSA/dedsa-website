@@ -1,0 +1,11 @@
+{
+    "name": "dedsa/calendar-rest",
+    "description": "REST API for DEDSA events",
+    "require": {
+        "google/apiclient": "^2.0"
+    },
+    "license": "GPL-2.0-or-later",
+    "config": {
+      "process-timeout": 600
+    }
+}

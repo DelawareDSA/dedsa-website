@@ -1,0 +1,113 @@
+'use client';
+
+import { useCalendar } from '@/core/hooks/calendar/useCalendar';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import CommitteesCard from './CommitteesCard';
+import UpcomingEventsCard from './UpcomingEventsCard';
+
+export default function GetInvolvedSection() {
+  const [isClient, setIsClient] = useState(false);
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
+  const { events, loading, error } = useCalendar();
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const sectionVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        when: 'beforeChildren',
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
+  // Filter out test events, only future events, and format date/time
+    // Filter out test events, only future events, and format date/time
+  const now = new Date();
+  const upcoming = events
+    .filter(e => !e.title.toLowerCase().includes('test'))
+    .filter(e => new Date(e.startDate) > now)
+    .map(e => {
+      const dt = new Date(e.startDate);
+      const formattedDate = dt.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+      const formattedTime = dt.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+      });
+      return {
+        title:     e.title,
+        date:      `${formattedDate} at ${formattedTime}`,
+        location:  e.location || '',
+        isVirtual: e.isVirtual || false,
+      };
+    });
+
+  return (
+    <section className="py-20 bg-dsa-red-t4 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5">
+        {isClient && (
+          <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#ec1f27">
+              {Array.from({ length: 50 }).map((_, i) => {
+                const x = (i * 97) % 1024;
+                const y = (i * 47) % 1024;
+                return <circle key={i} r="2" cx={x} cy={y} />;
+              })}
+            </g>
+          </svg>
+        )}
+      </div>
+
+      <motion.div
+        className="container-page relative z-10"
+        ref={ref}
+        initial="hidden"
+        animate={inView ? 'visible' : 'hidden'}
+        variants={sectionVariants}
+      >
+        <motion.div className="text-center mb-12" variants={itemVariants}>
+          <h2 className="text-3xl md:text-5xl font-bold mb-2 text-heading">
+            Get Involved
+          </h2>
+          <div className="w-24 h-1 bg-dsa-red mx-auto mb-4 rounded"></div>
+          <p className="text-lg text-secondary max-w-3xl mx-auto">
+            Join a committee or attend our next event.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div variants={itemVariants}>
+            {error && <p className="text-red-500">Failed to load events.</p>}
+            {loading && <p>Loading events…</p>}
+            {!loading && !error && (
+              <UpcomingEventsCard events={upcoming} />
+            )}
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <CommitteesCard />
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
+  );
+}

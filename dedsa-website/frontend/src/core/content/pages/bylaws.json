@@ -1,0 +1,91 @@
+{
+  "title": "Delaware DSA Bylaws",
+  "pdfUrl": "/documents/bylaws.pdf",
+  "fallbackContent": "<p>The Delaware DSA chapter bylaws outline our governance structure, decision-making processes, and operational procedures. These bylaws were democratically approved by our membership and can only be amended through a vote of the general membership.</p><p>Our bylaws reflect our commitment to democratic governance, transparency, and member-led organizing. They establish the roles and responsibilities of elected officers, committees, and the general membership.</p>",
+  "currentVersionLabel": "Current Version:",
+  "lastUpdatedLabel": "Last updated May 25, 2025",
+  "downloadButtonText": "Download PDF",
+  "bylawsDocument": {
+    "title": "Delaware DSA Bylaws",
+    "fallbackMessage": "If the document doesn't load properly, you can",
+    "downloadLinkText": "download the PDF directly"
+  },
+  "keyGovernanceSections": [
+    {
+      "title": "Chapter Structure",
+      "description": "Our chapter is structured with a Steering Committee, elected officers, standing committees, and working groups. General membership meetings are held monthly.",
+      "pageLink": "page=13",
+      "linkText": "Go to Chapter Structure"
+    },
+    {
+      "title": "Officers and Duties",
+      "description": "Elected officers including Co-chairs, Secretary, Treasurer, and Membership Coordinator serve one-year terms with specific responsibilities.",
+      "pageLink": "page=9",
+      "linkText": "Go to Officers"
+    },
+    {
+      "title": "Steering Committee",
+      "description": "The Steering Committee administers the affairs of the Local Chapter and oversees implementation of decisions made at General Meetings.",
+      "pageLink": "page=13",
+      "linkText": "Go to Steering Committee"
+    },
+    {
+      "title": "Meetings and Conventions",
+      "description": "Regular General Meetings, annual conventions, and special meetings govern chapter decision-making with proper quorum requirements.",
+      "pageLink": "page=17",
+      "linkText": "Go to Meetings"
+    },
+    {
+      "title": "Elections and Nominations",
+      "description": "Democratic election processes for officers, branch chairs, and delegates with recall procedures and vacancy provisions.",
+      "pageLink": "page=28",
+      "linkText": "Go to Elections"
+    },
+    {
+      "title": "Amendments",
+      "description": "Bylaws amendments require a two-thirds vote with proper notice and proposal procedures to ensure democratic input.",
+      "pageLink": "page=35",
+      "linkText": "Go to Amendments"
+    }
+  ],
+  "frequentlyAskedQuestions": [
+    {
+      "question": "How are bylaws amended?",
+      "answer": "Amendments to these Bylaws require a two-thirds vote of the general membership to pass. Proposed amendments must be submitted in writing at least thirty days in advance and include signed sponsorship by at least 3% of chapter members."
+    },
+    {
+      "question": "Who can propose amendments?",
+      "answer": "Any group of members representing at least 3% of chapter membership can propose amendments to the bylaws. Amendments must be submitted to the Secretaries at least thirty days before a scheduled vote."
+    },
+    {
+      "question": "When were the bylaws last updated?",
+      "answer": "Our bylaws were last updated on May 25, 2025. They establish our governance structure, decision-making processes, and operational procedures in accordance with national DSA standards."
+    },
+    {
+      "question": "How do the bylaws relate to DSA national?",
+      "answer": "Our chapter bylaws complement the national DSA constitution and bylaws. If any element of these Bylaws contradicts or conflicts with national bylaws, standing rules, or rulings, the National text shall supersede our local text."
+    },
+    {
+      "question": "What is the chapter structure?",
+      "answer": "Delaware DSA has a Steering Committee composed of five officers (Co-chairs, Secretary, Treasurer, Membership Coordinator) and two Branch Chairs representing Northern Branch (New Castle County) and Southern Branch (Kent and Sussex Counties)."
+    },
+    {
+      "question": "How often are elections held?",
+      "answer": "Elections for Local Officers are held at least once yearly. Officers serve one-year terms and can be re-elected. Branch Chair elections coincide with Chapter Officer elections."
+    }
+  ],
+  "otherDocuments": [
+    {
+      "title": "National DSA Constitution",
+      "description": "The national DSA constitution and bylaws that govern the organization as a whole and all its chapters.",
+      "href": "https://www.dsausa.org/about-us/constitution/",
+      "icon": "M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
+    },
+    {
+      "title": "DSA Harassment Policy",
+      "description": "Resolution 33 of national DSA outlining harassment policy and grievance procedures that our chapter follows.",
+      "href": "https://www.dsausa.org/about-us/harassment-policy-resolution-33/",
+      "icon": "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "page": {
+    "title": "Events Calendar",
+    "subtitle": "Join us for meetings, actions, educational events, and social gatherings.",
+    "errorTitle": "Unable to Load Calendar",
+    "errorMessage": "We're experiencing technical difficulties loading events. Please try again later.",
+    "errorActionLabel": "Return to Home",
+    "subscribeTitle": "Subscribe to Our Calendar",
+    "subscribeText": "Stay up-to-date with all Delaware DSA events by subscribing to our calendar.",
+    "googleCalendarButtonText": "Add to Google Calendar",
+    "iCalOutlookButtonText": "Subscribe to iCal/Outlook"
+  },
+  "eventCalendar": {
+    "noEventsMessage": "No events scheduled for this month.",
+    "checkBackMessage": "Please check back later or select a different month.",
+    "loadingMessage": "Loading events...",
+    "errorLoadingMessage": "Error loading events. Please try again."
+  },
+  "monthSelector": {
+    "label": "Select Month",
+    "previousMonth": "Previous Month",
+    "nextMonth": "Next Month"
+  },
+  "viewSelector": {
+    "month": "Month",
+    "week": "Week",
+    "day": "Day",
+    "list": "List"
+  },
+  "filters": {
+    "searchPlaceholder": "Search events...",
+    "categoriesLabel": "Categories",
+    "committeesLabel": "Committees",
+    "clearFilters": "Clear Filters",
+    "applyFilters": "Apply Filters"
+  },
+  "eventCard": {
+    "timeLabel": "Time",
+    "locationLabel": "Location",
+    "virtualEventLabel": "Virtual Event",
+    "registerLabel": "Register",
+    "detailsLabel": "View Details",
+    "addToCalendarLabel": "Add to Calendar"
+  },
+  "subscription": {
+    "calendarId": "f17d4d4d1756675b31bf0c7cc145c8e2b0fd967d93c55e23c40a0fe15fe4fd8d@group.calendar.google.com",
+    "googleCalendarEmbedUrl": "https://calendar.google.com/calendar/embed?src=f17d4d4d1756675b31bf0c7cc145c8e2b0fd967d93c55e23c40a0fe15fe4fd8d%40group.calendar.google.com&ctz=America%2FNew_York&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&wkst=1",
+    "googleCalendarUrl": "https://calendar.google.com/calendar/u/0?cid=f17d4d4d1756675b31bf0c7cc145c8e2b0fd967d93c55e23c40a0fe15fe4fd8d@group.calendar.google.com",
+    "iCalUrl": "https://calendar.google.com/calendar/ical/f17d4d4d1756675b31bf0c7cc145c8e2b0fd967d93c55e23c40a0fe15fe4fd8d%40group.calendar.google.com/public/basic.ics",
+    "subscriptionInstructions": "Subscribe to receive automatic updates about Delaware DSA events in your preferred calendar app."
+  }
+}

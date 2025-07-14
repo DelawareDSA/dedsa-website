@@ -1,0 +1,398 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*----------------------------------------------
+  1. Base Layer: Global resets, typography & theming
+-----------------------------------------------*/
+@layer base {
+  :root {
+    /* DSA Typography Variables */
+    --font-heading: var(--font-styrene-b);
+    --font-body: var(--font-manifold-dsa);
+
+    --on-accent: #ffffff; /* White text for colored backgrounds */
+    --heading-text: #231f20; /* DSA Black for headings */
+    --text-primary: #231f20; /* DSA Black for primary text */
+    --text-secondary: #4f5966; /* DSA Slate for secondary text */
+    --nav-text: #231f20; /* DSA Black for navigation */
+    --text-muted: #7f7b7c; /* DSA Black t2 for muted text */
+    --link-text: #ec1f27; /* DSA Red for links */
+    --card-title: #231f20; /* DSA Black for card titles */
+    --card-text: #231f20; /* DSA Black for card text */
+
+    /* DSA Type Scale */
+    --type-4xl: 4rem; /* 64pt */
+    --type-3xl: 3rem; /* 48pt */
+    --type-2xl: 2.25rem; /* 36pt */
+    --type-xl: 1.75rem; /* 28pt */
+    --type-lg: 1.25rem; /* 20pt */
+    --type-base: 1rem; /* 16pt - MINIMUM */
+    --type-sm: 0.875rem; /* 14pt */
+
+    /* DSA Letter Spacing */
+    --tracking-display: -0.02em; /* ≥64pt */
+    --tracking-heading: 0; /* 16-48pt */
+    --tracking-small: 0.08em; /* ≤12pt */
+
+    /* Line height */
+    --leading-tight: 1.2;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.75;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: max(16px, 1rem);
+    line-height: 1.5;
+    @apply antialiased bg-white text-dsa-black;
+  }
+
+  h1 {
+    letter-spacing: var(--tracking-display);
+  }
+  h2,
+  h3 {
+    letter-spacing: var(--tracking-heading);
+  }
+  .text-sm,
+  .text-xs {
+    letter-spacing: var(--tracking-small);
+  }
+
+  /* Heading styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    @apply text-dsa-black;
+  }
+
+  h1 {
+    font-size: var(--type-4xl);
+    letter-spacing: var(--tracking-display);
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: var(--type-3xl);
+    letter-spacing: var(--tracking-heading);
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: var(--type-2xl);
+    letter-spacing: var(--tracking-heading);
+    font-weight: 700;
+  }
+
+  p {
+    max-width: 70ch;
+    line-height: 1.5;
+    font-size: max(16px, 1rem);
+    @apply mb-4;
+  }
+
+  a {
+    @apply transition-colors duration-200 text-dsa-red hover:text-dsa-red;
+  }
+
+  /* Remove pink/rose colors - replace with DSA Red */
+  .bg-pink-50,
+  .bg-rose-50 {
+    @apply bg-dsa-red-t4;
+  }
+  .bg-pink-100,
+  .bg-rose-100 {
+    @apply bg-dsa-red-t3;
+  }
+  .text-pink-600,
+  .text-rose-600 {
+    @apply text-dsa-red;
+  }
+
+  :focus {
+    @apply outline-none ring-2 ring-dsa-red ring-opacity-50;
+  }
+}
+
+/*----------------------------------------------
+  2. Components Layer: Reusable UI elements
+-----------------------------------------------*/
+@layer components {
+  /* Text utility classes */
+  .text-primary {
+    color: var(--text-primary);
+  }
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  .text-muted {
+    color: var(--text-muted);
+  }
+  .text-heading {
+    color: var(--heading-text);
+  }
+  .text-link {
+    color: var(--link-text);
+  }
+  .text-nav {
+    color: var(--nav-text);
+  }
+  .text-card-title {
+    color: var(--card-title);
+  }
+  .text-card-body {
+    color: var(--card-text);
+  }
+  .text-on-accent {
+    color: var(--on-accent);
+  }
+
+  body {
+    font-size: max(16px, 1rem);
+  }
+  @media print {
+    body {
+      font-size: max(10pt, 1rem);
+    }
+  }
+
+  /* Button base */
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 font-medium transition-all duration-200 rounded;
+  }
+
+  /* Button variants */
+  .btn-primary {
+    @apply rounded-lg bg-dsa-red text-on-accent hover:bg-red-700;
+  }
+  .btn-secondary {
+    @apply text-gray-800 bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:ring-gray-200;
+  }
+
+  /* Layout helpers */
+  .container-page {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 md:py-20;
+  }
+  .section-light {
+    @apply bg-white;
+  }
+  .section-dark {
+    @apply bg-gray-100;
+  }
+
+  .card {
+    @apply overflow-hidden transition-shadow duration-300 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg;
+  }
+}
+
+/*----------------------------------------------
+  3. Keyframes: All animations gathered together
+-----------------------------------------------*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes morphBlob {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Newsletter-specific styles */
+.newsletter-content {
+  line-height: 1.8;
+}
+
+.newsletter-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.newsletter-content td {
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+.newsletter-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.newsletter-content a {
+  color: #ec1f27;
+  text-decoration: none;
+}
+
+.newsletter-content a:hover {
+  text-decoration: underline;
+}
+
+/* Email table styling adjustments for web display */
+.newsletter-content table[cellpadding] {
+  border: none;
+  box-shadow: none;
+}
+
+/*----------------------------------------------
+  5. Utilities Layer: Override and extend utilities
+-----------------------------------------------*/
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+  }
+  .animate-fade-scale {
+    animation: fadeScale 0.6s ease-out;
+  }
+  .animate-typewriter {
+    animation: typewriter 3s steps(60, end);
+  }
+
+  /* Custom scroll styles */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Backdrop blur utilities for better browser support */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  .backdrop-blur {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .backdrop-blur-lg {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  /* Gradient text utilities */
+  .text-gradient-red {
+    @apply text-transparent bg-gradient-to-r from-dsa-red to-red-600 bg-clip-text;
+  }
+
+  /* Enhanced focus states */
+  .focus-visible\:outline-custom:focus-visible {
+    @apply outline-none ring-2 ring-dsa-red ring-offset-2;
+  }
+
+  /* Custom shadows */
+  .shadow-red {
+    box-shadow: 0 4px 14px 0 rgba(236, 31, 39, 0.15);
+  }
+  .shadow-red-lg {
+    box-shadow:
+      0 10px 25px -3px rgba(236, 31, 39, 0.2),
+      0 4px 6px -2px rgba(236, 31, 39, 0.1);
+  }
+}

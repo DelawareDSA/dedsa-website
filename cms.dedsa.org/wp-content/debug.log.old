@@ -1,0 +1,76 @@
+[12-Jul-2025 20:43:02 UTC] PHP Fatal error:  Uncaught Google\Service\Exception: {
+ "error": {
+  "errors": [
+   {
+    "domain": "global",
+    "reason": "notFound",
+    "message": "Not Found"
+   }
+  ],
+  "code": 404,
+  "message": "Not Found"
+ }
+}
+ in /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Http/REST.php:134
+Stack trace:
+#0 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Http/REST.php(107): Google\Http\REST::decodeHttpResponse()
+#1 [internal function]: Google\Http\REST::doExecute()
+#2 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Task/Runner.php(187): call_user_func_array()
+#3 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Http/REST.php(66): Google\Task\Runner->run()
+#4 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Client.php(972): Google\Http\REST::execute()
+#5 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Service/Resource.php(248): Google\Client->execute()
+#6 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient-services/src/Calendar/Resource/Events.php(296): Google\Service\Resource->call()
+#7 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/calendar-rest.php(40): Google\Service\Calendar\Resource\Events->listEvents()
+#8 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/calendar-rest.php(81): fetch_google_events()
+#9 /var/www/cms.dedsa.org/wp-includes/rest-api/class-wp-rest-server.php(1292): dedsa_get_calendar_events()
+#10 /var/www/cms.dedsa.org/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#11 /var/www/cms.dedsa.org/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#12 /var/www/cms.dedsa.org/wp-includes/rest-api.php(459): WP_REST_Server->serve_request()
+#13 /var/www/cms.dedsa.org/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#14 /var/www/cms.dedsa.org/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#15 /var/www/cms.dedsa.org/wp-includes/plugin.php(565): WP_Hook->do_action()
+#16 /var/www/cms.dedsa.org/wp-includes/class-wp.php(418): do_action_ref_array()
+#17 /var/www/cms.dedsa.org/wp-includes/class-wp.php(818): WP->parse_request()
+#18 /var/www/cms.dedsa.org/wp-includes/functions.php(1342): WP->main()
+#19 /var/www/cms.dedsa.org/wp-blog-header.php(16): wp()
+#20 /var/www/cms.dedsa.org/index.php(17): require('...')
+#21 {main}
+  thrown in /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Http/REST.php on line 134
+[12-Jul-2025 20:43:14 UTC] PHP Fatal error:  Uncaught Google\Service\Exception: {
+ "error": {
+  "errors": [
+   {
+    "domain": "global",
+    "reason": "notFound",
+    "message": "Not Found"
+   }
+  ],
+  "code": 404,
+  "message": "Not Found"
+ }
+}
+ in /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Http/REST.php:134
+Stack trace:
+#0 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Http/REST.php(107): Google\Http\REST::decodeHttpResponse()
+#1 [internal function]: Google\Http\REST::doExecute()
+#2 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Task/Runner.php(187): call_user_func_array()
+#3 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Http/REST.php(66): Google\Task\Runner->run()
+#4 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Client.php(972): Google\Http\REST::execute()
+#5 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Service/Resource.php(248): Google\Client->execute()
+#6 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient-services/src/Calendar/Resource/Events.php(296): Google\Service\Resource->call()
+#7 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/calendar-rest.php(40): Google\Service\Calendar\Resource\Events->listEvents()
+#8 /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/calendar-rest.php(81): fetch_google_events()
+#9 /var/www/cms.dedsa.org/wp-includes/rest-api/class-wp-rest-server.php(1292): dedsa_get_calendar_events()
+#10 /var/www/cms.dedsa.org/wp-includes/rest-api/class-wp-rest-server.php(1125): WP_REST_Server->respond_to_request()
+#11 /var/www/cms.dedsa.org/wp-includes/rest-api/class-wp-rest-server.php(439): WP_REST_Server->dispatch()
+#12 /var/www/cms.dedsa.org/wp-includes/rest-api.php(459): WP_REST_Server->serve_request()
+#13 /var/www/cms.dedsa.org/wp-includes/class-wp-hook.php(324): rest_api_loaded()
+#14 /var/www/cms.dedsa.org/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#15 /var/www/cms.dedsa.org/wp-includes/plugin.php(565): WP_Hook->do_action()
+#16 /var/www/cms.dedsa.org/wp-includes/class-wp.php(418): do_action_ref_array()
+#17 /var/www/cms.dedsa.org/wp-includes/class-wp.php(818): WP->parse_request()
+#18 /var/www/cms.dedsa.org/wp-includes/functions.php(1342): WP->main()
+#19 /var/www/cms.dedsa.org/wp-blog-header.php(16): wp()
+#20 /var/www/cms.dedsa.org/index.php(17): require('...')
+#21 {main}
+  thrown in /var/www/cms.dedsa.org/wp-content/plugins/calendar-rest/vendor/google/apiclient/src/Http/REST.php on line 134
