@@ -7,7 +7,7 @@
         'aliases' => array(),
         'reference' => NULL,
         'name' => 'dedsa/calendar-rest',
-        'dev' => true,
+        'dev' => false,
     ),
     'versions' => array(
         'dedsa/calendar-rest' => array(

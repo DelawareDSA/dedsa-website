@@ -5,27 +5,35 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { safeFilter } from '../../../utils/safeFilter';
 
+/**
+ * Returns true if a date falls between today (start of day)
+ * and one month from today (end of day).
+ */
+function isInNextMonth(d: Date) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const oneMonthOut = new Date(today);
+  oneMonthOut.setMonth(oneMonthOut.getMonth() + 1);
+  oneMonthOut.setHours(23, 59, 59, 999);
+  return d >= today && d <= oneMonthOut;
+}
+
 export default function CalendarPage() {
-  const [view, setView]               = useState<'list' | 'month'>('list');
+  const [view, setView] = useState<'list' | 'month'>('list');
   const [selectedMonth, setSelectedMonth] = useState(new Date());
-  const { events, loading, error }    = useCalendarEvents(selectedMonth);
+  const { events, loading, error } = useCalendarEvents(selectedMonth);
 
   const getEventDate = (e: CalendarEvent) =>
     new Date(e.start.dateTime || e.start.date || '');
 
-  const filterEventsByMonth = (evts: CalendarEvent[], m: Date) =>
-    safeFilter(evts, (e: CalendarEvent) => {
-      const d = getEventDate(e);
-      return d.getMonth() === m.getMonth() && d.getFullYear() === m.getFullYear();
-    });
+  // Removed unused filterEventsByMonth function
 
-  const groupEventsByDate = (evts: CalendarEvent[]) => {
-    return evts.reduce<Record<string, CalendarEvent[]>>((acc, e) => {
+  const groupEventsByDate = (evts: CalendarEvent[]) =>
+    evts.reduce<Record<string, CalendarEvent[]>>((acc, e) => {
       const key = getEventDate(e).toDateString();
       (acc[key] = acc[key] || []).push(e);
       return acc;
     }, {});
-  };
 
   if (loading) {
     return (
@@ -53,8 +61,14 @@ export default function CalendarPage() {
     );
   }
 
-  const currentMonthEvents = filterEventsByMonth(events, selectedMonth);
-  const groupedEvents      = groupEventsByDate(currentMonthEvents);
+  // Filter events to only those from today through one month out
+  const rangedEvents = events.filter((e) => {
+    const d = getEventDate(e);
+    return isInNextMonth(d);
+  });
+
+  const currentMonthEvents = rangedEvents;
+  const groupedEvents = groupEventsByDate(currentMonthEvents);
 
   return (
     <div className="min-h-screen bg-dsa-red-t4 py-12">
@@ -72,7 +86,7 @@ export default function CalendarPage() {
           <div className="flex justify-between items-center flex-wrap gap-4">
             {/* Toggle List/Month */}
             <div className="flex gap-2">
-              {['list','month'].map((v) => (
+              {['list', 'month'].map((v) => (
                 <button
                   key={v}
                   onClick={() => setView(v as any)}
@@ -96,10 +110,13 @@ export default function CalendarPage() {
                   setSelectedMonth(d);
                 }}
                 className="p-2 hover:bg-dsa-red-t4 rounded"
-              >←</button>
+              >
+                ←
+              </button>
               <span className="font-semibold">
                 {selectedMonth.toLocaleDateString('en-US', {
-                  month: 'long', year: 'numeric'
+                  month: 'long',
+                  year: 'numeric',
                 })}
               </span>
               <button
@@ -109,7 +126,9 @@ export default function CalendarPage() {
                   setSelectedMonth(d);
                 }}
                 className="p-2 hover:bg-dsa-red-t4 rounded"
-              >→</button>
+              >
+                →
+              </button>
             </div>
 
             {/* External Links */}
@@ -118,7 +137,8 @@ export default function CalendarPage() {
                 href={`https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(
                   process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_ID!
                 )}`}
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-secondary text-sm"
               >
                 + Add to Google Calendar
@@ -141,29 +161,38 @@ export default function CalendarPage() {
             <div className="space-y-6">
               {Object.keys(groupedEvents).length === 0 ? (
                 <p className="text-dsa-black text-center py-8">
-                  No events scheduled for{' '}
-                  {selectedMonth.toLocaleDateString('en-US', {
-                    month: 'long', year: 'numeric'
-                  })}
+                  No upcoming events in the next month.
                 </p>
               ) : (
                 Object.entries(groupedEvents)
                   .sort(([a], [b]) => new Date(a).getTime() - new Date(b).getTime())
                   .map(([dateKey, dayEvents]) => (
-                    <div key={dateKey} className="border-b border-gray-200 pb-6 last:border-0">
+                    <div
+                      key={dateKey}
+                      className="border-b border-gray-200 pb-6 last:border-0"
+                    >
                       <h3 className="text-lg font-bold text-dsa-black mb-3">
                         {new Date(dateKey).toLocaleDateString('en-US', {
-                          weekday: 'long', month: 'long', day: 'numeric'
+                          weekday: 'long',
+                          month: 'long',
+                          day: 'numeric',
                         })}
                       </h3>
                       <div className="space-y-3">
                         {dayEvents.map((ev) => (
-                          <div key={ev.id} className="bg-gray-50 rounded-lg p-4">
-                            <h4 className="font-semibold text-dsa-black">{ev.summary}</h4>
+                          <div
+                            key={ev.id}
+                            className="bg-gray-50 rounded-lg p-4"
+                          >
+                            <h4 className="font-semibold text-dsa-black">
+                              {ev.summary}
+                            </h4>
                             {ev.start.dateTime && (
                               <p className="text-sm text-dsa-black mt-1">
                                 {new Date(ev.start.dateTime).toLocaleTimeString('en-US', {
-                                  hour: 'numeric', minute: '2-digit', hour12: true
+                                  hour: 'numeric',
+                                  minute: '2-digit',
+                                  hour12: true,
                                 })}
                               </p>
                             )}
@@ -175,7 +204,8 @@ export default function CalendarPage() {
                             {ev.link && (
                               <a
                                 href={ev.link}
-                                target="_blank" rel="noopener noreferrer"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-sm text-dsa-red hover:underline mt-1 block"
                               >
                                 View Details
@@ -200,9 +230,15 @@ export default function CalendarPage() {
             Subscribe to our calendar to automatically receive updates.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/join"      className="btn btn-primary">Join Delaware DSA</Link>
-            <Link href="/committees" className="btn btn-secondary">Explore Committees</Link>
-            <Link href="/contact"    className="btn btn-secondary">Contact Us</Link>
+            <Link href="/join" className="btn btn-primary">
+              Join Delaware DSA
+            </Link>
+            <Link href="/committees" className="btn btn-secondary">
+              Explore Committees
+            </Link>
+            <Link href="/contact" className="btn btn-secondary">
+              Contact Us
+            </Link>
           </div>
         </div>
       </div>
@@ -218,59 +254,52 @@ function MonthView({
   events: CalendarEvent[];
   month: Date;
 }) {
-  const dayCount   = new Date(month.getFullYear(), month.getMonth()+1, 0).getDate();
+  const getEventDate = (ev: CalendarEvent) =>
+    new Date(ev.start.dateTime || ev.start.date || '');
+  const dayCount = new Date(month.getFullYear(), month.getMonth() + 1, 0).getDate();
   const startIndex = new Date(month.getFullYear(), month.getMonth(), 1).getDay();
-  const weeks      = Math.ceil((dayCount + startIndex) / 7);
+  const weeks = Math.ceil((dayCount + startIndex) / 7);
 
   const getEventsForDay = (day: number) =>
     safeFilter(events, (e: CalendarEvent) => getEventDate(e).getDate() === day);
 
-  function getEventDate(ev: CalendarEvent) {
-    return new Date(ev.start.dateTime || ev.start.date || '');
-  }
-
   return (
     <div className="overflow-x-auto">
-      <table className="w-full">
-        <thead>
-          <tr>
-            {['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map((d) => (
-              <th key={d} className="text-center p-2 font-semibold text-dsa-black">{d}</th>
-            ))}
-          </tr>
-        </thead>
+      <table className="w-full text-sm">
+  <thead>
+    <tr>
+      {['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map((d) => (
+        <th key={d} className="p-2 font-semibold text-dsa-black text-center">{d}</th>
+      ))}
+    </tr>
+  </thead>
         <tbody>
-          {Array.from({ length: weeks }).map((_, weekIdx) => (
-            <tr key={weekIdx}>
-              {Array.from({ length: 7 }).map((_, dayIdx) => {
-                const dayNum    = weekIdx*7 + dayIdx - startIndex + 1;
-                const valid     = dayNum>0 && dayNum<=dayCount;
+          {Array.from({ length: weeks }).map((_, wi) => (
+            <tr key={wi}>
+              {Array.from({ length: 7 }).map((_, di) => {
+                const dayNum = wi * 7 + di - startIndex + 1;
+                const valid = dayNum > 0 && dayNum <= dayCount;
                 const dayEvents = valid ? getEventsForDay(dayNum) : [];
-
                 return (
                   <td
-                    key={dayIdx}
-                    className={`border border-gray-200 p-2 h-24 align-top ${
-                      !valid ? 'bg-gray-50' : ''
-                    }`}
+                    key={di}
+                    className={`border border-gray-200 p-2 align-top h-24 ${!valid ? 'bg-gray-50' : ''}`}
                   >
                     {valid && (
                       <>
-                        <div className="font-semibold text-sm mb-1">{dayNum}</div>
+                        <div className="font-semibold mb-1">{dayNum}</div>
                         <div className="space-y-1">
                           {dayEvents.slice(0,2).map((ev) => (
                             <div
                               key={ev.id}
-                              className="text-xs bg-dsa-red text-white px-1 py-0.5 rounded truncate"
+                              className="truncate bg-dsa-red text-white text-xs px-1 py-0.5 rounded"
                               title={ev.summary}
                             >
                               {ev.summary}
                             </div>
                           ))}
-                          {dayEvents.length>2 && (
-                            <div className="text-xs text-dsa-black">
-                              +{dayEvents.length-2} more
-                            </div>
+                          {dayEvents.length > 2 && (
+                            <div className="text-dsa-black text-xs">+{dayEvents.length - 2} more</div>
                           )}
                         </div>
                       </>
